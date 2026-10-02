@@ -11,6 +11,6 @@
 - `index.html`：首页，平台功能模块结构树（点击模块跳转到对应分析）
 - `analysis.html`：Nustar 平台完整分析文档
 - `competitor.html`：Nustar × 789Bingo 竞品报告
-- `prototype.html`：融合两家优点的新版平台原型（移动端，可交互）
+
 
 数据采集：Nustar 2026-09-30 至 10-01；789Bingo 2026-10-02。仅供内部竞品研究使用。
