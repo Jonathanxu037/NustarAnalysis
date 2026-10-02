@@ -1,0 +1,339 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>789Bingo 新版平台原型</title>
+<style>
+:root{
+  --bg:#eef0f6;--panel:#fff;--ink:#1d1b2e;--muted:#6b6880;--line:#e6e4ef;
+  --p1:#5b2bd6;--p2:#8a5cff;--gold:#f4b41a;--teal:#12b886;--red:#e5484d;--sky:#2f80ed;
+  --font:"Microsoft YaHei","PingFang SC","Noto Sans SC",system-ui,-apple-system,"Segoe UI",sans-serif;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:14px}
+.page{display:flex;gap:28px;justify-content:center;align-items:flex-start;padding:24px 16px 40px;flex-wrap:wrap}
+.intro{max-width:420px;flex:1 1 320px}
+.intro h1{font-size:22px;margin:0 0 6px}
+.intro .tag{display:inline-block;background:#fff3d6;color:#8a5a00;border-radius:6px;padding:2px 8px;font-size:12px;margin-bottom:10px}
+.intro p{color:var(--muted);line-height:1.7;margin:6px 0}
+.notes{margin-top:14px;background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:14px 16px}
+.notes h3{margin:0 0 8px;font-size:15px}
+.notes table{width:100%;border-collapse:collapse;font-size:12.5px}
+.notes td{padding:6px 4px;border-bottom:1px solid var(--line);vertical-align:top;line-height:1.5}
+.notes tr:last-child td{border:none}
+.src{display:inline-block;font-size:11px;border-radius:4px;padding:0 6px;margin-left:4px;white-space:nowrap}
+.src.n{background:#e9e3ff;color:#4a23b8}.src.b{background:#dcf7ee;color:#0b7a58}.src.x{background:#fff1d6;color:#8a5a00}
+.back{display:inline-block;margin-bottom:10px;color:var(--p1);text-decoration:none;font-weight:700}
+
+/* phone */
+.phone{width:390px;max-width:100%;height:820px;background:#000;border-radius:44px;padding:12px;box-shadow:0 20px 60px rgba(40,20,90,.25);flex:none}
+.screen{position:relative;width:100%;height:100%;border-radius:34px;overflow:hidden;background:#f5f4fa;display:flex;flex-direction:column}
+@media (max-width:440px){.phone{width:100%;height:100vh;border-radius:0;padding:0;box-shadow:none}.screen{border-radius:0}.page{padding:0}.intro{order:2;padding:16px}}
+.top{background:linear-gradient(135deg,var(--p1),var(--p2));color:#fff;padding:14px 14px 10px;flex:none}
+.row{display:flex;align-items:center;gap:8px}
+.logo{font-weight:900;font-size:18px;letter-spacing:.5px}
+.logo b{color:var(--gold)}
+.bal{margin-left:auto;background:rgba(255,255,255,.16);border-radius:20px;padding:4px 4px 4px 12px;display:flex;align-items:center;gap:8px;font-weight:700}
+.btn{border:0;border-radius:16px;padding:6px 12px;font:inherit;font-weight:700;cursor:pointer}
+.btn.gold{background:var(--gold);color:#3b2600}
+.btn.white{background:#fff;color:var(--p1)}
+.btn.line{background:transparent;border:1px solid var(--line);color:var(--ink)}
+.ico{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.16);display:grid;place-items:center;position:relative;cursor:pointer;font-size:15px}
+.badge{position:absolute;top:-3px;right:-3px;background:var(--red);color:#fff;font-size:10px;border-radius:8px;padding:0 4px;line-height:15px}
+.marquee{margin-top:10px;background:rgba(0,0,0,.18);border-radius:10px;padding:5px 10px;font-size:12px;white-space:nowrap;overflow:hidden}
+.marquee span{display:inline-block;padding-left:100%;animation:mq 22s linear infinite}
+@keyframes mq{to{transform:translateX(-100%)}}
+.body{flex:1;overflow-y:auto;padding-bottom:76px}
+.sec{padding:12px 12px 0}
+.sec h4{margin:4px 2px 8px;font-size:15px;display:flex;align-items:center;gap:6px}
+.sec h4 small{margin-left:auto;color:var(--muted);font-weight:400;font-size:12px}
+.banner{height:118px;border-radius:14px;color:#fff;padding:14px;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.banner b{font-size:19px;line-height:1.25}
+.banner span{font-size:12px;opacity:.92;margin-top:4px}
+.banner .rule{position:absolute;right:10px;bottom:8px;font-size:10.5px;opacity:.85}
+.dots{display:flex;gap:4px;justify-content:center;margin-top:6px}
+.dots i{width:6px;height:6px;border-radius:3px;background:#cfcbe0}.dots i.on{width:14px;background:var(--p1)}
+.kong{display:grid;grid-template-columns:repeat(5,1fr);gap:6px;background:var(--panel);border-radius:14px;padding:10px 4px}
+.kong div{text-align:center;font-size:11.5px;cursor:pointer;position:relative}
+.kong .k{width:42px;height:42px;border-radius:12px;margin:0 auto 4px;display:grid;place-items:center;font-size:20px;color:#fff}
+.kong .badge{right:6px;top:-4px}
+.cats{display:flex;gap:6px;overflow-x:auto;padding:12px 12px 2px;scrollbar-width:none}
+.cats::-webkit-scrollbar{display:none}
+.cats button{flex:none;border:1px solid var(--line);background:var(--panel);border-radius:18px;padding:6px 14px;font:inherit;font-weight:700;color:var(--muted);cursor:pointer}
+.cats button.on{background:var(--p1);color:#fff;border-color:var(--p1)}
+.room{background:var(--panel);border-radius:14px;padding:12px;margin-bottom:10px;display:flex;gap:10px;align-items:center;border:1px solid var(--line)}
+.ball{width:52px;height:52px;border-radius:50%;flex:none;display:grid;place-items:center;color:#fff;font-weight:900;font-size:17px;box-shadow:inset 0 -4px 0 rgba(0,0,0,.15)}
+.room .info{flex:1;min-width:0}
+.room .t{font-weight:800}
+.room .m{font-size:12px;color:var(--muted);margin-top:2px}
+.tags{display:flex;gap:4px;flex-wrap:wrap;margin-top:5px}
+.tg{font-size:10.5px;border-radius:5px;padding:1px 6px;font-weight:700}
+.tg.r{background:#e9e3ff;color:#4a23b8}.tg.g{background:#dcf7ee;color:#0b7a58}.tg.o{background:#fff1d6;color:#8a5a00}.tg.red{background:#ffe3e3;color:#b42318}
+.room .go{text-align:center}
+.room .cd{font-size:12px;color:var(--red);font-weight:800;margin-bottom:4px}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.game{background:var(--panel);border-radius:12px;overflow:hidden;border:1px solid var(--line);cursor:pointer}
+.game .art{height:84px;display:grid;place-items:center;color:#fff;font-weight:900;font-size:13px;text-align:center;padding:6px;position:relative}
+.game .art .hot{position:absolute;left:4px;top:4px;font-size:9.5px;background:rgba(0,0,0,.35);border-radius:4px;padding:0 4px}
+.game .art .pp{position:absolute;right:4px;bottom:4px;font-size:9.5px;background:rgba(0,0,0,.35);border-radius:4px;padding:0 4px}
+.game .nm{font-size:11.5px;font-weight:700;padding:5px 6px 2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.game .rb{font-size:10px;color:#4a23b8;padding:0 6px 6px}
+.wins{background:var(--panel);border-radius:14px;border:1px solid var(--line);overflow:hidden}
+.wins div{display:flex;justify-content:space-between;padding:8px 12px;border-bottom:1px solid var(--line);font-size:12.5px}
+.wins div:last-child{border:none}
+.wins b{color:var(--teal)}
+.float{position:absolute;right:10px;bottom:86px;background:linear-gradient(135deg,#ff8a00,#ff3d6e);color:#fff;border-radius:14px;padding:8px 10px;font-size:11px;font-weight:800;text-align:center;box-shadow:0 6px 16px rgba(255,61,110,.35);cursor:pointer;line-height:1.3}
+.nav{position:absolute;left:0;right:0;bottom:0;height:68px;background:#fff;border-top:1px solid var(--line);display:flex;align-items:flex-end;padding-bottom:8px}
+.nav div{flex:1;text-align:center;font-size:11px;color:var(--muted);cursor:pointer}
+.nav div .i{font-size:20px;display:block;line-height:1.2}
+.nav div.on{color:var(--p1);font-weight:800}
+.nav .mid .i{width:52px;height:52px;margin:-26px auto 2px;border-radius:50%;background:linear-gradient(135deg,var(--gold),#ff8a00);color:#fff;display:grid;place-items:center;font-size:22px;box-shadow:0 6px 14px rgba(244,180,26,.45)}
+.view{display:none}.view.on{display:block}
+.card{background:var(--panel);border-radius:14px;border:1px solid var(--line);padding:12px;margin-bottom:10px}
+.card h5{margin:0 0 8px;font-size:14px}
+table.t{width:100%;border-collapse:collapse;font-size:12px}
+table.t th,table.t td{padding:6px 4px;border-bottom:1px solid var(--line);text-align:left}
+table.t th{color:var(--muted);font-weight:700}
+.bar{height:8px;background:#ece9f6;border-radius:4px;overflow:hidden;margin:6px 0 4px}
+.bar i{display:block;height:100%;background:linear-gradient(90deg,var(--p1),var(--p2))}
+.hint{font-size:12px;color:var(--muted)}
+.hint b{color:var(--p1)}
+.chatmsg{display:flex;gap:8px;margin-bottom:10px;align-items:flex-start}
+.chatmsg .av{width:30px;height:30px;border-radius:50%;flex:none;display:grid;place-items:center;color:#fff;font-size:12px;font-weight:800}
+.chatmsg .bub{background:var(--panel);border:1px solid var(--line);border-radius:4px 12px 12px 12px;padding:6px 10px;font-size:12.5px}
+.chatmsg .who{font-size:11px;color:var(--muted)}
+.lv{font-size:10px;background:var(--gold);color:#3b2600;border-radius:4px;padding:0 4px;margin-left:4px;font-weight:800}
+.sheet{position:absolute;inset:0;background:rgba(20,10,40,.45);display:none;align-items:flex-end;z-index:20}
+.sheet.on{display:flex}
+.sheet .in{background:#f5f4fa;width:100%;max-height:86%;border-radius:20px 20px 0 0;overflow-y:auto;padding:14px 12px 24px;animation:up .2s ease}
+@keyframes up{from{transform:translateY(40px);opacity:.5}}
+.sheet .hd{display:flex;align-items:center;margin-bottom:10px}
+.sheet .hd b{font-size:16px}
+.sheet .hd .x{margin-left:auto;width:30px;height:30px;border-radius:50%;background:#e7e4f2;display:grid;place-items:center;cursor:pointer}
+.tier{display:flex;gap:10px;align-items:center;padding:10px;border-radius:12px;background:var(--panel);border:1px solid var(--line);margin-bottom:8px}
+.tier .amt{width:58px;text-align:center;font-weight:900;color:var(--p1)}
+.tier .st{margin-left:auto;font-size:11px;font-weight:800}
+.tier.done{border-color:var(--teal)}.tier.done .st{color:var(--teal)}
+.tier.lock{opacity:.6}
+.voucher{display:flex;border-radius:12px;overflow:hidden;background:var(--panel);border:1px solid var(--line);margin-bottom:8px}
+.voucher .l{width:84px;background:linear-gradient(135deg,var(--p1),var(--p2));color:#fff;display:grid;place-items:center;text-align:center;font-weight:900;font-size:16px;padding:8px}
+.voucher .r{flex:1;padding:8px 10px;font-size:12px}
+.voucher .r b{font-size:13px}
+.amts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.amts div{background:var(--panel);border:1.5px solid var(--line);border-radius:10px;padding:8px;text-align:center;cursor:pointer}
+.amts div.on{border-color:var(--p1);background:#f1ecff}
+.amts small{display:block;color:var(--teal);font-weight:800;font-size:11px}
+.menu div{display:flex;align-items:center;padding:12px 4px;border-bottom:1px solid var(--line);cursor:pointer}
+.menu div:last-child{border:none}
+.menu div span{margin-left:auto;color:var(--muted);font-size:12px}
+.toast{position:absolute;left:50%;top:40%;transform:translateX(-50%);background:rgba(20,10,40,.88);color:#fff;padding:10px 16px;border-radius:12px;font-size:13px;display:none;z-index:30;text-align:center;max-width:80%}
+</style>
+</head>
+<body>
+<div class="page">
+  <div class="intro">
+    <a class="back" href="index.html">← 返回分析站点</a>
+    <h1>789Bingo 新版平台原型</h1>
+    <span class="tag">原型 · 所有数值均为示例或建议值，非线上数据</span>
+    <p>基于 Nustar 与 789Bingo 的对比分析：保留 789Bingo 的「无流水返水、大额救援金、多级代理、聊天室等级、实时大奖榜」，补齐 Nustar 的「返利透明化、任务阶梯、日榜竞赛、卡券背包、提现时效承诺」，并把 Bingo 做成真正的主品类。</p>
+    <p>右侧手机可点击：金刚区 5 个入口、品类切换、底部导航、充值、背包、账户菜单都有对应的交互。</p>
+    <div class="notes">
+      <h3>功能来源对照</h3>
+      <table>
+        <tr><td>底部导航 Home / Bingo / Invite / Chat / Account</td><td><span class="src b">789Bingo</span></td></tr>
+        <tr><td>金刚区：返水中心、任务阶梯、Bingo 日榜、背包、救援金</td><td><span class="src n">Nustar</span><span class="src x">改进</span></td></tr>
+        <tr><td>返水进度条直接显示「再投 ₱x 多拿 ₱y」，费率公开、无流水</td><td><span class="src n">Nustar</span><span class="src b">789Bingo</span></td></tr>
+        <tr><td>Bingo 房间卡片：开奖倒计时、在线人数、奖池、返利角标</td><td><span class="src x">新增</span></td></tr>
+        <tr><td>游戏卡片人气数字 + 实时大奖榜</td><td><span class="src b">789Bingo</span></td></tr>
+        <tr><td>游戏卡片返利角标、专区按返利命名</td><td><span class="src n">Nustar</span></td></tr>
+        <tr><td>救援金：小额按比例、大额按档位，取高者</td><td><span class="src n">Nustar</span><span class="src b">789Bingo</span></td></tr>
+        <tr><td>任务阶梯自动发放，不设当天作废</td><td><span class="src n">Nustar</span><span class="src x">改进</span></td></tr>
+        <tr><td>Bingo 日榜按连线次数计分，长尾 500 名，每人每天只领一个榜最高奖</td><td><span class="src n">Nustar</span><span class="src x">改进</span></td></tr>
+        <tr><td>三级邀请佣金 + 里程碑奖金，层级口径统一</td><td><span class="src b">789Bingo</span><span class="src x">改进</span></td></tr>
+        <tr><td>聊天室等级与实物大奖</td><td><span class="src b">789Bingo</span></td></tr>
+        <tr><td>充值档位直接标注赠送与流水，自动匹配充值券</td><td><span class="src n">Nustar</span></td></tr>
+        <tr><td>提现 10 分钟承诺 + 超时补偿</td><td><span class="src n">Nustar</span></td></tr>
+        <tr><td>限额 / 自我排除放在账户一级菜单；宣传位写明门槛</td><td><span class="src x">合规改进</span></td></tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="phone"><div class="screen" id="scr">
+    <div class="top">
+      <div class="row">
+        <div class="logo">789<b>BINGO</b></div>
+        <div class="bal">₱1,250.00 <button class="btn gold" onclick="openSheet('dep')">Deposit</button></div>
+        <div class="ico" onclick="openSheet('bag')">🎁<span class="badge">3</span></div>
+      </div>
+      <div class="marquee"><span>🏆 Ma***25 won ₱48,600 in Bingo Fiesta 90 · Cashback rates are public: Bingo 1.2%, Slots 1.5% — no wagering · Withdrawals in 10 min or we pay ₱20 · 🏆 Je***07 won ₱12,300 in Super Ace</span></div>
+    </div>
+
+    <div class="body" id="body">
+      <!-- HOME -->
+      <div class="view on" id="v-home">
+        <div class="sec">
+          <div class="banner" id="ban" style="background:linear-gradient(135deg,#5b2bd6,#b14cff)"><b>Bingo Cashback 1.2%</b><span>Paid daily · No wagering · Every room counts</span><span class="rule">Rules ›</span></div>
+          <div class="dots" id="dots"><i class="on"></i><i></i><i></i></div>
+        </div>
+        <div class="sec">
+          <div class="kong">
+            <div onclick="openSheet('cb')"><div class="k" style="background:#5b2bd6">%</div>Cashback</div>
+            <div onclick="openSheet('task')"><div class="k" style="background:#12b886">✓</div>Daily Tasks<span class="badge">2</span></div>
+            <div onclick="openSheet('rank')"><div class="k" style="background:#f08c00">🏆</div>Bingo Rank</div>
+            <div onclick="openSheet('bag')"><div class="k" style="background:#e5484d">🎁</div>Bag<span class="badge">3</span></div>
+            <div onclick="openSheet('rescue')"><div class="k" style="background:#2f80ed">🛟</div>Rescue</div>
+          </div>
+        </div>
+        <div class="cats" id="cats">
+          <button class="on" data-c="bingo">Bingo</button><button data-c="slots">Slots</button><button data-c="casino">Casino</button><button data-c="fish">Fishing</button><button data-c="arcade">Arcade</button><button data-c="poker">Poker</button>
+        </div>
+        <div class="sec" id="catbox"></div>
+        <div class="sec">
+          <h4>🔥 Hot Slots <small>Cashback 1.5% · Rescue</small></h4>
+          <div class="grid3" id="slots"></div>
+        </div>
+        <div class="sec">
+          <h4>⚡ Recent Big Wins <small>live</small></h4>
+          <div class="wins" id="wins"></div>
+        </div>
+        <div class="sec"><p class="hint" style="text-align:center;padding:8px 0 4px">21+ only · PAGCOR regulated · <a href="#" onclick="openSheet('rg');return false">Set limits / Self-exclusion</a></p></div>
+      </div>
+
+      <!-- BINGO -->
+      <div class="view" id="v-bingo"><div class="sec"><h4>🎱 All Bingo Rooms <small>12 live</small></h4><div id="allrooms"></div></div></div>
+
+      <!-- INVITE -->
+      <div class="view" id="v-invite"><div class="sec">
+        <div class="banner" style="background:linear-gradient(135deg,#ff8a00,#ff3d6e);height:auto"><b>Invite friends, earn on 3 levels</b><span>Up to 0.8% + 0.2% + 0.1% of your network's valid bets, paid daily</span></div>
+        <div class="card" style="margin-top:10px"><h5>Your link</h5><div class="row"><code style="flex:1;font-size:12px;background:#f1ecff;padding:6px 8px;border-radius:8px">789bingo.com/r/JOSH88</code><button class="btn white" style="border:1px solid var(--line)" onclick="toast('Link copied')">Copy</button></div></div>
+        <div class="card"><h5>Commission rates (one rule, shown everywhere)</h5>
+          <table class="t"><tr><th>Level</th><th>Bingo</th><th>Slots</th><th>Casino</th></tr>
+          <tr><td>Level 1</td><td>0.8%</td><td>0.8%</td><td>0.3%</td></tr>
+          <tr><td>Level 2</td><td>0.2%</td><td>0.2%</td><td>0.1%</td></tr>
+          <tr><td>Level 3</td><td>0.1%</td><td>0.1%</td><td>0.05%</td></tr></table>
+          <p class="hint">建议：把 Bingo 的一级佣金提到与老虎机同级，让代理愿意推 Bingo。</p></div>
+        <div class="card"><h5>Milestones · 4 / 5 qualified friends</h5><div class="bar"><i style="width:80%"></i></div>
+          <p class="hint">Qualified = deposit ≥ ₱1,000 and valid bets ≥ ₱7,000. Next bonus <b>₱250</b> at 5 friends.</p></div>
+        <div class="card"><h5>Today</h5><table class="t"><tr><th>Level</th><th>Friends</th><th>Their bets</th><th>You earn</th></tr>
+          <tr><td>1</td><td>4</td><td>₱18,400</td><td>₱147.20</td></tr><tr><td>2</td><td>9</td><td>₱32,000</td><td>₱64.00</td></tr><tr><td>3</td><td>3</td><td>₱5,200</td><td>₱5.20</td></tr></table></div>
+      </div></div>
+
+      <!-- CHAT -->
+      <div class="view" id="v-chat"><div class="sec">
+        <div class="card"><h5>Room · Bingo Fiesta 90 <span class="tg g">486 online</span></h5><p class="hint" style="margin:0">Chat level 7 → 8: send 12 more messages or play 3 rounds. Level 20 prize: iPhone 17 Pro Max.</p><div class="bar"><i style="width:64%"></i></div></div>
+        <div class="chatmsg"><div class="av" style="background:#5b2bd6">MA</div><div><div class="who">Maria<span class="lv">Lv 12</span></div><div class="bub">BINGO!! 2 lines in round 48 🎉</div></div></div>
+        <div class="chatmsg"><div class="av" style="background:#12b886">JE</div><div><div class="who">Jerome<span class="lv">Lv 5</span></div><div class="bub">congrats! next draw in 30s, who's in?</div></div></div>
+        <div class="chatmsg"><div class="av" style="background:#f08c00">SY</div><div><div class="who">System</div><div class="bub">🎁 Rain: ₱500 split among 50 active players in 5 min</div></div></div>
+        <div class="chatmsg"><div class="av" style="background:#e5484d">AN</div><div><div class="who">Ana<span class="lv">Lv 9</span></div><div class="bub">cashback came in this morning, no wagering 👍</div></div></div>
+        <div class="row" style="gap:6px"><input style="flex:1;border:1px solid var(--line);border-radius:18px;padding:8px 12px;font:inherit" placeholder="Say something…"><button class="btn gold" onclick="toast('Message sent')">Send</button></div>
+      </div></div>
+
+      <!-- ACCOUNT -->
+      <div class="view" id="v-acct"><div class="sec">
+        <div class="card"><div class="row"><div class="ball" style="background:#5b2bd6;width:46px;height:46px">J</div><div><b>Joshua</b><div class="hint">ID 7890012 · KYC verified</div></div></div>
+          <div style="margin-top:10px"><b>VIP 3</b> <span class="hint">→ VIP 4 needs ₱36,500 more valid bets this month</span><div class="bar"><i style="width:58%"></i></div>
+          <p class="hint" style="margin:0">VIP 4 perks: Bingo cashback 1.4%, birthday bonus ₱888, priority withdrawals.</p></div></div>
+        <div class="card"><div class="row"><div><div class="hint">Withdrawable</div><b style="font-size:18px">₱1,250.00</b></div><div style="margin-left:auto;text-align:right"><div class="hint">Wagering left</div><b>₱0</b></div></div>
+          <div class="row" style="margin-top:10px;gap:8px"><button class="btn gold" style="flex:1" onclick="openSheet('dep')">Deposit</button><button class="btn line" style="flex:1" onclick="toast('Withdrawal submitted · arrives within 10 min, or ₱20 compensation')">Withdraw</button></div></div>
+        <div class="card menu">
+          <div onclick="openSheet('bag')">🎁 Bag <span>3 available ›</span></div>
+          <div onclick="openSheet('cb')">💰 Cashback history <span>›</span></div>
+          <div onclick="toast('Bet records · last 30 days')">🧾 Bet records <span>›</span></div>
+          <div onclick="toast('Transactions')">💳 Transactions <span>›</span></div>
+          <div onclick="openSheet('rg')">🛡️ Limits & self-exclusion <span>›</span></div>
+          <div onclick="toast('Security center')">🔒 Security center <span>›</span></div>
+          <div onclick="toast('24/7 live chat')">💬 Customer service <span>24/7 ›</span></div>
+        </div>
+      </div></div>
+    </div>
+
+    <div class="float" onclick="go('invite')">Invite<br>3 levels</div>
+
+    <div class="nav" id="nav">
+      <div class="on" data-v="home"><span class="i">⌂</span>Home</div>
+      <div data-v="bingo"><span class="i">🎱</span>Bingo</div>
+      <div class="mid" data-v="invite"><span class="i">🎁</span>Invite</div>
+      <div data-v="chat"><span class="i">💬</span>Chat</div>
+      <div data-v="acct"><span class="i">👤</span>Account</div>
+    </div>
+
+    <div class="sheet" id="sheet" onclick="if(event.target===this)closeSheet()"><div class="in" id="sheetIn"></div></div>
+    <div class="toast" id="toast"></div>
+  </div></div>
+</div>
+
+<script>
+var rooms=[
+ {n:'Bingo Fiesta 90',c:'#5b2bd6',p:'₱5 / card',on:486,jp:'₱128,400',cd:30,tg:['Cashback 1.2%','Rank']},
+ {n:'Speed Bingo 75',c:'#12b886',p:'₱2 / card',on:312,jp:'₱42,900',cd:12,tg:['Cashback 1.2%','Fast 60s']},
+ {n:'Perya Color Bingo',c:'#f08c00',p:'₱10 / card',on:205,jp:'₱86,000',cd:45,tg:['Cashback 1.2%','New']},
+ {n:'Jackpot Bingo',c:'#e5484d',p:'₱20 / card',on:154,jp:'₱512,000',cd:70,tg:['Cashback 1.2%','Jackpot']},
+ {n:'Pinoy Bingo 30',c:'#2f80ed',p:'₱1 / card',on:96,jp:'₱8,200',cd:20,tg:['Cashback 1.2%','Beginner']}
+];
+var games={
+ slots:[['Super Ace','#0f9d58','20.9k','1.5% · Rescue'],['Pinata Wins','#d6336c','21.8k','1.5% · Rescue'],['Fortune Gems 3','#b8860b','9.1k','1.5%'],['Sugar Bang 2','#f76707','2.7k','1.5%'],['Wild Bounty','#7048e8','6.4k','1.5%'],['Money Coming','#e03131','4.0k','1.5%']],
+ casino:[['Speed Baccarat','#1c7ed6','1.2k','1.0%'],['Bac Bo','#0b7285','3.3k','1.0%'],['Crazy Time','#c2255c','5.2k','1.0%'],['Perya Roulette','#e8590c','860','1.0%'],['Dragon Tiger','#5f3dc4','740','0.8%'],['Blackjack','#2b8a3e','410','0.8%']],
+ fish:[['Ocean King','#1098ad','3.0k','1.2%'],['Jackpot Fishing','#1971c2','2.1k','1.2%'],['Mega Fishing','#0c8599','1.4k','1.2%']],
+ arcade:[['Mines','#495057','1.7k','1.0%'],['Plinko','#7950f2','900','1.0%'],['Crash','#f03e3e','1.1k','1.0%']],
+ poker:[['Tongits Go','#2f9e44','2.4k','1.0%'],['Pusoy Go','#1864ab','1.0k','1.0%'],['Sic Bo','#c92a2a','620','1.0%']]
+};
+function roomCard(r){var num=(r.n.match(/\d+/)||['B'])[0];return '<div class="room"><div class="ball" style="background:'+r.c+'">'+num+'</div><div class="info"><div class="t">'+r.n+'</div><div class="m">'+r.p+' · '+r.on+' online · Jackpot '+r.jp+'</div><div class="tags">'+r.tg.map(function(t,i){return '<span class="tg '+(i?'o':'r')+'">'+t+'</span>'}).join('')+'<span class="tg g">No wagering</span></div></div><div class="go"><div class="cd" data-cd="'+r.cd+'">0:'+String(r.cd).padStart(2,'0')+'</div><button class="btn gold" onclick="toast(\'Joining '+r.n+'…\')">Play</button></div></div>';}
+function gameCard(g){return '<div class="game" onclick="toast(\'Launching '+g[0]+'…\')"><div class="art" style="background:linear-gradient(135deg,'+g[1]+',#222)"><span class="hot">👥 '+g[2]+'</span>'+g[0]+'<span class="pp">'+g[3]+'</span></div><div class="nm">'+g[0]+'</div><div class="rb">Cashback '+g[3]+'</div></div>';}
+function renderCat(c){var box=document.getElementById('catbox');
+ if(c==='bingo'){box.innerHTML='<h4>🎱 Bingo Rooms <small>draws every 30–90s</small></h4>'+rooms.slice(0,3).map(roomCard).join('');}
+ else{box.innerHTML='<h4>'+c.charAt(0).toUpperCase()+c.slice(1)+' <small>cashback shown on every card</small></h4><div class="grid3">'+games[c].map(gameCard).join('')+'</div>';}}
+document.getElementById('cats').onclick=function(e){var b=e.target.closest('button');if(!b)return;[].forEach.call(this.children,function(x){x.classList.toggle('on',x===b)});renderCat(b.dataset.c);};
+renderCat('bingo');
+document.getElementById('slots').innerHTML=games.slots.map(gameCard).join('');
+document.getElementById('allrooms').innerHTML=rooms.map(roomCard).join('');
+var winsData=[['Bingo Fiesta 90','Ma***25','₱48,600'],['Super Ace','Je***07','₱12,300'],['Jackpot Bingo','Ro***31','₱102,000'],['Bac Bo','Sh***81','₱20,000'],['Pinata Wins','Pl***65','₱35,530']];
+function renderWins(){document.getElementById('wins').innerHTML=winsData.map(function(w){return '<div><span>'+w[0]+' · '+w[1]+'</span><b>'+w[2]+'</b></div>'}).join('');}
+renderWins();
+setInterval(function(){winsData.unshift(winsData.pop());renderWins();},4000);
+setInterval(function(){document.querySelectorAll('[data-cd]').forEach(function(el){var v=+el.dataset.cd-1;if(v<0)v=90;el.dataset.cd=v;el.textContent=Math.floor(v/60)+':'+String(v%60).padStart(2,'0');});},1000);
+var bans=[['linear-gradient(135deg,#5b2bd6,#b14cff)','Bingo Cashback 1.2%','Paid daily · No wagering · Every room counts'],['linear-gradient(135deg,#0b7285,#12b886)','Rescue Bonus up to ₱888,888','Lost today? Get back up to 15% (small) or a tier bonus (big) — whichever is higher'],['linear-gradient(135deg,#ff8a00,#ff3d6e)','Invite & earn on 3 levels','0.8% + 0.2% + 0.1% of your network\'s valid bets']];
+var bi=0;setInterval(function(){bi=(bi+1)%3;var b=document.getElementById('ban');b.style.background=bans[bi][0];b.innerHTML='<b>'+bans[bi][1]+'</b><span>'+bans[bi][2]+'</span><span class="rule">Rules ›</span>';[].forEach.call(document.getElementById('dots').children,function(d,i){d.classList.toggle('on',i===bi)});},3500);
+function go(v){document.querySelectorAll('.view').forEach(function(x){x.classList.toggle('on',x.id==='v-'+v)});document.querySelectorAll('#nav div').forEach(function(x){x.classList.toggle('on',x.dataset.v===v)});document.getElementById('body').scrollTop=0;}
+document.getElementById('nav').onclick=function(e){var d=e.target.closest('[data-v]');if(d)go(d.dataset.v);};
+function toast(m){var t=document.getElementById('toast');t.textContent=m;t.style.display='block';clearTimeout(t._h);t._h=setTimeout(function(){t.style.display='none'},1800);}
+function closeSheet(){document.getElementById('sheet').classList.remove('on');}
+var S={
+ cb:'<div class="hd"><b>Cashback Center</b><div class="x" onclick="closeSheet()">✕</div></div>'+
+  '<div class="card"><div class="row"><div><div class="hint">Today (preview, updates every 10 min)</div><b style="font-size:20px">₱86.40</b></div><span class="tg g" style="margin-left:auto">No wagering</span></div><p class="hint" style="margin:6px 0 0">Paid automatically tomorrow before 10:00 AM.</p></div>'+
+  '<div class="card"><h5>Bingo · ₱4,200 bet · 1.2%</h5><div class="bar"><i style="width:84%"></i></div><p class="hint" style="margin:0">Bet <b>₱800</b> more today → rate becomes 1.4% and you get <b>+₱19.40</b> more.</p></div>'+
+  '<div class="card"><h5>Slots · ₱2,100 bet · 1.5%</h5><div class="bar"><i style="width:100%"></i></div><p class="hint" style="margin:0">Top rate reached.</p></div>'+
+  '<div class="card"><h5>Public rates (proposed)</h5><table class="t"><tr><th>Today\'s bets</th><th>Bingo</th><th>Slots</th><th>Casino</th></tr><tr><td>₱1+</td><td>1.2%</td><td>1.5%</td><td>0.5%</td></tr><tr><td>₱5,000+</td><td>1.4%</td><td>1.5%</td><td>0.6%</td></tr><tr><td>₱50,000+</td><td>1.6%</td><td>1.5%</td><td>0.8%</td></tr></table><p class="hint">对比：Nustar Bingo 起步 0.3%，要投到 ₱100,000 才有 1%。</p></div>',
+ task:'<div class="hd"><b>Daily Tasks</b><div class="x" onclick="closeSheet()">✕</div></div><p class="hint">Rewards are credited automatically when a tier completes — nothing to claim, nothing expires tonight.</p>'+
+  '<div class="tier done"><div class="amt">₱2</div><div><b>Deposit ₱50 · Play 20 Bingo cards</b><div class="hint">Done 20/20</div></div><div class="st">Credited</div></div>'+
+  '<div class="tier"><div class="amt">₱15</div><div><b>Deposit ₱300 · Play 100 cards</b><div class="hint">Deposit ₱300/300 · Cards 64/100</div><div class="bar"><i style="width:64%"></i></div></div><div class="st"><button class="btn gold" onclick="go(\'bingo\');closeSheet()">Go</button></div></div>'+
+  '<div class="tier lock"><div class="amt">₱80</div><div><b>Deposit ₱1,000 · Play 400 cards</b><div class="hint">Unlocks after tier 2</div></div><div class="st">🔒</div></div>'+
+  '<div class="tier lock"><div class="amt">₱400</div><div><b>Deposit ₱5,000 · Play 2,000 cards</b></div><div class="st">🔒</div></div>'+
+  '<p class="hint">与 Nustar 的差异：自动发放、不设当天作废；底部展示的是「你今天最多可得」而不是误导性的总奖金。</p>',
+ rank:'<div class="hd"><b>Bingo Daily Rank</b><div class="x" onclick="closeSheet()">✕</div></div>'+
+  '<div class="card"><div class="row"><div><div class="hint">Scored by lines completed — card price doesn\'t matter</div><b>Pool ₱100,000 · 500 winners</b></div><div style="margin-left:auto" class="tg red">Ends 07:59:18</div></div></div>'+
+  '<div class="card"><table class="t"><tr><th>#</th><th>Player</th><th>Lines</th><th>Prize</th></tr><tr><td>1</td><td>Ma***25</td><td>1,284</td><td>₱10,000</td></tr><tr><td>2</td><td>Ro***31</td><td>1,102</td><td>₱6,000</td></tr><tr><td>3</td><td>Je***07</td><td>998</td><td>₱4,000</td></tr><tr><td>…</td><td></td><td></td><td></td></tr><tr><td>401–500</td><td></td><td>≥ 52</td><td>₱30</td></tr><tr style="background:#f1ecff"><td>188</td><td>You</td><td>214</td><td>₱120</td></tr></table>'+
+  '<p class="hint">One account wins from one rank per day (highest prize kept). 对比：Nustar 同一大户一天可在 3 个榜单拿 ₱35 万。</p></div>',
+ bag:'<div class="hd"><b>Bag</b><div class="x" onclick="closeSheet()">✕</div></div>'+
+  '<div class="voucher"><div class="l">+20%</div><div class="r"><b>Deposit Boost</b><br>Min ₱500 · max +₱200 · wagering 5x<br><span style="color:var(--red)">Expires in 23:41:08</span></div></div>'+
+  '<div class="voucher"><div class="l">50<br><small style="font-size:10px">cards</small></div><div class="r"><b>Free Bingo Cards</b><br>Any room up to ₱5/card · winnings 1x<br>Expires in 2 days</div></div>'+
+  '<div class="voucher"><div class="l">₱30</div><div class="r"><b>Bonus Credit</b><br>From Daily Rank #188 · wagering 1x<br><button class="btn gold" style="margin-top:4px" onclick="toast(\'₱30 added to balance · wagering ₱30\')">Claim</button></div></div>'+
+  '<p class="hint">每张券在卡片上写清金额、流水、适用范围与过期时间。</p>',
+ rescue:'<div class="hd"><b>Rescue Bonus</b><div class="x" onclick="closeSheet()">✕</div></div>'+
+  '<div class="card"><h5>Today\'s net loss: ₱1,800</h5><p class="hint" style="margin:0">Small-loss rule: 10% of loss up to ₱150 → <b>₱150</b><br>Tier rule: ₱1,000 tier → ₱38<br>You get the higher one: <b>₱150</b> · wagering 3x · paid tomorrow</p></div>'+
+  '<div class="card"><table class="t"><tr><th>Net loss</th><th>Rescue</th></tr><tr><td>₱100–1,500</td><td>10% (max ₱150)</td></tr><tr><td>₱10,000</td><td>₱188</td></tr><tr><td>₱100,000</td><td>₱1,888</td></tr><tr><td>₱1,000,000</td><td>₱18,888</td></tr><tr><td>₱10,000,000</td><td>₱888,888</td></tr></table><p class="hint">融合方案：小额沿用 Nustar 式比例返还（更有体感），大额沿用 789Bingo 档位（覆盖大户），取高者；流水由 10x 降到 3x（建议值）。</p></div>',
+ dep:'<div class="hd"><b>Deposit</b><div class="x" onclick="closeSheet()">✕</div></div>'+
+  '<div class="row" style="gap:6px;margin-bottom:10px"><span class="tg r">GCash</span><span class="tg r">Maya</span><span class="tg r">QRPH</span><span class="tg r">InstaPay</span></div>'+
+  '<div class="amts" id="amts"><div>₱100<small>+₱10</small></div><div class="on">₱500<small>+₱100 (voucher)</small></div><div>₱1,000<small>+₱150</small></div><div>₱5,000<small>+₱300</small></div><div>₱20,000<small>+₱800</small></div><div>₱50,000<small>+₱1,500</small></div></div>'+
+  '<div class="card" style="margin-top:10px"><div class="row"><div><div class="hint">Auto-matched voucher</div><b>Deposit Boost +20%</b></div><span class="tg o" style="margin-left:auto">5x wagering on ₱100</span></div></div>'+
+  '<button class="btn gold" style="width:100%;padding:12px;font-size:15px" onclick="closeSheet();toast(\'Deposit ₱500 + ₱100 bonus\')">Continue · ₱500 → ₱600</button>'+
+  '<p class="hint">赠送与流水在档位上直接标注；最高赠送写明门槛，不使用「Free ₱8000」这类需要 ₱400,000 才能拿到的宣传。</p>',
+ rg:'<div class="hd"><b>Responsible Gaming</b><div class="x" onclick="closeSheet()">✕</div></div>'+
+  '<div class="card menu"><div>Daily deposit limit <span>₱5,000 ›</span></div><div>Daily loss limit <span>Off ›</span></div><div>Session reminder <span>Every 60 min ›</span></div><div>Cool-off <span>24h / 7d / 30d ›</span></div><div style="color:var(--red)">Self-exclusion <span>›</span></div></div>'+
+  '<p class="hint">Nustar 条款提到限额工具但前端无入口；新版放在账户一级菜单与首页底部。</p>'
+};
+function openSheet(k){document.getElementById('sheetIn').innerHTML=S[k];document.getElementById('sheet').classList.add('on');
+ var a=document.getElementById('amts');if(a)a.onclick=function(e){var d=e.target.closest('div');if(!d||d===a)return;[].forEach.call(a.children,function(x){x.classList.toggle('on',x===d)});};}
+</script>
+</body>
+</html>

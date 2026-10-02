@@ -1,0 +1,3812 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nustar Online 平台功能梳理与分析</title><link rel="stylesheet" href="assets/style.css"></head>
+<body>
+<header class="topbar"><button class="iconbtn" id="menuBtn" aria-label="目录">☰</button>
+<a class="brand" href="index.html">Nustar <span>×</span> 789Bingo 分析</a><nav><a href="index.html" class="">结构树首页</a><a href="analysis.html" class="on">Nustar 分析文档</a><a href="competitor.html" class="">竞品报告</a><a href="prototype.html" class="">新版原型</a></nav><span class="sp"></span>
+<button class="iconbtn" id="themeBtn" title="切换深浅色">◐</button></header>
+<div class="wrap"><aside class="side" id="side"><input class="search" id="q" placeholder="搜索目录…">
+<h4>功能模块结构树</h4><ul class="tree"><li class="l1"><a href="index.html">Nustar Online（结构树）</a><ul><li class="l1"><details open><summary><span class="lbl">首页</span></summary><ul><li class="sub"><a href="analysis.html#二首页">首页总览</a></li><li><a href="analysis.html#81-首页" title="余额·充值·VIP·搜索">顶栏</a></li><li><a href="analysis.html#81-首页" title="铃铛未读·在线客服">消息与客服入口</a></li><li><a href="analysis.html#122-金刚区总览" title="返水·即时返·榜单·BAG">活动金刚区</a></li><li><a href="analysis.html#81-首页" title="7 个品类">品类导航</a></li><li><a href="analysis.html#81-首页" title="按页面与渠道投放">轮播 Banner</a></li><li><a href="analysis.html#81-首页" title="横滑回访">最近玩过</a></li><li><a href="analysis.html#128-首页深度分析不同游戏的返利机制10-01-抓取" title="推荐·返水区·新品·热门">游戏专区</a></li></ul></details></li><li class="l1"><details open><summary><span class="lbl">活动</span></summary><ul><li class="sub"><a href="analysis.html#四活动体系">活动总览</a></li><li><a href="analysis.html#四活动体系" title="21 个 Banner">活动列表</a></li><li><a href="analysis.html#83-活动中心" title="主图 + 规则长图">图文详情页</a></li><li><a href="analysis.html#123a-返水中心专项真实数据拆解2026-10-01-抓取" title="今日/昨日·分档进度">返水中心</a></li><li><a href="analysis.html#124a-即时返专项真实数据拆解2026-10-01-抓取" title="按档手动领·当天失效">即时返领取</a></li><li><a href="analysis.html#125a-榜单中心专项真实榜单数据拆解2026-10-01-抓取" title="10 个日榜">榜单中心</a></li><li><a href="analysis.html#103-每日红包daily-ang-pao-rush" title="每天 2–3 场">每日红包</a></li><li><a href="analysis.html#126a-bag-专项真实数据拆解2026-10-01-抓取" title="旋转券·充值券·奖金券">BAG 背包</a></li><li><a href="analysis.html#108-用户推荐奖励邀请裂变bonus-chest-助力开宝箱" title="转盘·签到·裂变">储备活动</a></li></ul></details></li><li class="l1"><details open><summary><span class="lbl">游戏</span></summary><ul><li class="sub"><a href="analysis.html#三游戏大厅">游戏总览</a></li><li><a href="analysis.html#三游戏大厅" title="返水合集·Casino 1%">活动合集 Tab</a></li><li><a href="analysis.html#三游戏大厅" title="Hot 至 Sports 共 7 类">品类 Tab</a></li><li><a href="analysis.html#三游戏大厅" title="约 30 家·可隐藏">厂商筛选</a></li><li><a href="analysis.html#82-游戏" title="卡片 ♥">收藏</a></li><li><a href="analysis.html#82-游戏" title="Top 10 按点赞">搜索与热度榜</a></li><li><a href="analysis.html#82-游戏" title="内嵌 webview">游戏启动</a></li></ul></details></li><li class="l1"><details open><summary><span class="lbl">资讯与消息</span></summary><ul><li class="sub"><a href="analysis.html#七消息与资讯">资讯与消息总览</a></li><li><a href="analysis.html#七消息与资讯" title="4 类标签·倒序">资讯 News</a></li><li><a href="analysis.html#七消息与资讯" title="注册 ₱2 等通知">站内信 Inbox</a></li><li><a href="analysis.html#十一平台规则与合规分析" title="使用条款·隐私政策">协议</a></li><li><a href="analysis.html#119-合规与文案风险点" title="充提·游戏指南">FAQ</a></li></ul></details></li><li class="l1"><details open><summary><span class="lbl">账户</span></summary><ul><li class="sub"><a href="analysis.html#六账户安全中心与-vip">账户总览</a></li><li><a href="analysis.html#六账户安全中心与-vip" title="头像·昵称·ID">个人信息</a></li><li><a href="analysis.html#95-vip-返水与额外加成" title="单一等级·半月升降">VIP</a></li><li><a href="analysis.html#五充值与提现" title="电子钱包 3·银行 2">充值</a></li><li><a href="analysis.html#115-提现规则" title="绑账户·密码校验">提现</a></li><li><a href="analysis.html#84-账户与钱包" title="新增·编辑·上限">提现账户</a></li><li><a href="analysis.html#84-账户与钱包" title="全部·充·提·奖励">交易记录</a></li><li><a href="analysis.html#84-账户与钱包" title="最近 7 天·按厂商">投注记录</a></li><li><a href="analysis.html#六账户安全中心与-vip" title="手机·密码·Google">安全中心</a></li><li><a href="analysis.html#113-kyc-实名认证" title="简易表·完整表">KYC 认证</a></li></ul></details></li></ul></li></ul><h4>文档目录</h4><ul class="tree"><li class="l1"><a href="analysis.html#功能模块结构树">功能模块结构树</a></li><li class="l1"><a href="analysis.html#一信息架构">一、信息架构</a></li><li class="l1"><a href="analysis.html#二首页">二、首页</a></li><li class="l1"><a href="analysis.html#三游戏大厅">三、游戏大厅</a></li><li class="l1"><a href="analysis.html#四活动体系">四、活动体系</a></li><li class="l1"><a href="analysis.html#五充值与提现">五、充值与提现</a></li><li class="l1"><a href="analysis.html#六账户安全中心与-vip">六、账户、安全中心与 VIP</a></li><li class="l1"><a href="analysis.html#七消息与资讯">七、消息与资讯</a></li><li class="l1"><details><summary><span class="lbl"><a href="analysis.html#八模块逐项深度分析" style="display:inline;padding:0">八、模块逐项深度分析</a></span></summary><ul><li class="sub"><a href="analysis.html#81-首页">8.1 首页</a></li><li class="sub"><a href="analysis.html#82-游戏">8.2 游戏</a></li><li class="sub"><a href="analysis.html#83-活动中心">8.3 活动中心</a></li><li class="sub"><a href="analysis.html#84-账户与钱包">8.4 账户与钱包</a></li><li class="sub"><a href="analysis.html#85-内容与系统">8.5 内容与系统</a></li></ul></details></li><li class="l1"><details><summary><span class="lbl"><a href="analysis.html#九返利-奖励-返水-返金专题" style="display:inline;padding:0">九、返利 / 奖励 / 返水 / 返金专题</a></span></summary><ul><li class="sub"><a href="analysis.html#91-日返水15-unlimited-cashback">9.1 日返水（1.5% Unlimited Cashback）</a></li><li class="sub"><a href="analysis.html#92-即时返2-instant-return仅指定老虎机">9.2 即时返（2% Instant Return，仅指定老虎机）</a></li><li class="sub"><a href="analysis.html#93-亏损返还15-slots-loss-return">9.3 亏损返还（15% Slots Loss Return）</a></li><li class="sub"><a href="analysis.html#94-同一笔老虎机投注的叠加效果">9.4 同一笔老虎机投注的叠加效果</a></li><li class="sub"><a href="analysis.html#95-vip-返水与额外加成">9.5 VIP 返水与额外加成</a></li><li class="sub"><a href="analysis.html#96-各类奖励的流水倍数总览">9.6 各类奖励的流水倍数总览</a></li><li class="sub"><a href="analysis.html#97-全活动返利百分比与返利逻辑总表">9.7 全活动返利百分比与返利逻辑总表</a></li><li class="sub"><a href="analysis.html#98-扣除流水成本后的真实价值估算">9.8 扣除流水成本后的真实价值（估算）</a></li><li class="sub"><a href="analysis.html#99-三类典型用户的综合返利模拟">9.9 三类典型用户的综合返利模拟</a></li></ul></details></li><li class="l1"><details><summary><span class="lbl"><a href="analysis.html#十活动深度分析" style="display:inline;padding:0">十、活动深度分析</a></span></summary><ul><li class="sub"><a href="analysis.html#101-首充奖励deposit-and-get-up-to-8000">10.1 首充奖励（Deposit and get up to ₱8,000）</a></li><li class="sub"><a href="analysis.html#102-deposit-boost-20定时抢充值加赠券">10.2 Deposit Boost +20%（定时抢充值加赠券）</a></li><li class="sub"><a href="analysis.html#103-每日红包daily-ang-pao-rush">10.3 每日红包（Daily Ang Pao Rush）</a></li><li class="sub"><a href="analysis.html#104-daily-lucky-surprise登录送券-bag-道具背包">10.4 Daily Lucky Surprise（登录送券 + BAG 道具背包）</a></li><li class="sub"><a href="analysis.html#105-榜单类rank-cup-leaderboard">10.5 榜单类（Rank Cup / Leaderboard）</a></li><li class="sub"><a href="analysis.html#106-厂商联运活动">10.6 厂商联运活动</a></li><li class="sub"><a href="analysis.html#107-服务承诺与拉新类">10.7 服务承诺与拉新类</a></li><li class="sub"><a href="analysis.html#108-用户推荐奖励邀请裂变bonus-chest-助力开宝箱">10.8 用户推荐奖励（邀请裂变：Bonus Chest 助力开宝箱）</a></li></ul></details></li><li class="l1"><details><summary><span class="lbl"><a href="analysis.html#十一平台规则与合规分析" style="display:inline;padding:0">十一、平台规则与合规分析</a></span></summary><ul><li class="sub"><a href="analysis.html#111-运营主体与牌照">11.1 运营主体与牌照</a></li><li class="sub"><a href="analysis.html#112-准入与禁入人群">11.2 准入与禁入人群</a></li><li class="sub"><a href="analysis.html#113-kyc-实名认证">11.3 KYC 实名认证</a></li><li class="sub"><a href="analysis.html#114-反洗钱与资金安全">11.4 反洗钱与资金安全</a></li><li class="sub"><a href="analysis.html#115-提现规则">11.5 提现规则</a></li><li class="sub"><a href="analysis.html#116-投注与奖励滥用规则">11.6 投注与奖励滥用规则</a></li><li class="sub"><a href="analysis.html#117-隐私与营销授权">11.7 隐私与营销授权</a></li><li class="sub"><a href="analysis.html#118-负责任博彩">11.8 负责任博彩</a></li><li class="sub"><a href="analysis.html#119-合规与文案风险点">11.9 合规与文案风险点</a></li></ul></details></li><li class="l1"><details><summary><span class="lbl"><a href="analysis.html#十二首页活动金刚区深度分析10-01-版本复测" style="display:inline;padding:0">十二、首页活动金刚区深度分析（10-01 版本复测）</a></span></summary><ul><li class="sub"><a href="analysis.html#121-两个版本的差异">12.1 两个版本的差异</a></li><li class="sub"><a href="analysis.html#122-金刚区总览">12.2 金刚区总览</a></li><li class="sub"><details><summary><span class="lbl"><a href="analysis.html#123-cashback返水中心" style="display:inline;padding:0">12.3 Cashback：返水中心</a></span></summary><ul><li class="sub"><a href="analysis.html#123a-返水中心专项真实数据拆解2026-10-01-抓取">12.3A 返水中心专项：真实数据拆解（2026-10-01 抓取）</a></li></ul></details></li><li class="sub"><details><summary><span class="lbl"><a href="analysis.html#124-instant-return阶梯任务页" style="display:inline;padding:0">12.4 Instant Return：阶梯任务页</a></span></summary><ul><li class="sub"><a href="analysis.html#124a-即时返专项真实数据拆解2026-10-01-抓取">12.4A 即时返专项：真实数据拆解（2026-10-01 抓取）</a></li></ul></details></li><li class="sub"><details><summary><span class="lbl"><a href="analysis.html#125-rank-cup榜单中心" style="display:inline;padding:0">12.5 Rank Cup：榜单中心</a></span></summary><ul><li class="sub"><a href="analysis.html#125a-榜单中心专项真实榜单数据拆解2026-10-01-抓取">12.5A 榜单中心专项：真实榜单数据拆解（2026-10-01 抓取）</a></li></ul></details></li><li class="sub"><details><summary><span class="lbl"><a href="analysis.html#126-bag道具背包" style="display:inline;padding:0">12.6 BAG：道具背包</a></span></summary><ul><li class="sub"><a href="analysis.html#126a-bag-专项真实数据拆解2026-10-01-抓取">12.6A BAG 专项：真实数据拆解（2026-10-01 抓取）</a></li></ul></details></li><li class="sub"><a href="analysis.html#127-对-789bingo-金刚区的建议">12.7 对 789Bingo 金刚区的建议</a></li><li class="sub"><a href="analysis.html#128-首页深度分析不同游戏的返利机制10-01-抓取">12.8 首页深度分析：不同游戏的返利机制（10-01 抓取）</a></li></ul></details></li><li class="l1"><a href="analysis.html#十三运营分析与对-789bingo-的可借鉴点">十三、运营分析与对 789Bingo 的可借鉴点</a></li><li class="l1"><a href="analysis.html#十四未覆盖与待确认项">十四、未覆盖与待确认项</a></li></ul><h4>站点</h4><ul class="tree"><li class="l1"><a href="index.html">结构树首页</a></li><li class="l1"><a href="analysis.html">Nustar 分析文档</a></li><li class="l1"><a href="competitor.html">竞品报告</a></li><li class="l1"><a href="prototype.html">新版原型</a></li></ul></aside>
+<main class="main"><div class="doc"><h1 id="nustar-online-平台功能梳理与分析">Nustar Online 平台功能梳理与分析</h1>
+<p>2026-09-30 首版 · 2026-10-02 更新 · Joshua</p>
+<p>Nustar Online（nustargame.com）是宿务 NUSTAR 综合度假村旗下、面向菲律宾的移动端 H5 在线娱乐平台：5 个底部 Tab、7 个游戏品类、约 30 家厂商、17 个常驻活动，核心打法是“多层返水叠加 + 首充赠送 + 快速提现”。以下基于 2026-09-30 登录态实测（仅浏览，未发生充值、提现或下注）。第八至十一节的返利费率、活动规则与合规条款，取自活动规则图、平台接口返回的配置以及 Terms of Use / Privacy Policy / FAQ 原文。</p>
+<h2 id="功能模块结构树">功能模块结构树</h2>
+<p><img alt="功能模块结构树" src="assets/tree.svg" /></p>
+<blockquote>
+<p>交互版结构树见站点首页，点击任一模块可跳转到对应分析章节。</p>
+</blockquote>
+<p>活动（8 个模块）和账户（9 个模块）是最重的两块；返水、榜单、红包、BAG 这些福利模块在首页金刚区和活动中心各有一个入口。三级细节见第八节逐项分析。</p>
+<h2 id="一信息架构">一、信息架构</h2>
+<p>竖屏 H5 单页应用，桌面端也以手机宽度居中显示；全站只有 5 个一级入口，钱包直接放在「账户」页，没有单独的充值页。</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>位置</th>
+<th>入口</th>
+<th>路由</th>
+<th>功能</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>底部 Tab 1</td>
+<td>Home</td>
+<td>/home</td>
+<td>首页聚合：活动入口、品类、Banner、游戏专区</td>
+</tr>
+<tr>
+<td>底部 Tab 2</td>
+<td>Promos</td>
+<td>/promos → /promos/promo_0?id=</td>
+<td>活动列表（纯图片 Banner）→ 活动详情（主图 + 规则）</td>
+</tr>
+<tr>
+<td>底部 Tab 3</td>
+<td>Games</td>
+<td>/games</td>
+<td>游戏大厅：品类 Tab + 厂商筛选 + 收藏</td>
+</tr>
+<tr>
+<td>底部 Tab 4</td>
+<td>News</td>
+<td>/news</td>
+<td>品牌资讯（度假村、赛事、美食等）</td>
+</tr>
+<tr>
+<td>底部 Tab 5</td>
+<td>Account</td>
+<td>/account</td>
+<td>个人信息、VIP 入口、余额、充值/提现</td>
+</tr>
+<tr>
+<td>顶栏左</td>
+<td>余额 + Deposit（登录后显示「免费 ₱8000」）</td>
+<td>—</td>
+<td>余额展示，一键进充值</td>
+</tr>
+<tr>
+<td>顶栏</td>
+<td>VIP 徽章</td>
+<td>/account/vip-introduction</td>
+<td>VIP 权益与规则</td>
+</tr>
+<tr>
+<td>顶栏右</td>
+<td>搜索</td>
+<td>/gameRankList</td>
+<td>搜索框 + 游戏热度榜（按点赞数）</td>
+</tr>
+<tr>
+<td>顶栏右</td>
+<td>铃铛（带未读红点）</td>
+<td>/message</td>
+<td>站内信 Inbox</td>
+</tr>
+<tr>
+<td>顶栏右</td>
+<td>耳机</td>
+<td>未确认</td>
+<td>在线客服（本次未能打开，见第十四节）</td>
+</tr>
+<tr>
+<td>账户页</td>
+<td>Accounts</td>
+<td>/account/security-center</td>
+<td>安全中心</td>
+</tr>
+<tr>
+<td>账户页</td>
+<td>My Wallets</td>
+<td>/account/withdraw-account</td>
+<td>提现账户管理</td>
+</tr>
+<tr>
+<td>账户页</td>
+<td>Bet Order</td>
+<td>/account/bet-order</td>
+<td>投注记录</td>
+</tr>
+<tr>
+<td>账户页</td>
+<td>Transactions</td>
+<td>/account/transactions/Deposit</td>
+<td>资金流水</td>
+</tr>
+<tr>
+<td>页脚</td>
+<td>Terms of use / Privacy Policy / FAQ</td>
+<td>—</td>
+<td>协议与帮助</td>
+</tr>
+<tr>
+<td>悬浮条</td>
+<td>Download NUSTAR App</td>
+<td>appstore.nustargame.com</td>
+<td>App 下载引导（下载送 ₱10）</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="二首页">二、首页</h2>
+<p>首页是“活动优先、游戏其次”的布局：首屏上半部分全是返水和赠送入口，进入即连弹 5 个弹窗。</p>
+<p><strong>模块顺序（自上而下）</strong></p>
+<ol>
+<li>顶栏：余额、Deposit/免费 ₱8000、VIP、搜索、消息、客服</li>
+<li>跑马灯公告：支付渠道维护通知（实测当天 QRPH 与 GCash 均在维护）</li>
+<li>4 个活动快捷入口：1.5%+2% Cashback、2% Instant Return、Rank Cup（₱300,000）、BAG</li>
+<li>7 个品类图标：Hot / Slots / Casino / Poker / Arcade / Bingo / Sports</li>
+<li>轮播 Banner（约 7 张），左下角挂「首充 ₱8000 BONUS」角标，右下角挂活动悬浮球</li>
+<li>Recently Played：最近玩过（横滑）</li>
+<li>游戏专区（均带 View All）：Nustar Recommends → 1.5%+2%+15% Slots RETURN → Exclusive &amp; New → FC Combo Rank Win Daily → Casino 1.0% Cashback → Popular Games</li>
+<li>All Games 全量列表 + 底部厂商 Logo（DW / MW / WOW 等）</li>
+<li>页脚：Terms of use / Privacy Policy / FAQ</li>
+<li>常驻悬浮条：Download NUSTAR App for New Bonus and Fast Cash-Out</li>
+</ol>
+<p>专区命名直接用活动名，把“玩哪个游戏能拿哪种返水”绑定在选游戏的动作上；游戏卡片左上角也直接标注「1.5%+2% Cashback / 15% Loss Rebate」或 HOT / EXCLUSIVE。</p>
+<p><strong>进入首页的弹窗链（关闭一个弹下一个）</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>顺序</th>
+<th>弹窗</th>
+<th>内容</th>
+<th>主按钮</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>每日红包（Ang Pao）</td>
+<td>倒计时 + “₱10,000,000!”，提示“今天还剩 2 次机会”，右上角 ? 进规则</td>
+<td>打开</td>
+</tr>
+<tr>
+<td>2</td>
+<td>首充额外奖励</td>
+<td>First Deposit Extra Bonus ₱8,000</td>
+<td>立即存款</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Maximum Rewards</td>
+<td>每日叠加 5 项：+20% 充值加成、2% 即时返、1.5% 无限返水、15% 亏损返还、₱10m 红包</td>
+<td>Play Now</td>
+</tr>
+<tr>
+<td>4</td>
+<td>VIP 额外返水</td>
+<td>Casino / Slots 额外 0.2%，条件：投注 ₱20K + 所有 VIP</td>
+<td>—</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Evolution × PP</td>
+<td>真人最高 1% 无限返水</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="三游戏大厅">三、游戏大厅</h2>
+<p>大厅为「品类 Tab → 厂商筛选 Chip（含全部、收藏）→ 3 列游戏卡片」三层结构；老虎机厂商最多（约 24 家），体育只接 SABA 一家。品类 Tab 最前面还有两个活动型 Tab：「1.5%+2%+15% Return」与「Casino 1.0% Cashback」。</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>品类</th>
+<th>厂商筛选项</th>
+<th>代表游戏</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Hot</td>
+<td>跨品类热门</td>
+<td>Super Ace、Pinata Wins、Wild Bounty Showdown、Speed Baccarat A</td>
+</tr>
+<tr>
+<td>Slots</td>
+<td>JILI、PG、FC、5G、YB、OP、PP、JDB、MW、YGR、GG、BNG、PS、CQ9、SG、WOW、PT、KM、DW、NLC、Red Tiger、NetEnt、BTG、SNKY</td>
+<td>Super Ace 系列、Fortune Gems 系列、Mahjong Ways 2、Gates of Olympus、Sweet Bonanza</td>
+</tr>
+<tr>
+<td>Casino（真人）</td>
+<td>Evolution、PP、SG、PT、DW</td>
+<td>Speed / No Commission / Perya Speed Baccarat、Crazy Time、彩色游戏（Color Game）</td>
+</tr>
+<tr>
+<td>Poker（棋牌）</td>
+<td>JILI、PT、SG、PG、JDB、KM、CQ9、FC</td>
+<td>Tongits Go、Pusoy Go、Tongits Pinoy、7up7down、骰宝、百家乐、21 点</td>
+</tr>
+<tr>
+<td>Arcade</td>
+<td>JILI、JDB、FC、YB、CQ9、KM、MW、SG、PP、GG、PT、YGR、PS</td>
+<td>Mines、Ocean King Jackpot、捕鱼类、Color Game</td>
+</tr>
+<tr>
+<td>Bingo</td>
+<td>JILI、YB、SG、Evolution、DW、WOW</td>
+<td>Jackpot Bingo、Heat Bingo、iRich Bingo、Money Bingo、Super 30 Bingo（约 20 款）</td>
+</tr>
+<tr>
+<td>Sports</td>
+<td>SABA</td>
+<td>SABA Sports（单入口）</td>
+</tr>
+</tbody>
+</table></div>
+<p>其他交互：</p>
+<ul>
+<li>卡片角标：HOT / EXCLUSIVE / 活动返水标签，卡片右下角可收藏（♥）</li>
+<li>搜索页默认展示热度榜 Top 10，按点赞数排序（Super Ace 804.9K 点赞居首，Pinata Wins 239.3K 第二）</li>
+<li>本地化明显：Tongits、Pusoy、Perya、Color Game 都是菲律宾本地玩法</li>
+</ul>
+<p>注：部分厂商名来自 Chrome 自动翻译后的页面（如 SG、KM、Red Tiger、NetEnt），为按原文推断的缩写，需对照英文页核实。</p>
+<h2 id="四活动体系">四、活动体系</h2>
+<p>Promos 页共 17 个活动，另有 1 个仅在弹窗出现（VIP 额外 0.2%）；返水/返还类共 5 个，是平台的主力留存手段；列表只有图片，点击进详情页（主图 + RULES 文字规则）。</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>活动</th>
+<th>要点</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>返水</td>
+<td>Slots Cashback</td>
+<td>2% 即时返 + 1.5% 无限返水</td>
+</tr>
+<tr>
+<td>返水</td>
+<td>15% Slots Loss Return</td>
+<td>老虎机亏损返还 15%</td>
+</tr>
+<tr>
+<td>返水</td>
+<td>Evolution × PP 1% Casino Cashback</td>
+<td>真人无限返水 1%</td>
+</tr>
+<tr>
+<td>返水</td>
+<td>Spark Game 1.0% Rebate</td>
+<td>Color Game 返水 1%（SG 的 Bonus / Lucky Color Game，非 Bingo）</td>
+</tr>
+<tr>
+<td>返水</td>
+<td>VIP Casino/Slots Extra 0.2%</td>
+<td>VIP 且投注 ₱20K 额外返 0.2%（弹窗活动）</td>
+</tr>
+<tr>
+<td>充值</td>
+<td>First Deposit ₱8,000 Bonus</td>
+<td>首充赠送，全站多处曝光</td>
+</tr>
+<tr>
+<td>充值</td>
+<td>Deposit Boost +20%</td>
+<td>每天 12AM / 10AM / 6PM 三个时段充值加赠 20%</td>
+</tr>
+<tr>
+<td>榜单</td>
+<td>FC Daily Combo Rank</td>
+<td>FC 厂商日榜，9/30–10/6</td>
+</tr>
+<tr>
+<td>榜单</td>
+<td>VIP Bet Royale</td>
+<td>₱1,000,000 每日奖池</td>
+</tr>
+<tr>
+<td>榜单</td>
+<td>Arcade Bet Leaderboard</td>
+<td>街机投注榜</td>
+</tr>
+<tr>
+<td>榜单</td>
+<td>Poker Bet Leaderboard</td>
+<td>棋牌投注榜</td>
+</tr>
+<tr>
+<td>厂商联运</td>
+<td>PP Daily Wins</td>
+<td>₱435,000,000 奖池，至 2027-03-28</td>
+</tr>
+<tr>
+<td>厂商联运</td>
+<td>PS Jackpot</td>
+<td>奖池游戏推广</td>
+</tr>
+<tr>
+<td>厂商联运</td>
+<td>Evolution Perya Fiesta</td>
+<td>₱420 Million 奖池</td>
+</tr>
+<tr>
+<td>厂商联运</td>
+<td>SABA PBA &amp; WNBA</td>
+<td>每天额外 ₱1,000</td>
+</tr>
+<tr>
+<td>随机福利</td>
+<td>Daily Lucky Surprise（Ang Pao）</td>
+<td>每日随机时间发红包，金额随机，1 倍流水可提</td>
+</tr>
+<tr>
+<td>服务承诺</td>
+<td>Delayed Withdrawal 100% Compensation</td>
+<td>提现超时 &gt;10 分钟赔 ₱10，7 天周期上限 ₱50，3 倍流水；需有充值记录、未被人工审核、仅限 GCash/Maya</td>
+</tr>
+<tr>
+<td>拉新/下载</td>
+<td>Download the App</td>
+<td>下载 App 送 ₱10</td>
+</tr>
+</tbody>
+</table></div>
+<p>设计特点：</p>
+<ul>
+<li>返水可叠加，并用「Stack 5 Daily」弹窗把 5 项打包宣传</li>
+<li>流水要求极低（红包 1 倍、提现补偿 3 倍），靠“小额高频”维持活跃</li>
+<li>提现补偿把“10 分钟到账”做成可量化承诺，是信任度卖点</li>
+<li>每条规则末尾都有“平台保留修改、最终解释权”条款</li>
+</ul>
+<h2 id="五充值与提现">五、充值与提现</h2>
+<p>充值和提现都嵌在 Account 页的余额卡片下方，用 Deposit / Withdrawal 两个 Tab 切换；充值每一档都直接标出赠送金额。</p>
+<p><strong>充值渠道</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>分组</th>
+<th>渠道</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E-Wallet (3)</td>
+<td>GCash（默认选中）、Maya、QRPH</td>
+<td>实测当天 GCash、QRPH 在维护</td>
+</tr>
+<tr>
+<td>Bank</td>
+<td>InstaPay</td>
+<td>≤ ₱50,000，即时到账</td>
+</tr>
+<tr>
+<td>Bank</td>
+<td>PESONet</td>
+<td>大额，次日到账</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>充值档位与赠送（₱）</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>充值</th>
+<th>10</th>
+<th>20</th>
+<th>50</th>
+<th>100</th>
+<th>200</th>
+<th>500</th>
+<th>1,000</th>
+<th>5,000</th>
+<th>50,000</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>赠送</td>
+<td>+5</td>
+<td>+5</td>
+<td>+10</td>
+<td>+10</td>
+<td>+40</td>
+<td>+40</td>
+<td>+150</td>
+<td>+300</td>
+<td>+1,000</td>
+</tr>
+</tbody>
+</table></div>
+<p>底部固定栏显示 Total（₱）、Rewards 按钮和 Continue。最低充值 ₱10，小档赠送比例最高（充 10 送 5 = 50%），明显在降低首充门槛。</p>
+<p><strong>提现</strong></p>
+<ul>
+<li>先「Add Withdrawal Account」绑定提现账户（My Wallets 页管理）</li>
+<li>快捷档位：100 / 200 / 500 / 1,000 / 5,000 / 10,000，或手动输入 ₱100–100,000</li>
+<li>宣传「10 分钟到账」，超时按「Delayed Withdrawal」活动补偿</li>
+</ul>
+<p>资金记录：Transactions 分 All / Deposit / Withdrawal / Reward 四个 Tab；Bet Order 可按 Today / Yesterday / Last 3 days / Last 7 days 和厂商筛选。</p>
+<h2 id="六账户安全中心与-vip">六、账户、安全中心与 VIP</h2>
+<p>账户体系轻量：支持 Google 账号关联登录，手机号、登录密码、KYC 都可后补；VIP 只有一级，按半月流水自动升降。</p>
+<p><strong>个人页头部</strong>：头像、昵称、脱敏 ID（可复制）、编辑入口、「How To Become VIP?」横条，下方 4 宫格：Accounts / My Wallets / Bet Order / Transactions。</p>
+<p><strong>安全中心（/account/security-center）</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>分组</th>
+<th>项目</th>
+<th>实测状态</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>General Setting</td>
+<td>手机号</td>
+<td>未设置</td>
+</tr>
+<tr>
+<td>General Setting</td>
+<td>登录密码</td>
+<td>未设置</td>
+</tr>
+<tr>
+<td>General Setting</td>
+<td>KYC 验证</td>
+<td>未验证</td>
+</tr>
+<tr>
+<td>Link</td>
+<td>关联 Google</td>
+<td>已关联</td>
+</tr>
+<tr>
+<td>Account Operation</td>
+<td>退出登录</td>
+<td>—</td>
+</tr>
+<tr>
+<td>其他</td>
+<td>版本号 2.6.1.2、使用条款、隐私政策</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>VIP 规则</strong></p>
+<ul>
+<li>门槛：半月内（1–15 日、16 日–月底）累计投注 &gt; ₱300,000</li>
+<li>每月 1 日和 16 日自动升级，未达标自动降级</li>
+<li>权益：最高 1.0% 返水（Slots / Poker / Arcade / Bingo / Sports 1.0%，Casino 0.8%）、Maya 钱包月限额提升至 ₱5,000,000、专属客服、优先提现</li>
+<li>页面底部展示 PAGCOR 牌照与 21+ 年龄标识</li>
+</ul>
+<p>观察：VIP 权益文案有复制粘贴痕迹（“专属客服”“优先提现”的描述与“最高返水”完全相同），没有等级阶梯和进度条。</p>
+<h2 id="七消息与资讯">七、消息与资讯</h2>
+<p>消息用于运营触达，资讯用于品牌背书，两者分开。</p>
+<ul>
+<li><strong>Inbox（/message）</strong>：站内信列表，顶栏铃铛带未读数。注册欢迎信内容：赠送 ₱2 体验金，强调 PAGCOR 持牌、最高返水、“10 分钟提现”。</li>
+<li><strong>News（/news）</strong>：图文列表，按日期倒序，标签为 About Us / Events / Seasonal / Promotion。内容多是 NUSTAR 宿务度假村的餐饮、酒店获奖、高尔夫赛、NUSTAR Run、购物抽奖等线下活动，更新频率约每周 1–2 篇。</li>
+<li><strong>全局公告</strong>：首页 / 大厅顶部跑马灯，实测内容是支付渠道维护通知。</li>
+</ul>
+<p>资讯频道的作用是把线上平台和线下持牌度假村绑在一起，增加“正规、可信”的感知。</p>
+<h2 id="八模块逐项深度分析">八、模块逐项深度分析</h2>
+<p>按结构树中的模块逐个拆开：每个模块写功能点、实际交互逻辑、设计意图和问题/机会。除页面实测外，还参考了前端路由表与接口返回的配置（如 roadshow 模块开关）。</p>
+<h3 id="81-首页">8.1 首页</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>模块</th>
+<th>功能与逻辑</th>
+<th>设计意图</th>
+<th>问题 / 机会</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>顶栏</td>
+<td>余额 + 刷新；未首充时 Deposit 按钮变为「Free ₱8000」（配置 not_deposit_attract_number）；VIP 徽章、搜索、消息（未读数）、客服</td>
+<td>永远把“充值”放在视线起点</td>
+<td>“₱8000”门槛不透明</td>
+</tr>
+<tr>
+<td>跑马灯</td>
+<td>后台配置（marquee/list），用于渠道维护、活动播报</td>
+<td>实时运营告知</td>
+<td>维护通知长期占位会削弱信任</td>
+</tr>
+<tr>
+<td>活动金刚区</td>
+<td>4 格：Cashback（返水中心）、Instant Return、Rank Cup（榜单中心）、BAG（道具背包，带未读数）；由 activity-kong/list 配置</td>
+<td>高频福利入口前置</td>
+<td>位置好，可以借鉴</td>
+</tr>
+<tr>
+<td>品类导航</td>
+<td>Hot / Slots / Casino / Poker / Arcade / Bingo / Sports，点击进大厅对应 Tab</td>
+<td>首页与大厅共用一套分类</td>
+<td>—</td>
+</tr>
+<tr>
+<td>轮播 Banner</td>
+<td>banner/activity/list 下发，按 page（Home / Promo / Login）与渠道（Web / iOS / Google / 小米等）分别投放，有起止时间</td>
+<td>按渠道精准投放</td>
+<td>渠道化配置值得借鉴</td>
+</tr>
+<tr>
+<td>最近玩过</td>
+<td>按用户历史横滑</td>
+<td>缩短回访路径</td>
+<td>—</td>
+</tr>
+<tr>
+<td>游戏专区</td>
+<td>Recommends、返水专区、Exclusive &amp; New、FC Combo、Casino 1%、Popular、All Games；roadshow 开关还包含 liveGame、justForYou、Top10Ranking、CasinoRanking、JILIRanking、Spin、FirstDeposit 等模块</td>
+<td>按活动组织游戏，把返水写进选游戏决策</td>
+<td>信息密度高，新用户难以找到自己想玩的</td>
+</tr>
+<tr>
+<td>弹窗系统</td>
+<td>autoPopMgr 统一调度 20+ 种弹窗：21+ 确认、VIP、红包、注册奖励、榜单、弹窗 Banner、转盘、App 下载、PWA 安装、KYC 提示、签到、BAG、限时抢购（flash sale）等；弹窗 Banner 有 show_count（如 Max Rewards 最多弹 5 次）</td>
+<td>最大化活动曝光</td>
+<td>实测连弹 5 个，体验差；但“统一调度 + 次数限制”的架构值得借鉴</td>
+</tr>
+<tr>
+<td>App / PWA 引导</td>
+<td>底部常驻下载条，跳 appstore.nustargame.com；另有 PWA 安装引导与 Safari 指引页</td>
+<td>H5 → App 转化，提升留存</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="82-游戏">8.2 游戏</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>模块</th>
+<th>功能与逻辑</th>
+<th>设计意图</th>
+<th>问题 / 机会</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>游戏大厅</td>
+<td>品类 Tab → 厂商 Chip（含全部、收藏）→ 3 列卡片；前两个 Tab 是活动合集（Slots Return、Casino 1%）；配置 hideProviders 可隐藏厂商</td>
+<td>品类 × 厂商双维筛选</td>
+<td>缺少排序（热度/新品/RTP）和按玩法筛选</td>
+</tr>
+<tr>
+<td>游戏卡片</td>
+<td>角标：HOT / EXCLUSIVE / 返水标签（1.5%+2% Cashback、15% 或 6% Loss Rebate）；♥ 收藏</td>
+<td>选游戏时就看到能拿多少返水</td>
+<td>值得借鉴</td>
+</tr>
+<tr>
+<td>搜索 / 热度榜</td>
+<td>/gameRankList：搜索框 + Top 10（按点赞数）</td>
+<td>用社交证明引导选游戏</td>
+<td>点赞数字来源不明</td>
+</tr>
+<tr>
+<td>游戏启动</td>
+<td>/game-webview 内嵌打开（本次未启动游戏）</td>
+<td>不离开平台</td>
+<td>待实测</td>
+</tr>
+<tr>
+<td>厂商返水体系</td>
+<td>JILI 有独立返水显示开关（jili_rebate_show_switch）与 jili/backhall 接口</td>
+<td>厂商级运营</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="83-活动中心">8.3 活动中心</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>模块</th>
+<th>功能与逻辑</th>
+<th>设计意图</th>
+<th>问题 / 机会</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>活动列表</td>
+<td>纯图 Banner；点击按 jump_type 分流：7 = 图文详情页（标题图 + 规则长图），4 = 活动功能页（返水中心、榜单中心），8 = 直达游戏</td>
+<td>运营可快速上新</td>
+<td>规则是图片，不可搜索、不可翻译、不利于无障碍</td>
+</tr>
+<tr>
+<td>返水中心 /promos/promo_3</td>
+<td>Today / Yesterday；Total Bonus；按合集和品类显示当前投注、当前费率、下一档费率；右上角显示用户返水徽章（如 VIP 1.5%）；每 10 分钟更新</td>
+<td>“进度可见”刺激凑档</td>
+<td>设计优秀</td>
+</tr>
+<tr>
+<td>即时返页</td>
+<td>按档位手动领取，当天失效</td>
+<td>制造每日回访</td>
+<td>漏领易引发投诉</td>
+</tr>
+<tr>
+<td>榜单中心 /customList</td>
+<td>8 个榜单 Tab；倒计时；Previous / Current；前三领奖台 + 列表 + 底部固定“我的名次”；? 进规则详情</td>
+<td>竞争激励大额用户</td>
+<td>实测部分榜单详情页加载失败</td>
+</tr>
+<tr>
+<td>红包</td>
+<td>弹窗倒计时 + 打开；每天 3 场，按场次设投注/充值门槛；有结果页与详情页（/angpaoResult、/angpaoDetail）</td>
+<td>定时召回</td>
+<td>—</td>
+</tr>
+<tr>
+<td>BAG 背包</td>
+<td>统一存放免费旋转券、充值券、奖金券；券有倒计时；充值时可选券</td>
+<td>所有券类福利的基建</td>
+<td>值得借鉴</td>
+</tr>
+<tr>
+<td>转盘 / 签到 / 裂变</td>
+<td>接口有 spin/config（剩余 5 次）、checkin（当前未绑定签到活动）；路由还有 /fission（邀请裂变）、/vote、/goldenWeek</td>
+<td>活动能力储备，按需开启</td>
+<td>本次前端未露出入口</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="84-账户与钱包">8.4 账户与钱包</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>模块</th>
+<th>功能与逻辑</th>
+<th>设计意图</th>
+<th>问题 / 机会</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>充值</td>
+<td>电子钱包 / 银行两组；档位按钮标出首充赠送；可选充值券（BAG）；底栏 Total + Rewards + Continue；有 KYC 拦截弹窗、充值超时、各渠道最小/最大额</td>
+<td>减少跳转，赠送前置</td>
+<td>—</td>
+</tr>
+<tr>
+<td>提现</td>
+<td>先绑定提现账户；档位 + 手输 ₱100–100,000；前置校验（登录密码、提现密码、KYC）；有风控提现信息和 On Time Care 请求号</td>
+<td>安全与风控</td>
+<td>—</td>
+</tr>
+<tr>
+<td>提现账户</td>
+<td>列表、新增、编辑，有账户数量上限</td>
+<td>限制多卡套现</td>
+<td>—</td>
+</tr>
+<tr>
+<td>交易记录</td>
+<td>All / Deposit / Withdrawal / Reward；有详情页与合并列表</td>
+<td>资金透明</td>
+<td>—</td>
+</tr>
+<tr>
+<td>投注记录</td>
+<td>Today / Yesterday / 3 天 / 7 天 + 厂商筛选；有注单详情</td>
+<td>—</td>
+<td>只能查 7 天</td>
+</tr>
+<tr>
+<td>安全中心</td>
+<td>手机、登录密码、KYC、Google 关联、退出、版本号</td>
+<td>—</td>
+<td>无负责任博彩限额设置</td>
+</tr>
+<tr>
+<td>KYC</td>
+<td>简易表 / 完整表 / 详情 / 成功页；注册宽限期内可先玩</td>
+<td>降低注册流失</td>
+<td>—</td>
+</tr>
+<tr>
+<td>VIP</td>
+<td>单一等级，半月升降；权益页</td>
+<td>—</td>
+<td>无阶梯、无进度</td>
+</tr>
+<tr>
+<td>头像 / 昵称</td>
+<td>设置头像页</td>
+<td>—</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="85-内容与系统">8.5 内容与系统</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>模块</th>
+<th>功能与逻辑</th>
+<th>问题 / 机会</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>站内信</td>
+<td>列表 + 详情，未读红点</td>
+<td>—</td>
+</tr>
+<tr>
+<td>资讯</td>
+<td>列表 + 详情，分标签，有未读标记</td>
+<td>—</td>
+</tr>
+<tr>
+<td>协议 / FAQ</td>
+<td>Terms of Use、Privacy Policy、FAQ（含充提、老虎机、Bingo 指南）</td>
+<td>FAQ 邮箱拼写错误（见第十一节）</td>
+</tr>
+<tr>
+<td>系统页</td>
+<td>维护页、地区限制页（/system/restricted）、版本检查（每 180 秒）</td>
+<td>—</td>
+</tr>
+<tr>
+<td>客服</td>
+<td>顶栏入口 + FAQ 写“24/7、在线聊天”</td>
+<td>本次未打开</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="九返利-奖励-返水-返金专题">九、返利 / 奖励 / 返水 / 返金专题</h2>
+<p>Nustar 的返利是四层叠加：<strong>日返水（按投注）+ 即时返（按投注 + 充值门槛）+ 亏损返还（按净输）+ VIP 直升最高档</strong>。同一笔老虎机投注最多可同时拿到前三层，这就是游戏卡片上「1.5% + 2% + 6%/15%」角标的含义。以下数值来自活动规则图和平台接口返回的配置（cashback/detail、first-recharge rule），标注“推断”的为规则未写明、按常见做法理解的部分。</p>
+<h3 id="91-日返水15-unlimited-cashback">9.1 日返水（1.5% Unlimited Cashback）</h3>
+<p><strong>规则要点</strong></p>
+<ul>
+<li>统计周期：每天 00:00:00–23:59:59（GMT+8）的有效投注（valid bets）</li>
+<li>发放：次日 16:00 前自动到账；当日返水合计 &lt; ₱1 不发</li>
+<li>提现条件：返水金额 1 倍流水</li>
+<li>页面（/promos/promo_3）按 Today / Yesterday 展示，数据每 10 分钟更新；每个品类显示当前投注、当前费率和“下一档”费率</li>
+<li>对冲下注（百家乐庄闲同押、龙虎同押等）不计入，发现可取消资格、审核或拒绝提现、封号</li>
+</ul>
+<p><strong>费率表</strong>（普通会员按当日累计投注分档；VIP 不论投注额直接享最高档）</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>当日投注（₱）</th>
+<th>指定老虎机（60 款）</th>
+<th>非指定老虎机</th>
+<th>Casino</th>
+<th>Poker / Arcade / Bingo / Sports</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 – 999.99</td>
+<td>1.5%</td>
+<td>1.0%</td>
+<td>0.30%</td>
+<td>0.30%</td>
+</tr>
+<tr>
+<td>1,000 – 4,999.99</td>
+<td>1.5%</td>
+<td>1.0%</td>
+<td>0.45%</td>
+<td>0.45%</td>
+</tr>
+<tr>
+<td>5,000 – 49,999.99</td>
+<td>1.5%</td>
+<td>1.0%</td>
+<td>0.60%</td>
+<td>0.60%</td>
+</tr>
+<tr>
+<td>50,000 – 99,999.99</td>
+<td>1.5%</td>
+<td>1.0%</td>
+<td>0.70%</td>
+<td>0.70%</td>
+</tr>
+<tr>
+<td>≥ 100,000</td>
+<td>1.5%</td>
+<td>1.0%</td>
+<td>0.80%</td>
+<td>1.00%</td>
+</tr>
+<tr>
+<td>VIP（全部投注）</td>
+<td>1.5%</td>
+<td>1.0%</td>
+<td>0.80%</td>
+<td>1.00%</td>
+</tr>
+</tbody>
+</table></div>
+<p>另有两个“游戏合集”费率，覆盖对应品类的基础费率：<strong>CASINO 1%</strong>（37 款 Evolution / PP 真人桌，如 Speed Baccarat A、No Commission Baccarat、Crazy Time）固定 1%；<strong>SPARK GAME 1%</strong>（SG 的 Bonus Color Game、Lucky Color Game）固定 1%。Spark 规则写明“不可与其他返水叠加，只取较高者”，即<strong>同一笔投注取 max(合集费率, 品类费率)</strong>。</p>
+<p><strong>计算逻辑</strong></p>
+<pre><code class="language-latex">\text{Cashback}_{day} = \sum_{\text{categories}} \text{ValidBet}_{c} \times \max(\text{CollectionRate}, \text{TierRate}_{c}(\text{DailyBet}_c))
+</code></pre>
+<p>分档按品类当日累计投注定档，并对该品类当日全额适用同一费率（推断：规则表头为 Daily Bet Amount，页面按品类展示“下一档”）。</p>
+<p><strong>示例（普通会员，同一天）</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>投注</th>
+<th>适用费率</th>
+<th>返水</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Super Ace（指定老虎机）₱2,000</td>
+<td>1.5%</td>
+<td>₱30.00</td>
+</tr>
+<tr>
+<td>非指定老虎机 ₱1,000</td>
+<td>1.0%</td>
+<td>₱10.00</td>
+</tr>
+<tr>
+<td>Speed Baccarat A（CASINO 1% 合集）₱3,000</td>
+<td>max(1%, 0.45%) = 1%</td>
+<td>₱30.00</td>
+</tr>
+<tr>
+<td>Poker（Tongits Go）₱800</td>
+<td>0.30%（未到 ₱1,000 档）</td>
+<td>₱2.40</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td>—</td>
+<td><strong>₱72.40</strong>，次日 16:00 前到账，需 ₱72.40 流水后可提</td>
+</tr>
+</tbody>
+</table></div>
+<p>同样的 Poker 投注若加到 ₱1,000，整档升到 0.45%，返水从 ₱2.40 变为 ₱4.50；档位设计在鼓励用户“凑档”。若当天只在 Arcade 投 ₱200，返水 ₱0.60 &lt; ₱1，不发放。</p>
+<h3 id="92-即时返2-instant-return仅指定老虎机">9.2 即时返（2% Instant Return，仅指定老虎机）</h3>
+<p><strong>规则要点</strong></p>
+<ul>
+<li>按当日指定老虎机投注额 + 当日充值额双门槛解锁，阶梯逐级领取</li>
+<li>必须在活动页<strong>手动领取</strong>，且当天 23:59:59 前领，过期作废</li>
+<li>1 倍流水</li>
+</ul>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>指定老虎机投注（₱）</th>
+<th>当日充值（₱）</th>
+<th>本档奖励（₱）</th>
+<th>累计奖励（₱）</th>
+<th>累计 / 投注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>50</td>
+<td>10</td>
+<td>1</td>
+<td>1</td>
+<td>2.0%</td>
+</tr>
+<tr>
+<td>500</td>
+<td>100</td>
+<td>7</td>
+<td>8</td>
+<td>1.6%</td>
+</tr>
+<tr>
+<td>5,000</td>
+<td>1,000</td>
+<td>72</td>
+<td>80</td>
+<td>1.6%</td>
+</tr>
+<tr>
+<td>50,000</td>
+<td>10,000</td>
+<td>720</td>
+<td>800</td>
+<td>1.6%</td>
+</tr>
+<tr>
+<td>200,000</td>
+<td>20,000</td>
+<td>2,400</td>
+<td>3,200</td>
+<td>1.6%</td>
+</tr>
+<tr>
+<td>500,000</td>
+<td>20,000</td>
+<td>4,800</td>
+<td>8,000</td>
+<td>1.6%</td>
+</tr>
+<tr>
+<td>2,000,000</td>
+<td>20,000</td>
+<td>24,000</td>
+<td>32,000</td>
+<td>1.6%</td>
+</tr>
+<tr>
+<td>5,000,000</td>
+<td>20,000</td>
+<td>48,000</td>
+<td>80,000</td>
+<td>1.6%</td>
+</tr>
+<tr>
+<td>10,000,000</td>
+<td>20,000</td>
+<td>80,000</td>
+<td>160,000</td>
+<td>1.6%</td>
+</tr>
+</tbody>
+</table></div>
+<p>宣传是 “2%”，但只有第一档（投 ₱50）是 2%，其余累计比例都是 1.6%，而且不在档位点上时更低。充值门槛在 ₱20,000 封顶，大额玩家靠投注解锁。</p>
+<p><strong>示例</strong>：当天充值 ₱1,000、在 Super Ace 投注 ₱8,000 → 解锁前三档，可领 ₱1 + ₱7 + ₱72 = <strong>₱80</strong>（实际 1.0%）；即使投注到 ₱49,999 也还是 ₱80，要到 ₱50,000 投注 + ₱10,000 充值才到下一档。忘记当天点领取则一分没有。</p>
+<h3 id="93-亏损返还15-slots-loss-return">9.3 亏损返还（15% Slots Loss Return）</h3>
+<p><strong>规则要点</strong></p>
+<ul>
+<li>对象：普通与 VIP 均可，需有过至少 ₱100 的充值</li>
+<li>费率：JILI Super Ace、PG Pinata Wins <strong>15%</strong>；其他指定老虎机 <strong>6%</strong></li>
+<li>净输赢按天（00:00–23:59:59 GMT+8）计算，<strong>当天收到的各类奖金不计入</strong>；只有当天净输才返</li>
+<li>上限 ₱100 / 天；&lt; ₱1 不发；次日 16:00 前到账；1 倍流水</li>
+</ul>
+<pre><code class="language-latex">\text{LossReturn} = \min(\ 100,\ \text{NetLoss}_{15\%\ games} \times 15\% + \text{NetLoss}_{6\%\ games} \times 6\%\ )
+</code></pre>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>场景</th>
+<th>计算</th>
+<th>到账</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Super Ace 当天净输 ₱500</td>
+<td>500 × 15% = 75</td>
+<td>₱75</td>
+</tr>
+<tr>
+<td>Super Ace 当天净输 ₱2,000</td>
+<td>2,000 × 15% = 300 → 封顶</td>
+<td>₱100</td>
+</tr>
+<tr>
+<td>Fortune Gems 3 当天净输 ₱1,000</td>
+<td>1,000 × 6% = 60</td>
+<td>₱60</td>
+</tr>
+<tr>
+<td>当天净赢</td>
+<td>—</td>
+<td>₱0</td>
+</tr>
+</tbody>
+</table></div>
+<p>封顶点：15% 游戏净输 ≈ ₱667、6% 游戏净输 ≈ ₱1,667 就到 ₱100 上限，超过部分不再返。“15%”实际只对小额亏损有效。多款游戏混合时是按游戏分别算净输还是整体净输后分摊，规则未写明。</p>
+<h3 id="94-同一笔老虎机投注的叠加效果">9.4 同一笔老虎机投注的叠加效果</h3>
+<p>普通会员当天充值 ₱1,000、只玩 Super Ace、投注 ₱5,000、净输 ₱600：</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>层</th>
+<th>计算</th>
+<th>金额</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>日返水 1.5%</td>
+<td>5,000 × 1.5%</td>
+<td>₱75</td>
+</tr>
+<tr>
+<td>即时返（需当天手动领）</td>
+<td>前三档累计</td>
+<td>₱80</td>
+</tr>
+<tr>
+<td>亏损返还 15%</td>
+<td>min(100, 600 × 15%)</td>
+<td>₱90</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td>—</td>
+<td><strong>₱245</strong>（投注额的 4.9%，净输的 41%），均为 1 倍流水</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="95-vip-返水与额外加成">9.5 VIP 返水与额外加成</h3>
+<ul>
+<li>VIP 所有品类直接享受表中最高档（Casino 0.8%、其他 1.0%、指定老虎机 1.5%），不需要当天打到 ₱100,000。对大额用户的实际差别是“不用凑档”；例：VIP 当天在 Poker 投 ₱2,000 拿 ₱20（1%），普通会员只拿 ₱9（0.45%）。</li>
+<li>弹窗另宣传 Casino / Slots 额外 0.2%（条件：所有 VIP + 投注 ₱20K），其完整规则未在 Promos 页出现，待确认。</li>
+</ul>
+<h3 id="96-各类奖励的流水倍数总览">9.6 各类奖励的流水倍数总览</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>流水倍数</th>
+<th>适用奖励</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 倍（直接现金）</td>
+<td>PP Daily Wins 周转盘奖金</td>
+</tr>
+<tr>
+<td>1 倍</td>
+<td>日返水、即时返、亏损返还、Casino 1%、Spark 1%、每日红包、VIP Bet Royale、SABA 篮球加赠</td>
+</tr>
+<tr>
+<td>3 倍</td>
+<td>提现超时补偿（On Time Care）</td>
+</tr>
+<tr>
+<td>5 倍</td>
+<td>首充奖励</td>
+</tr>
+<tr>
+<td>20 倍</td>
+<td>Deposit Boost +20% 充值加赠券</td>
+</tr>
+</tbody>
+</table></div>
+<p>规律：<strong>按行为返还的（投注、亏损）流水低，按充值赠送的流水高</strong>。前者已经以投注为前提，套利空间小；后者是“白送”的钱，靠高流水拉回。</p>
+<h3 id="97-全活动返利百分比与返利逻辑总表">9.7 全活动返利百分比与返利逻辑总表</h3>
+<p>把平台全部带返利性质的活动放在同一口径下对比：<strong>名义比例</strong>是宣传或规则写的数字，<strong>实际有效比例</strong>是套上门槛、分档和封顶后，用户真正拿到的金额占返利基数的比例区间。数据来自活动规则图与平台接口配置（截至 2026-10-01）。</p>
+<p><strong>A. 按投注返利（返水类）</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>活动</th>
+<th>返利基数</th>
+<th>名义比例</th>
+<th>实际有效比例</th>
+<th>门槛 / 上限</th>
+<th>计算与发放逻辑</th>
+<th>流水</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>日返水·指定老虎机（60 款）</td>
+<td>当日有效投注</td>
+<td>1.5%</td>
+<td>1.5%（固定）</td>
+<td>当日返水合计 ≥ ₱1；无上限</td>
+<td>投注 × 1.5%，次日 16:00 前自动到账</td>
+<td>1 倍</td>
+</tr>
+<tr>
+<td>日返水·非指定老虎机</td>
+<td>当日有效投注</td>
+<td>1.0%</td>
+<td>1.0%（固定）</td>
+<td>同上</td>
+<td>同上</td>
+<td>1 倍</td>
+</tr>
+<tr>
+<td>日返水·Poker / Arcade / Bingo / Sports</td>
+<td>当日该品类投注</td>
+<td>最高 1.0%</td>
+<td>0.30% – 1.00%</td>
+<td>分 5 档：₱1 / 1,000 / 5,000 / 50,000 / 100,000</td>
+<td>按当日累计投注落档，整档费率乘全额</td>
+<td>1 倍</td>
+</tr>
+<tr>
+<td>日返水·Casino（非合集桌）</td>
+<td>当日真人投注</td>
+<td>最高 0.8%</td>
+<td>0.30% – 0.80%</td>
+<td>同上 5 档</td>
+<td>同上</td>
+<td>1 倍</td>
+</tr>
+<tr>
+<td>CASINO 1% 合集（37 桌）</td>
+<td>当日在合集桌的投注</td>
+<td>1.0%</td>
+<td>1.0%</td>
+<td>与品类费率取高者，不叠加</td>
+<td>投注 × max(1%, 分档费率)</td>
+<td>1 倍</td>
+</tr>
+<tr>
+<td>Spark Game 1%（Color Game 2 款）</td>
+<td>当日投注</td>
+<td>1.0%</td>
+<td>1.0%</td>
+<td>同上，取高不叠加</td>
+<td>同上</td>
+<td>1 倍</td>
+</tr>
+<tr>
+<td>VIP 返水</td>
+<td>当日投注</td>
+<td>最高 1.0%</td>
+<td>直接按最高档：Casino 0.8%、其他 1.0%、指定老虎机 1.5%</td>
+<td>半月投注 &gt; ₱300,000 得 VIP</td>
+<td>不用凑档</td>
+<td>1 倍</td>
+</tr>
+<tr>
+<td>VIP 额外返水</td>
+<td>Casino / Slots 投注</td>
+<td>+0.2%</td>
+<td>规则未公布</td>
+<td>弹窗写“所有 VIP + 投注 ₱20K”</td>
+<td>待确认</td>
+<td>待确认</td>
+</tr>
+<tr>
+<td>即时返（2% Instant Return）</td>
+<td>当日指定老虎机投注 + 当日充值</td>
+<td>2%</td>
+<td><strong>0.16% – 2.0%</strong>（档位点上 1.6%）</td>
+<td>9 档逐级解锁；单日最高 ₱160,000</td>
+<td>解锁档位奖金累加；当天 23:59 前手动领，否则作废</td>
+<td>1 倍</td>
+</tr>
+</tbody>
+</table></div>
+<p>即时返 0.16% 的例子：充 ₱10,000、投 ₱49,999 只解锁到第 3 档（累计 ₱80），80 ÷ 49,999 = 0.16%；再投 ₱1 到 ₱50,000 就解锁第 4 档（累计 ₱800），变成 1.6%。所以即时返是一条<strong>阶梯形曲线</strong>，只有恰好踩在档位点上才接近宣传比例。</p>
+<p><strong>B. 按亏损返利</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>活动</th>
+<th>返利基数</th>
+<th>名义比例</th>
+<th>实际有效比例（占净输）</th>
+<th>门槛 / 上限</th>
+<th>逻辑</th>
+<th>流水</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>15% Slots Loss Return</td>
+<td>当日在指定老虎机的净输（不含当天收到的奖金）</td>
+<td>Super Ace、Pinata Wins 15%；其他指定老虎机 6%</td>
+<td>净输 ≤ ₱667 时 15%；净输 ₱5,000 时 2%；₱10,000 时 1%</td>
+<td>需有 ≥ ₱100 充值；每天封顶 ₱100；&lt; ₱1 不发</td>
+<td>min(100, 净输 × 费率)；次日 16:00 前自动到账</td>
+<td>1 倍</td>
+</tr>
+</tbody>
+</table></div>
+<p>封顶让它变成“小额保险”：对单日输 ₱600 以内的用户是实打实的 15%，对大额用户几乎可以忽略。</p>
+<p><strong>C. 按充值返利</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>活动</th>
+<th>返利基数</th>
+<th>名义比例</th>
+<th>实际有效比例（占充值）</th>
+<th>门槛 / 上限</th>
+<th>逻辑</th>
+<th>流水</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>首充奖励</td>
+<td>首笔充值</td>
+<td>“最高 ₱8,000”</td>
+<td><strong>50% → 0.25%</strong>：₱10 得 ₱5（50%）、₱200 得 ₱40（20%）、₱1,000 得 ₱150（15%）、₱5,000 得 ₱300（6%）、₱399,999 得 ₱1,000（0.25%）、₱400,000 得 ₱8,000（2%）</td>
+<td>8 个金额区间，固定奖金</td>
+<td>按区间发固定金额，区间内充得越多比例越低；充值成功即到账</td>
+<td>5 倍</td>
+</tr>
+<tr>
+<td>Deposit Boost +20%</td>
+<td>单笔充值</td>
+<td>20%</td>
+<td>12AM / 10AM：₱400–500 为 20%，₱1,000 为 10%；6PM：₱1,000–2,500 为 20%，₱5,000 为 10%</td>
+<td>限量抢券；12AM / 10AM 最低 ₱400、封顶 ₱100；6PM 最低 ₱1,000、封顶 ₱500；券 2 小时过期</td>
+<td>min(充值 × 20%, 封顶)</td>
+<td>20 倍</td>
+</tr>
+<tr>
+<td>Daily Lucky Surprise 充值券</td>
+<td>下一笔合格充值</td>
+<td>随机</td>
+<td>规则图示例：充 ₱5,000 加 ₱250（5%）</td>
+<td>登录随机获得，有过期时间</td>
+<td>充值页选券使用</td>
+<td>未公布</td>
+</tr>
+<tr>
+<td>每日红包</td>
+<td>无固定基数</td>
+<td>随机金额</td>
+<td>无法计算比例</td>
+<td>3 场；第 2 场需当日投注与充值 ≥ ₱10，第 3 场 ≥ ₱50；每日限次</td>
+<td>打开随机金额</td>
+<td>1 倍</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>D. 竞赛 / 抽奖 / 服务类</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>活动</th>
+<th>返利形式</th>
+<th>比例或金额</th>
+<th>逻辑</th>
+<th>流水</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VIP Bet Royale</td>
+<td>日榜奖金</td>
+<td>第 1 名占奖池 30%，前 3 名合计 60%</td>
+<td>按全平台投注额排名（不含 Poker），前 20 名，₱1,000,000 / 天</td>
+<td>1 倍</td>
+</tr>
+<tr>
+<td>NS 500</td>
+<td>日榜奖金</td>
+<td>第 1 名 ₱50,000（25%），第 401–500 名 ₱50</td>
+<td>按净赢额排名，前 500 名，₱200,000 / 天，每周四–五</td>
+<td>3 倍</td>
+</tr>
+<tr>
+<td>FC Combo</td>
+<td>日榜奖金 + 免费旋转</td>
+<td>第 1 名 ₱80,000，第 501–1,000 名 ₱35 免费旋转</td>
+<td>按 COMBO 次数排名，单注 ≥ ₱4，与注额无关</td>
+<td>未写明</td>
+</tr>
+<tr>
+<td>厂商榜（JILI / PG / FC / PP / YB / OP / Arcade / Poker）</td>
+<td>日榜奖金</td>
+<td>每日奖池 ₱12,400 – ₱142,500</td>
+<td>按厂商或品类投注排名（推断）</td>
+<td>1 倍（推断）</td>
+</tr>
+<tr>
+<td>PP Daily Wins</td>
+<td>按注额倍数发奖</td>
+<td>×5 – ×500；注额按最高 ₱29 计，单人最高 ₱14,500</td>
+<td>按单次最大赢分倍数排名，20:00–02:00</td>
+<td>推断为现金</td>
+</tr>
+<tr>
+<td>PP 周转盘</td>
+<td>随机奖品</td>
+<td>₱29,000 / ₱14,500 / 免费旋转</td>
+<td>任意投注掉碎片，集 3 片转一次</td>
+<td>0 倍</td>
+</tr>
+<tr>
+<td>Evolution Perya Fiesta</td>
+<td>Reward Game 下注额</td>
+<td>最高可赢 = 下注额的 20%</td>
+<td>周抽奖，奖品以 5 倍预期奖金的下注额发放</td>
+<td>由 Evolution 规则决定</td>
+</tr>
+<tr>
+<td>PS Jackpot</td>
+<td>奖池</td>
+<td>未公布</td>
+<td>4 级奖池，注越大概率越高</td>
+<td>未公布</td>
+</tr>
+<tr>
+<td>SABA PBA × WNBA</td>
+<td>加赠</td>
+<td><strong>注额的 100%</strong></td>
+<td>全场独赢且所选队赢球并投进第一球；每联赛每天封顶 ₱500</td>
+<td>1 倍</td>
+</tr>
+<tr>
+<td>提现超时补偿</td>
+<td>固定金额</td>
+<td>₱10 / 次，7 天封顶 ₱50</td>
+<td>处理超 10 分钟；仅 GCash / Maya；人工审核不赔</td>
+<td>3 倍</td>
+</tr>
+<tr>
+<td>注册 / 下载</td>
+<td>固定金额</td>
+<td>注册站内信 ₱2；App 下载 ₱10；注册送 ₱10（登录页 Banner，规则未展开）</td>
+<td>一次性</td>
+<td>未公布</td>
+</tr>
+<tr>
+<td>邀请宝箱</td>
+<td>宝箱奖金</td>
+<td>未公布（活动已下线）</td>
+<td>好友助力 + 充值加速</td>
+<td>未公布</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="98-扣除流水成本后的真实价值估算">9.8 扣除流水成本后的真实价值（估算）</h3>
+<p>同样是 ₱100 的奖励，流水倍数不同，对用户的真实价值差别很大：完成流水要继续下注，而每注都有庄家优势。下表按通用公式估算，<strong>庄家优势为行业常见假设（老虎机 RTP 约 96.5%，即优势 3.5%；百家乐约 1.2%），不是 Nustar 公布的数据</strong>。</p>
+<pre><code class="language-latex">\text{真实价值} \approx \text{奖励} - \text{流水倍数} \times \text{流水基数} \times \text{庄家优势}
+</code></pre>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>流水倍数（仅按奖励计）</th>
+<th>对应活动</th>
+<th>玩老虎机完成时的真实价值</th>
+<th>玩百家乐完成时的真实价值</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0 倍</td>
+<td>PP 周转盘</td>
+<td>100%</td>
+<td>100%</td>
+</tr>
+<tr>
+<td>1 倍</td>
+<td>日返水、即时返、亏损返还、红包、VIP 榜、SABA</td>
+<td>约 96.5%</td>
+<td>约 98.8%</td>
+</tr>
+<tr>
+<td>3 倍</td>
+<td>NS 500、提现超时补偿</td>
+<td>约 89.5%</td>
+<td>约 96.4%</td>
+</tr>
+<tr>
+<td>5 倍</td>
+<td>首充奖励</td>
+<td>约 82.5%</td>
+<td>约 94.0%</td>
+</tr>
+<tr>
+<td>20 倍</td>
+<td>Deposit Boost</td>
+<td>约 30%</td>
+<td>约 76%</td>
+</tr>
+</tbody>
+</table></div>
+<p>如果流水基数是“充值 + 奖励”，高倍数奖励的价值会变成负数。两个例子：</p>
+<ul>
+<li>首充 ₱1,000 得 ₱150（5 倍）：按奖励计需投 ₱750，预期损耗约 ₱26，剩 ₱124；按“充值 + 奖励”计需投 ₱5,750，老虎机预期损耗约 ₱201，已经超过 ₱150 的奖励</li>
+<li>6PM Deposit Boost 充 ₱2,500 得 ₱500（20 倍）：按奖励计需投 ₱10,000，老虎机预期损耗约 ₱350，剩 ₱150；按“充值 + 奖励”计需投 ₱60,000，预期损耗约 ₱2,100</li>
+</ul>
+<p>结论：<strong>1 倍流水的返水类奖励基本等于现金；5 倍、尤其 20 倍的充值赠送主要作用是把资金留在平台内继续下注</strong>。流水基数规则写的是“在提现页查看”，这一点直接决定了充值类奖励是正价值还是负价值，仍待实测。注意：用百家乐刷流水时，对冲下注是被明确禁止的（见 11.6）。</p>
+<h3 id="99-三类典型用户的综合返利模拟">9.9 三类典型用户的综合返利模拟</h3>
+<p>把同一天可以同时拿到的返利叠加计算（不含随机红包、榜单等不确定收入），看平台对不同用户实际让利多少。</p>
+<p><strong>用户 A：新用户小额</strong>——首充 ₱200，当天在 Super Ace 投注 ₱1,000，净输 ₱150</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>返利层</th>
+<th>计算</th>
+<th>金额（₱）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>首充奖励（5 倍流水）</td>
+<td>₱200 档</td>
+<td>40</td>
+</tr>
+<tr>
+<td>日返水</td>
+<td>1,000 × 1.5%</td>
+<td>15</td>
+</tr>
+<tr>
+<td>即时返</td>
+<td>充 200 / 投 1,000 → 第 1–2 档</td>
+<td>8</td>
+</tr>
+<tr>
+<td>亏损返还</td>
+<td>150 × 15%</td>
+<td>22.5</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td>—</td>
+<td><strong>85.5</strong>（投注的 8.6%、充值的 43%）</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>用户 B：普通中额</strong>——当天用 6PM 加赠券充 ₱5,000；指定老虎机投 ₱30,000（净输 ₱2,000，均在 6% 游戏），CASINO 1% 合集桌投 ₱20,000</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>返利层</th>
+<th>计算</th>
+<th>金额（₱）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deposit Boost（20 倍流水）</td>
+<td>min(5,000 × 20%, 500)</td>
+<td>500</td>
+</tr>
+<tr>
+<td>日返水</td>
+<td>30,000 × 1.5% + 20,000 × 1%</td>
+<td>650</td>
+</tr>
+<tr>
+<td>即时返</td>
+<td>充 5,000 / 投 30,000 → 第 1–3 档</td>
+<td>80</td>
+</tr>
+<tr>
+<td>亏损返还</td>
+<td>min(100, 2,000 × 6%)</td>
+<td>100</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td>—</td>
+<td><strong>1,330</strong>（投注的 2.7%；不含加赠券为 1.7%）</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>用户 C：VIP 大额</strong>——当天充 ₱50,000；指定老虎机投 ₱600,000，非合集真人桌投 ₱400,000</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>返利层</th>
+<th>计算</th>
+<th>金额（₱）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>日返水</td>
+<td>600,000 × 1.5% + 400,000 × 0.8%（VIP 最高档）</td>
+<td>12,200</td>
+</tr>
+<tr>
+<td>即时返</td>
+<td>充 50,000 / 投 600,000 → 第 1–6 档</td>
+<td>8,000</td>
+</tr>
+<tr>
+<td>亏损返还</td>
+<td>封顶</td>
+<td>≤ 100</td>
+</tr>
+<tr>
+<td>VIP Bet Royale</td>
+<td>当天总投注 ₱1,000,000，若进前 20 名</td>
+<td>₱5,000 – 300,000（不确定）</td>
+</tr>
+<tr>
+<td><strong>合计（不含榜单）</strong></td>
+<td>—</td>
+<td><strong>约 20,300</strong>（投注的 2.0%）</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>观察</strong></p>
+<ul>
+<li>小额新用户的返利率最高（8.6%），主要来自一次性首充奖励和未封顶的亏损返还；这是拉新成本</li>
+<li>持续性返利（日返水 + 即时返）在指定老虎机上最高约 1.5% + 1.6% = 3.1% 的投注额，已接近老虎机常见庄家优势（约 3–4%）；平台靠“仅限指定游戏”“充值门槛”“当天手动领”“封顶 ₱100”来控制实际支出</li>
+<li>大额用户按比例拿得少（约 2%），平台用榜单的高额奖金（前 3 名占 60%）来弥补对大额用户的吸引力</li>
+<li>对 789Bingo：设计返利时先算 Bingo 游戏的庄家优势，把“持续性返利上限”控制在优势以内，并让一次性拉新奖励单独计入获客成本</li>
+</ul>
+<h2 id="十活动深度分析">十、活动深度分析</h2>
+<p>按接口配置，平台当前共上线 21 个活动 Banner（含登录页、首页专用位），其中返水类已在第九节展开，这里逐一拆解其余活动。每个活动均有“平台保留修改、暂停、取消及最终解释权”条款，下文不再重复。</p>
+<h3 id="101-首充奖励deposit-and-get-up-to-8000">10.1 首充奖励（Deposit and get up to ₱8,000）</h3>
+<p>活动期 2026-04-08 至 2027-12-31，仅限账号第一笔充值，充值成功即自动发放，流水 5 倍。</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>首充金额（₱）</th>
+<th>奖励（₱）</th>
+<th>奖励比例（按区间下限）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>10 – 49.99</td>
+<td>5</td>
+<td>50%</td>
+</tr>
+<tr>
+<td>50 – 99.99</td>
+<td>10</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>100 – 199.99</td>
+<td>10</td>
+<td>10%</td>
+</tr>
+<tr>
+<td>200 – 999.99</td>
+<td>40</td>
+<td>20%</td>
+</tr>
+<tr>
+<td>1,000 – 4,999.99</td>
+<td>150</td>
+<td>15%</td>
+</tr>
+<tr>
+<td>5,000 – 49,999.99</td>
+<td>300</td>
+<td>6%</td>
+</tr>
+<tr>
+<td>50,000 – 399,999.99</td>
+<td>1,000</td>
+<td>2%</td>
+</tr>
+<tr>
+<td>≥ 400,000</td>
+<td>8,000</td>
+<td>2%</td>
+</tr>
+</tbody>
+</table></div>
+<p>注意点：</p>
+<ul>
+<li>全站反复曝光的“Free ₱8000”要首充 <strong>₱400,000</strong> 才能拿到；对绝大多数用户，实际是 ₱5–₱150</li>
+<li>最划算的是 ₱10（50%）和 ₱200（20%）档；充 ₱199 只拿 ₱10，充 ₱200 拿 ₱40，档位边界效应明显</li>
+<li>5 倍流水是按奖励还是按“本金 + 奖励”计算，规则只写“在提现页查看”。例：首充 ₱1,000 拿 ₱150，按奖励计需投 ₱750，按本金 + 奖励计需投 ₱5,750</li>
+<li>同样适用对冲禁止条款</li>
+<li>首充前账户有 ₱2 注册体验金（站内信发放）</li>
+</ul>
+<h3 id="102-deposit-boost-20定时抢充值加赠券">10.2 Deposit Boost +20%（定时抢充值加赠券）</h3>
+<p>活动期 2026-08-18 至 2026-12-31。每天 3 个时点限量放券，先到先得。</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>放券时间</th>
+<th>最低充值</th>
+<th>加赠</th>
+<th>上限</th>
+<th>充多少最划算</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12:00 AM</td>
+<td>₱400</td>
+<td>+20%</td>
+<td>₱100</td>
+<td>₱500</td>
+</tr>
+<tr>
+<td>10:00 AM</td>
+<td>₱400</td>
+<td>+20%</td>
+<td>₱100</td>
+<td>₱500</td>
+</tr>
+<tr>
+<td>6:00 PM</td>
+<td>₱1,000</td>
+<td>+20%</td>
+<td>₱500</td>
+<td>₱2,500</td>
+</tr>
+</tbody>
+</table></div>
+<p>规则：券抢到后 <strong>2 小时内</strong>有效，过期不补；所有加赠 <strong>20 倍流水</strong>。领取路径：首页弹出 Limited Offer 倒计时 → Claim Now → 券进入 BAG → 充值页选券 → 底部显示 +₱加赠 → Continue。</p>
+<p>示例：6PM 抢到券后充 ₱2,500 → 加赠 ₱500；若流水按加赠计，需投注 ₱10,000。充 ₱5,000 仍只有 ₱500（实际 10%）。</p>
+<h3 id="103-每日红包daily-ang-pao-rush">10.3 每日红包（Daily Ang Pao Rush）</h3>
+<p>首页弹窗展示倒计时和“₱10,000,000!”奖池，每天有限次数（实测“今天还剩 2 次”）。接口返回每天 3 场（GMT+8）：</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>场次</th>
+<th>时间</th>
+<th>参与门槛（推断：接口金额以分为单位）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>11:00 – 14:00</td>
+<td>无</td>
+</tr>
+<tr>
+<td>2</td>
+<td>15:00 – 18:00</td>
+<td>当天投注 ≥ ₱10 且充值 ≥ ₱10</td>
+</tr>
+<tr>
+<td>3</td>
+<td>19:00 – 23:59</td>
+<td>当天投注 ≥ ₱50 且充值 ≥ ₱50</td>
+</tr>
+</tbody>
+</table></div>
+<p>规则：新老会员均可；红包数量有限，随机时间放出；金额随机；<strong>1 倍流水</strong>（拿 ₱100 需先投 ₱100）。第一场零门槛用来拉登录，后两场用小额充值/投注门槛引导用户首充。</p>
+<h3 id="104-daily-lucky-surprise登录送券-bag-道具背包">10.4 Daily Lucky Surprise（登录送券 + BAG 道具背包）</h3>
+<p>活动期 2026-09-16 至 2026-12-31。每天登录有机会获得随机奖励，放入首页「BAG」：</p>
+<ul>
+<li>Free Spin Voucher：指定游戏免费旋转</li>
+<li>Deposit Voucher：下一笔合格充值额外加赠（如“Deposit EXTRA ₱250”，示例为充 ₱5,000 得 ₱5.2K）</li>
+<li>Credit Voucher：直接加奖金</li>
+<li>券有倒计时，过期失效；BAG 分 All / Deposit 两个 Tab</li>
+</ul>
+<p>BAG 是所有券类奖励的统一容器（Deposit Boost 券也在这里），是这套活动体系的关键基建。</p>
+<h3 id="105-榜单类rank-cup-leaderboard">10.5 榜单类（Rank Cup / Leaderboard）</h3>
+<p>入口：首页 Rank Cup → /customList，顶部 8 个榜单 Tab，可看 Previous / Current 和“我的名次”。所有榜单<strong>每日重置、不累计</strong>，同分先达成者排前，次日 16:00 前发奖。</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>榜单</th>
+<th>每日奖池（₱）</th>
+<th>排名依据</th>
+<th>活动期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VIP Bet Royale</td>
+<td>1,000,000</td>
+<td>全平台有效投注（不含 Poker）</td>
+<td>2026-08-26 – 2026-12-03</td>
+</tr>
+<tr>
+<td>JILI</td>
+<td>141,000</td>
+<td>JILI 游戏投注（推断）</td>
+<td>2026-08-31 – 2026-12-08</td>
+</tr>
+<tr>
+<td>PG</td>
+<td>83,136</td>
+<td>PG 游戏投注（推断）</td>
+<td>2026-08-29 – 2026-12-06</td>
+</tr>
+<tr>
+<td>FC</td>
+<td>79,500</td>
+<td>FC 游戏投注（推断）</td>
+<td>2026-08-21 – 2026-11-28</td>
+</tr>
+<tr>
+<td>PP</td>
+<td>71,000</td>
+<td>PP 游戏投注（推断）</td>
+<td>2026-08-30 – 2026-12-07</td>
+</tr>
+<tr>
+<td>YB</td>
+<td>30,677</td>
+<td>YB 游戏投注（推断）</td>
+<td>2026-08-27 – 2026-12-04</td>
+</tr>
+<tr>
+<td>Arcade</td>
+<td>21,000</td>
+<td>街机品类投注</td>
+<td>2026-07-09 – 2026-10-16</td>
+</tr>
+<tr>
+<td>Poker</td>
+<td>12,400</td>
+<td>棋牌品类投注</td>
+<td>2026-07-10 – 2026-10-17</td>
+</tr>
+</tbody>
+</table></div>
+<p>VIP Bet Royale 奖励：第 1 名 ₱300,000、第 2 名 ₱200,000、第 3 名 ₱100,000、第 4–10 名各 ₱50,000、第 11–20 名各 ₱5,000，合计正好 ₱1,000,000；1 倍流水，禁止对冲。奖金高度集中在前 3 名（60%），面向大额玩家。除 VIP 外其他榜单的详细规则页本次未能加载。10 月 1 日复测新增 NS 500 与 OP 两个榜单，见 12.5。</p>
+<p><strong>FC Combo Leaderboard</strong>（2026-09-30 至 10-06，独立活动）：</p>
+<ul>
+<li>按 FC（发财）指定 9 款老虎机当日累计 COMBO（消除连击）次数排名，单注 ≥ ₱4 才计入</li>
+<li><strong>与注额无关</strong>：₱4 注的一次 COMBO = ₱100 注的一次 COMBO，小额高频玩家也有机会</li>
+<li>奖励：第 1–5 名 ₱80,000 / 50,000 / 15,000 / 8,000 / 5,000；6–10 名免费旋转价值 ₱2,000；11–100 名 ₱600；101–500 名 ₱100；501–1,000 名 ₱35</li>
+<li>付费购买功能（Buy Feature）产生的 COMBO 计入；任务/奖励送的免费旋转不计入</li>
+</ul>
+<h3 id="106-厂商联运活动">10.6 厂商联运活动</h3>
+<p><strong>PP Daily Wins</strong>（至 2027-03-28）</p>
+<ul>
+<li>每日比赛 20:00–02:00（GMT+8），按“单次最大赢分倍数”排名：得分 = 单次最大赢额 ÷ 该注注额 × 100</li>
+<li>奖励是<strong>注额倍数</strong>：第 1 名 ×500、2–7 名 ×200、8–20 名 ×50、21–500 名 ×10、501–4,500 名 ×5</li>
+<li>注额超过 ₱29 按 ₱29 计算奖金（奖金上限 = ₱29 × 倍数）</li>
+<li>示例：注 ₱1 赢 ₱50 → 得分 5,000；若排第 1，奖金 = ₱1 × 500 = ₱500；同样排第 1 但该注为 ₱100，按 ₱29 计，奖金 ₱14,500</li>
+<li>每周转盘（周一 20:00 至下周一 19:59）：任意投注随机掉落转盘碎片，集齐 3 片可转，奖品 ₱29,000 / ₱14,500 / 50、5–20 次免费旋转 / 10 Free Chips；免费旋转 3 天内有效；<strong>奖金为现金，无流水要求</strong></li>
+<li>排除部分 PP 游戏（Money Roll、Mahjong Wins 2 等）</li>
+</ul>
+<p><strong>Evolution Perya Fiesta ₱420 Million</strong>（至 2026-12-27）</p>
+<ul>
+<li>每周 Reward Drop，在 Evolution Perya 系列（Perya Speed Baccarat、Perya Roulette、Perya Lightning Roulette、Perya Super Color Game）下注即有机会</li>
+<li>每周 5,862 个奖，奖品形式是“Reward Game 下注额”，按预期奖金的 5 倍发放，下完所有 Reward Game 后才拿到奖金</li>
+<li>奖品表：1 个 ₱1,625,000 下注额（最高赔付 ₱325,000）…… 3,000 个 ₱3,500（最高 ₱650）；每周合计 ₱40,625,000 下注额 / 最高赔付 ₱8,125,000</li>
+<li>示例：预期奖金 ₱650 → 获得 ₱3,250 Reward Game 下注额，最多赢 ₱650。“₱420 Million”是下注额口径，实际可赔付金额约为其 1/5</li>
+<li>在 EVO 大厅 Promotion Tab 领取；活动由 Evolution 运营</li>
+</ul>
+<p><strong>PS × NS Jackpot</strong>（至 2026-12-31）</p>
+<ul>
+<li>PlayStar 四级奖池 Grand / Major / Minor / Mini，每次旋转都有机会中奖，注额越高概率越高，奖池到顶即开</li>
+<li>适用 Lucky Ace、Horde 2 Winter、Deng Deng、Super Gems 2；活动期以官方公告为准</li>
+</ul>
+<p><strong>SABA PBA × WNBA Bet Boost</strong>（Banner 至 2026-10-01；规则图写“1–31 September”，九月只有 30 天，文案错误）</p>
+<ul>
+<li>赛前下全场独赢（Full-Time Moneyline），所选球队<strong>赢球且投进全场第一球</strong> → 返还 1 倍注额的奖金</li>
+<li>每场只计最早一笔；两队都下则取消资格</li>
+<li>上限：每个联赛每天 ₱500，PBA + WNBA 合计 ₱1,000；1 倍流水；比赛结束次日 16:00 前发放</li>
+<li>示例：下 A 队 ₱300，A 队投进第一球且赢球 → 赢球派彩 + 额外 ₱300；下 ₱800 则加赠封顶 ₱500</li>
+</ul>
+<h3 id="107-服务承诺与拉新类">10.7 服务承诺与拉新类</h3>
+<p><strong>Delayed Withdrawal 100% Compensation（On Time Care，至 2027-02-06）</strong></p>
+<ul>
+<li>提现处理超过 10 分钟 → 每次补偿 ₱10</li>
+<li>每个人的 7 天（168 小时）周期最多 ₱50，周期从首次符合条件开始计算，到期自动重置</li>
+<li>条件：有成功充值记录、未被列入人工审核、仅限 GCash / Maya 提现</li>
+<li>3 倍流水；奖池不足时不再触发</li>
+<li>示例：一周内 3 次提现超时 → ₱30，需投 ₱90 后可提；超时 6 次仍只有 ₱50</li>
+<li>被转人工审核的滞留不赔，而真正严重的延迟往往正是人工审核，所以这项承诺的成本被严格限定</li>
+</ul>
+<p><strong>拉新类</strong>：Get ₱10 for App Download（至 2027-01-01）、Register to get free ₱10、Google Signup（登录页 Banner）、注册站内信 ₱2。这些规则页本次未展开。</p>
+<p><strong>首页专用位</strong>：Colour Pinoy、SG Drop Ball、Bingo Pinoy（直达游戏的 Banner，非奖励活动）。</p>
+<h3 id="108-用户推荐奖励邀请裂变bonus-chest-助力开宝箱">10.8 用户推荐奖励（邀请裂变：Bonus Chest 助力开宝箱）</h3>
+<p>Nustar 没有传统的“邀请一人返多少”或代理佣金体系，推荐奖励做成了**“邀请好友助力开宝箱”**的裂变活动（路由 /fission，接口前缀 bmp-treasure）。<strong>实测当前已下线</strong>：页面可打开但金额均为 ₱0，数据接口返回“activity not found or ended”，Promotion Rules 弹窗为空，底部导航和活动列表都没有入口。下面的机制来自页面结构和前端代码中的字段与文案，具体金额、人数要等活动重新上线后才能确认。</p>
+<p><strong>页面结构</strong></p>
+<ul>
+<li>顶部：3 个宝箱轮播（文案“You have 3 Bonus Chests!”、“Up to ₱…!”），宝箱状态分 LOCKED（未解锁）/ RUNNING（助力中）/ CLAIM（可领取），另有“已领取”“已过期”</li>
+<li>中部：进度条（当前金额 → 目标金额）+ 倒计时 +「INVITE NOW」邀请按钮</li>
+<li>下部：Invite History（邀请记录，列出助力好友、是否新用户、助力时间）和 Fastest Timings（最快开箱排行榜）</li>
+<li>首页有宝箱动效入口与活动跳转组件可直达此页（当前未启用）</li>
+</ul>
+<p><strong>机制（按代码字段还原）</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>环节</th>
+<th>字段 / 接口</th>
+<th>逻辑</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>参加</td>
+<td>join、has_joined</td>
+<td>用户点击参加后获得 3 个宝箱（分级 level）</td>
+</tr>
+<tr>
+<td>初始进度</td>
+<td>init_amount、target_amount</td>
+<td>每个宝箱有目标金额，开局就送一段初始进度（“差一点就满”的拼多多式设计）；金额以分为单位存储</td>
+</tr>
+<tr>
+<td>分享</td>
+<td>share、share_token、social-channels、share-chest-info</td>
+<td>生成带 token 的分享链接，可选社交渠道</td>
+</tr>
+<tr>
+<td>好友助力</td>
+<td>help、helpers、is_new_user、help_time</td>
+<td>好友打开链接助力，宝箱 current_amount 上涨；记录区分新老用户（推断：新用户助力权重更高或仅新用户有效）</td>
+</tr>
+<tr>
+<td>充值加速</td>
+<td>is_boost_phase、boost_type、boost_target_amount、boost_complete_amount</td>
+<td>进度到一定阶段进入“加速期”，文案“Unlock the chest immediately with a deposit!”，即本人充值达到指定额可直接解锁</td>
+</tr>
+<tr>
+<td>时限</td>
+<td>expire_time、current_cycle_start/end_time</td>
+<td>每个宝箱有倒计时，过期作废；活动按周期循环</td>
+</tr>
+<tr>
+<td>领取</td>
+<td>claim、total_reward_amount</td>
+<td>达到目标后手动领取，累计奖励展示在顶部</td>
+</tr>
+<tr>
+<td>排行</td>
+<td>leaderboard、top_list、my_rank</td>
+<td>按开箱用时排名（Fastest Timings）</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>用户路径示例</strong>（金额为假设，仅说明流程）：用户参加后得到目标 ₱100 的宝箱，开局进度已有 ₱70 → 分享到 Messenger / Facebook 群 → 每个好友助力进度上涨（每次涨多少未知） → 进入加速期后提示“充值即可立即解锁”→ 倒计时结束前达到目标并领取，否则宝箱过期。</p>
+<p><strong>分析</strong></p>
+<ul>
+<li>这是“拉新 + 促充”双目标设计：好友助力带来新注册，加速期把最后一段进度转为充值门槛</li>
+<li>奖励是一次性的宝箱奖金，不是按被邀请人投注持续返佣，平台成本可控，也避开了多级代理的合规风险</li>
+<li>当前下线状态说明它是按需开启的阶段性活动，不是常驻权益</li>
+<li>条款中的多账号、奖励滥用条款同样覆盖刷助力行为（一人多号互助即违规）</li>
+</ul>
+<p><strong>对 789Bingo 的启示</strong>：Bingo 天然有“多人同场”属性，邀请奖励可以和房间绑定（如邀请好友同场开局送卡片），比单纯开宝箱更有留存效果；规则页要写明单奖励金额、有效助力条件、流水倍数和防刷规则。</p>
+<h2 id="十一平台规则与合规分析">十一、平台规则与合规分析</h2>
+<p>Nustar 的合规框架围绕 PAGCOR 线上博彩监管搭建：21 岁门槛、禁入名单、一人一号、AMLA 反洗钱、提现风控审核，违规资金“没收归政府”。以下内容来自 Terms of Use、Privacy Policy、FAQ 和页面实测，仅作竞品分析，不构成法律意见。</p>
+<h3 id="111-运营主体与牌照">11.1 运营主体与牌照</h3>
+<ul>
+<li>隐私政策中的数据控制者（PIC）是 <strong>Premier Online Digital Entertainment Corporation（PODEC）</strong>，自称 PAGCOR 认可的 Gaming System Administrator，数据保护邮箱 dataprotection@premieronline.com.ph</li>
+<li>活动图和 VIP 页底部展示 PAGCOR 标识、21+ 标识、pagcor.ph/regulatory 与负责任博彩邮箱</li>
+<li>品牌与宿务 NUSTAR 度假村绑定（News 频道），借线下持牌赌场背书</li>
+</ul>
+<h3 id="112-准入与禁入人群">11.2 准入与禁入人群</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>规则</th>
+<th>内容</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>年龄</td>
+<td>必须满 21 岁；平台可随时要求年龄证明，怀疑未满 21 岁可冻结账户且余额不可提</td>
+</tr>
+<tr>
+<td>禁入名单</td>
+<td>NDRP（国家限制人员数据库）在册者、被禁止博彩的政府官员/雇员、菲律宾军警（AFP / PNP）、PAGCOR 官员员工、GEL（博彩从业许可）持有人、被禁人员、以上人员的配偶/伴侣/父母/子女、放贷人等</td>
+</tr>
+<tr>
+<td>从业人员</td>
+<td>政府与博彩网站员工、其供应商承包商及直系亲属不得注册</td>
+</tr>
+<tr>
+<td>账号数量</td>
+<td>严格一人一号，多开即违规</td>
+</tr>
+<tr>
+<td>休眠</td>
+<td>6 个月无交易标记为不活跃账户</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="113-kyc-实名认证">11.3 KYC 实名认证</h3>
+<ul>
+<li>路由有 simple-form（简易）与 full-form（完整）两套 KYC；安全中心可看状态</li>
+<li>实测账户“未验证”仍可浏览和充值，接口状态显示处于注册宽限期（isInRegisterPeriod），即<strong>先玩后认证</strong></li>
+<li>FAQ：“较大金额交易需 KYC，限额随支付方式不同”；提现前会触发前置校验（登录密码、提现密码、KYC）</li>
+<li>收集字段（隐私政策）：姓名、出生日期地点、地址、联系方式、国籍、证件及号码、职业/雇主、资金来源、照片/自拍/视频、IP</li>
+<li>有 KYC 完成奖励配置（kyc_completed_reward），当前为空</li>
+</ul>
+<h3 id="114-反洗钱与资金安全">11.4 反洗钱与资金安全</h3>
+<ul>
+<li>账户或交易被 AMLA 标记、进入强化尽调、疑似非法资金，或接到 PAGCOR / AMLC / BSP 等指令时，可暂停或注销账户</li>
+<li>记录保存：客户资料与交易文件至少保存 5 年（含销户后 5 年）</li>
+<li>玩家资金与公司资金分账存放；充值渠道 GCash / Maya / QR Ph / InstaPay / PESONet，宣称遵守 BSP 支付规范</li>
+</ul>
+<h3 id="115-提现规则">11.5 提现规则</h3>
+<ul>
+<li>所有提现均需风控检查与审批，条款写明处理时间 5–10 分钟（营销端统一宣传“10 分钟到账”）</li>
+<li>首次提现必须设置提现密码；单笔 ₱100–100,000</li>
+<li>未完成活动流水不可提现（需在提现页查看剩余流水）</li>
+<li>违规账户的资金“没收归政府”（forfeited in favor of the Government），这是 PAGCOR 体系下的典型写法</li>
+</ul>
+<h3 id="116-投注与奖励滥用规则">11.6 投注与奖励滥用规则</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>被禁止行为</th>
+<th>后果</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>对冲下注（百家乐庄闲、龙虎、轮盘红黑、体育主客同押）</td>
+<td>取消活动资格、提现审核/拒绝、封号、资金没收</td>
+</tr>
+<tr>
+<td>多账号、多账号对冲</td>
+<td>封号</td>
+</tr>
+<tr>
+<td>奖励滥用（bonus hunting、钻规则漏洞、chip abuse）</td>
+<td>没收奖励、封号</td>
+</tr>
+<tr>
+<td>串通、组队操纵</td>
+<td>封号、法律追责</td>
+</tr>
+<tr>
+<td>机器人 / 自动化下注</td>
+<td>封号</td>
+</tr>
+<tr>
+<td>利用系统漏洞、篡改后台流程</td>
+<td>封号</td>
+</tr>
+<tr>
+<td>马丁格尔等固定策略</td>
+<td>默认不禁止，用于利用系统错误时可封号</td>
+</tr>
+<tr>
+<td>虚假注册信息、伪造文件</td>
+<td>拒绝/注销会员，资金没收</td>
+</tr>
+</tbody>
+</table></div>
+<p>其他投注规则：注单确认后不可撤销；维护或技术故障导致暂停时，进行中的注单作废并退款；争议需在规定时间内（如 48 小时）联系客服；赢的派彩可能需要核验。平台可在认为有监管、财务、运营或安全风险时不经通知限制或注销账户。</p>
+<h3 id="117-隐私与营销授权">11.7 隐私与营销授权</h3>
+<ul>
+<li>营销用途需要用户明确同意，反欺诈用途不需要同意；数据可共享给公共机构、合作银行等第三方</li>
+<li>数据主体权利：知情、访问、更正、删除等（对应菲律宾《数据隐私法》框架）</li>
+<li>条款含邮件、电话营销的 Opt-In 条款</li>
+</ul>
+<h3 id="118-负责任博彩">11.8 负责任博彩</h3>
+<ul>
+<li>条款声称提供充值、投注、游戏时长限额工具；FAQ 有资金管理提示（设预算、别追损）</li>
+<li>但实测安全中心和账户页<strong>未见限额或自我排除入口</strong>；全局配置里有 responsible_gaming_home_window 与 if_responsible_gaming_setting 开关，当前值均为 "2"（推断为关闭）</li>
+<li>进入首页有 21+ 确认弹窗逻辑（showTips21Tip / hasAgreedTip21）</li>
+</ul>
+<h3 id="119-合规与文案风险点">11.9 合规与文案风险点</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>问题</th>
+<th>具体表现</th>
+<th>风险</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>宣传金额与实际门槛差距大</td>
+<td>“Free ₱8000”需首充 ₱400,000；“2% Instant Return”实际 1.6%；“15% Loss Return”封顶 ₱100；“₱420 Million”为下注额口径</td>
+<td>误导性广告投诉</td>
+</tr>
+<tr>
+<td>客服邮箱拼写错误</td>
+<td>FAQ 写 support@nurstagame.com（与站点域名 nustargame 不符）</td>
+<td>用户来信丢失、仿冒风险</td>
+</tr>
+<tr>
+<td>活动文案错误</td>
+<td>SABA 活动写“1–31 September”</td>
+<td>规则争议</td>
+</tr>
+<tr>
+<td>负责任博彩工具声称与实际不符</td>
+<td>条款提到限额工具，前端未见入口</td>
+<td>监管检查</td>
+</tr>
+<tr>
+<td>高频弹窗与限时刺激</td>
+<td>进首页连弹 5 个弹窗、红包倒计时、抢券</td>
+<td>与负责任博彩要求冲突</td>
+</tr>
+<tr>
+<td>宽泛的单方解释权</td>
+<td>每个活动均有“随时修改、最终解释权”</td>
+<td>用户信任成本</td>
+</tr>
+<tr>
+<td>社会证明数字</td>
+<td>首充引导接口返回“今日充值人数 657,092”</td>
+<td>数字真实性存疑</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>对 789Bingo 的启示</strong>：在宣传位直接写明门槛和上限（如“最高 ₱8,000，首充 ₱400,000 起”）、把限额和自我排除做成可见入口、控制弹窗频次，既降低监管风险，也能成为与 Nustar 差异化的信任卖点。</p>
+<h2 id="十二首页活动金刚区深度分析10-01-版本复测">十二、首页活动金刚区深度分析（10-01 版本复测）</h2>
+<p>2026-10-01 用同一域名、同一账号复测，前端框架和金刚区 4 个入口没变，但背后的活动配置已经更新：榜单从 8 个增加到 10 个，首页新增周四主题活动和 OP 榜单专区。另外，BAG 的接口返回 in_gray = true，说明 BAG 正在<strong>灰度发布</strong>，不同用户看到的功能可能不同。以下是金刚区 4 个活动的逐个拆解。</p>
+<h3 id="121-两个版本的差异">12.1 两个版本的差异</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>项目</th>
+<th>09-30 版本</th>
+<th>10-01 版本</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>榜单数量</td>
+<td>8 个（VIP、JILI、PG、FC、ARCADE、POKER、PP、YB）</td>
+<td>10 个，新增 <strong>NS 500</strong>（₱200,000/天，每周四–五）和 <strong>OP</strong>（₱142,500/天，10-01 至 10-07）</td>
+</tr>
+<tr>
+<td>首页 Banner / 弹窗</td>
+<td>首屏为 App 下载、Deposit Boost 等</td>
+<td>新增 <strong>Triple Treat Thursdays</strong>（周四加大红包 Upsized Angpao Rush + NUSTAR 500 大赢家榜 + 特别直播），首屏 Banner 与弹窗链都加入了它</td>
+</tr>
+<tr>
+<td>首页专区</td>
+<td>无 OP 专区</td>
+<td>新增「OP 百万比索排行榜」专区；Exclusive &amp; New 换成 OP、PS（Mega Palayok 5000x）、5G、FC 的新游戏</td>
+</tr>
+<tr>
+<td>跑马灯</td>
+<td>GCash / QRPH 维护通知</td>
+<td>改为活动播报 + <strong>大额中奖播报</strong>（如“10***14 在 Speed Baccarat A 赢 ₱400,000”，用户名脱敏）</td>
+</tr>
+<tr>
+<td>金刚区入口</td>
+<td>Cashback / Instant Return / Rank Cup / BAG</td>
+<td>相同，配置 ID 未变</td>
+</tr>
+<tr>
+<td>返水费率</td>
+<td>见 9.1</td>
+<td>未变</td>
+</tr>
+</tbody>
+</table></div>
+<h3 id="122-金刚区总览">12.2 金刚区总览</h3>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>位置</th>
+<th>入口</th>
+<th>落地页</th>
+<th>核心机制</th>
+<th>领取方式</th>
+<th>流水</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1.5%+2% Cashback</td>
+<td>返水中心 /promos/promo_3</td>
+<td>按当日投注分档返水</td>
+<td>自动，次日 16:00 前</td>
+<td>1 倍</td>
+</tr>
+<tr>
+<td>2</td>
+<td>2% Instant Return</td>
+<td>阶梯任务页 /goldenWeek</td>
+<td>充值 + 投注双任务，9 档逐级解锁</td>
+<td>手动，当天 23:59:59 前</td>
+<td>1 倍</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Rank Cup（角标 ₱300000）</td>
+<td>榜单中心 /customList</td>
+<td>10 个日榜，4 种排名算法</td>
+<td>自动，次日 16:00 前</td>
+<td>1 倍（NS 500 为 3 倍）</td>
+</tr>
+<tr>
+<td>4</td>
+<td>BAG</td>
+<td>道具背包 /rewards</td>
+<td>存放各类券</td>
+<td>使用时手动</td>
+<td>随券而定</td>
+</tr>
+</tbody>
+</table></div>
+<p>4 个入口正好覆盖了留存的四种动机：<strong>保底</strong>（返水）、<strong>任务</strong>（即时返）、<strong>竞争</strong>（榜单）、<strong>惊喜</strong>（背包券）。</p>
+<h3 id="123-cashback返水中心">12.3 Cashback：返水中心</h3>
+<p><strong>页面与交互</strong></p>
+<ul>
+<li>顶部：活动主图 + 右上角用户返水徽章（接口 user_badge：普通费率 1.5%、VIP 费率 1.5%，指指定老虎机最高档）</li>
+<li>Today / Yesterday 切换；Total Bonus 显示当日累计返水，提示“数据每 10 分钟更新”</li>
+<li>Selected Games 区（3 个合集）：SLOTS 1.5%+2% RETURN（60 款）、CASINO 1%（37 款）、SPARK GAME 1%（2 款）</li>
+<li>Category 区（6 个品类）：Slots / Casino / Arcade / Poker / Bingo / Sports</li>
+<li>每张卡片：当日投注、当前费率、已得返水，底部进度条显示“再投多少 → 下一档费率”（如“Bet ₱1.00 → 0.3%(Next)”），右侧 » 直达对应游戏</li>
+</ul>
+<p><strong>逻辑要点</strong></p>
+<ul>
+<li>卡片从 “0%” 起步：当天未投注时费率显示 0%，投满 ₱1 才进入第一档，用“点亮”的方式引导用户各品类都玩一下</li>
+<li>分档对全天全额生效，档位边界有明显的“台阶”：Casino（非合集桌）当天投 ₱999 返 ₱3.00（0.3%），再投 ₱1 到 ₱1,000 就返 ₱4.50（0.45%）。进度条把这个台阶直接画给用户看，是凑档动机的来源</li>
+<li>合集费率与品类费率取高者，所以普通用户玩 CASINO 1% 合集的桌子等于直接拿到 ₱100,000 档的费率，这是把流量导向指定桌台的手段</li>
+</ul>
+<p><strong>问题 / 机会</strong>：页面只有百分比，不显示“再投 ₱x 可多拿 ₱y”；返水规则在页尾长图里，不好查。</p>
+<h4 id="123a-返水中心专项真实数据拆解2026-10-01-抓取">12.3A 返水中心专项：真实数据拆解（2026-10-01 抓取）</h4>
+<p>活动页 /promos/promo_3?id=212817038798909445 由 3 个接口驱动：cashback/detail（费率配置与游戏名单）、cashback/page（用户当日数据）、cashback/user_badge（右上角徽章）。以下数字均来自这三个接口的实际返回。测试账号当天没有下注，所以用户侧金额为 0，用户侧示例均按配置推算。</p>
+<p><strong>1. 活动本体（接口原始字段）</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>字段</th>
+<th>值</th>
+<th>含义</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>activity_id</td>
+<td>271072549671014444</td>
+<td>当前返水活动实例</td>
+</tr>
+<tr>
+<td>start_time / end_time</td>
+<td>2026-09-29 00:00 – 2026-12-31 00:00（GMT+8）</td>
+<td>本期活动在 9 月 29 日重新创建，与即时返新一期同日上线；首页 Banner 的投放期是 07-16 – 12-31</td>
+</tr>
+<tr>
+<td>activity_status</td>
+<td>active</td>
+<td>进行中</td>
+</tr>
+<tr>
+<td>user_type / real_user_type</td>
+<td>1 / 1</td>
+<td>普通会员</td>
+</tr>
+<tr>
+<td>user_badge</td>
+<td>normal_rebate 1.5、vip_rebate 1.5</td>
+<td>右上角显示“VIP 1.5%”，展示的是指定老虎机费率，普通与 VIP 相同</td>
+</tr>
+<tr>
+<td>summary.settlement_status</td>
+<td>preview</td>
+<td>今天的数字是预估值，次日结算后才是实发</td>
+</tr>
+<tr>
+<td>summary.update_tip</td>
+<td>Data update every 10 minutes.</td>
+<td>数据 10 分钟刷新一次</td>
+</tr>
+<tr>
+<td>provider_rebate</td>
+<td>空</td>
+<td>系统支持按厂商单独设费率，当前未启用</td>
+</tr>
+<tr>
+<td>banner_images</td>
+<td>6 张</td>
+<td>规则长图</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>2. 费率配置（cashback/detail 原始分档）</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>配置项</th>
+<th>game_type / 合集</th>
+<th>分档（当日投注 → 费率）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>品类·Slots</td>
+<td>10000</td>
+<td>₱1 → 1%</td>
+</tr>
+<tr>
+<td>品类·Casino</td>
+<td>10006</td>
+<td>₱1 → 0.3%；₱1,000 → 0.45%；₱5,000 → 0.6%；₱50,000 → 0.7%；₱100,000 → 0.8%</td>
+</tr>
+<tr>
+<td>品类·Arcade</td>
+<td>10002</td>
+<td>₱1 → 0.3%；₱1,000 → 0.45%；₱5,000 → 0.6%；₱50,000 → 0.7%；₱100,000 → 1%</td>
+</tr>
+<tr>
+<td>品类·Poker</td>
+<td>10001</td>
+<td>同 Arcade</td>
+</tr>
+<tr>
+<td>品类·Bingo</td>
+<td>10004</td>
+<td>同 Arcade</td>
+</tr>
+<tr>
+<td>品类·Sports</td>
+<td>10005</td>
+<td>同 Arcade</td>
+</tr>
+<tr>
+<td>合集·SLOTS 1.5%+2% RETURN</td>
+<td>60 款游戏</td>
+<td>₱1 → 1.5%</td>
+</tr>
+<tr>
+<td>合集·CASINO 1%</td>
+<td>37 张真人桌</td>
+<td>₱1 → 1%</td>
+</tr>
+<tr>
+<td>合集·SPARK GAME 1%</td>
+<td>2 款</td>
+<td>₱1 → 1%</td>
+</tr>
+</tbody>
+</table></div>
+<p>接口按 sort 排序：合集在前（SLOTS 20 → CASINO 10 → SPARK 0），品类在后（Slots 10 → Casino 9 → Arcade 8 → Poker 7 → Bingo 6 → Sports 5），这就是页面上卡片的顺序。Bingo 在品类里排第 5 位，费率也是最低的 0.3% 起步。</p>
+<p><strong>3. 用户卡片字段与进度逻辑（cashback/page）</strong></p>
+<p>每张卡片返回 22 个字段，关键的是：bet_amount（当日投注）、bonus_amount（当日返水）、current_rate / next_rate（当前 / 下一档费率）、current_amount / next_amount（当前档 / 下一档的投注门槛）、need_amount（还差多少升档）、progress_rate（进度条）、is_highest（是否已到最高档）。当前账号的实际返回：</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>卡片</th>
+<th>当日投注</th>
+<th>当前费率</th>
+<th>下一档费率</th>
+<th>下一档门槛</th>
+<th>还差</th>
+<th>已到最高</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>SLOTS 1.5%+2% RETURN</td>
+<td>₱0</td>
+<td>0%</td>
+<td>1.5%</td>
+<td>₱1</td>
+<td>₱1</td>
+<td>否</td>
+</tr>
+<tr>
+<td>CASINO 1%</td>
+<td>₱0</td>
+<td>0%</td>
+<td>1%</td>
+<td>₱1</td>
+<td>₱1</td>
+<td>否</td>
+</tr>
+<tr>
+<td>SPARK GAME 1%</td>
+<td>₱0</td>
+<td>0%</td>
+<td>1%</td>
+<td>₱1</td>
+<td>₱1</td>
+<td>否</td>
+</tr>
+<tr>
+<td>SLOTS</td>
+<td>₱0</td>
+<td>0%</td>
+<td>1%</td>
+<td>₱1</td>
+<td>₱1</td>
+<td>否</td>
+</tr>
+<tr>
+<td>CASINO / ARCADE / POKER / BINGO / SPORTS</td>
+<td>₱0</td>
+<td>0%</td>
+<td>0.3%</td>
+<td>₱1</td>
+<td>₱1</td>
+<td>否</td>
+</tr>
+</tbody>
+</table></div>
+<p>结论：未下注时一律显示 0%，门槛 ₱1；只要下任何一注就立即“点亮”。页面只显示“Bet ₱x → y%(Next)”，但接口已经给出了 need_amount，说明前端有能力做“再投 ₱x 可多拿 ₱y”的提示。</p>
+<p><strong>4. 分档台阶：过线前后的返水差（按上述配置计算）</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>当日投注</th>
+<th>Casino 返水</th>
+<th>Arcade / Poker / Bingo / Sports 返水</th>
+<th>过线跳升</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>₱999.99 → ₱1,000</td>
+<td>₱3.00 → ₱4.50</td>
+<td>₱3.00 → ₱4.50</td>
+<td>+₱1.50</td>
+</tr>
+<tr>
+<td>₱4,999.99 → ₱5,000</td>
+<td>₱22.50 → ₱30.00</td>
+<td>₱22.50 → ₱30.00</td>
+<td>+₱7.50</td>
+</tr>
+<tr>
+<td>₱49,999.99 → ₱50,000</td>
+<td>₱300 → ₱350</td>
+<td>₱300 → ₱350</td>
+<td>+₱50</td>
+</tr>
+<tr>
+<td>₱99,999.99 → ₱100,000</td>
+<td>₱700 → ₱800</td>
+<td>₱700 → ₱1,000</td>
+<td>+₱100 / +₱300</td>
+</tr>
+</tbody>
+</table></div>
+<p>“凑档”的边际收益：例如当天在 Poker 已投 ₱90,000（返 ₱630），再投 ₱10,000 到 ₱100,000 就返 ₱1,000，多出的 ₱370 等于这 ₱10,000 投注的 3.7%。对接近档位的用户，这是很强的继续下注动机。</p>
+<p><strong>5. 普通会员 vs VIP（同一投注额）</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>当日投注</th>
+<th>普通会员·Poker</th>
+<th>VIP·Poker</th>
+<th>普通会员·Casino（非合集桌）</th>
+<th>VIP·Casino</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>₱500</td>
+<td>₱1.50（0.3%）</td>
+<td>₱5.00（1%）</td>
+<td>₱1.50</td>
+<td>₱4.00（0.8%）</td>
+</tr>
+<tr>
+<td>₱2,000</td>
+<td>₱9.00（0.45%）</td>
+<td>₱20.00</td>
+<td>₱9.00</td>
+<td>₱16.00</td>
+</tr>
+<tr>
+<td>₱20,000</td>
+<td>₱120（0.6%）</td>
+<td>₱200</td>
+<td>₱120</td>
+<td>₱160</td>
+</tr>
+<tr>
+<td>₱100,000</td>
+<td>₱1,000（1%）</td>
+<td>₱1,000</td>
+<td>₱800（0.8%）</td>
+<td>₱800</td>
+</tr>
+</tbody>
+</table></div>
+<p>VIP 的优势全在中低投注区间，当天投到 ₱100,000 后普通会员与 VIP 完全一致。而指定老虎机（1.5%）、非指定老虎机（1%）和两个 1% 合集，VIP 和普通会员没有任何区别。</p>
+<p><strong>6. 规则原文要点（规则长图）</strong></p>
+<ul>
+<li>对普通与 VIP 会员开放；每天按费率表发放</li>
+<li>统计 00:00:00–23:59:59（GMT+8）的有效投注；当日返水 ≥ ₱1 才发</li>
+<li>指定老虎机带“1.5% + 2% + 6% Cashback”标签</li>
+<li>禁止对冲（百家乐庄闲/和同押、龙虎同押等），违反可取消资格、审核或拒绝提现、暂停或永久封号</li>
+<li>返水与即时返都是 1 倍流水</li>
+<li>指定老虎机 60 款完整名单：Super Ace、Pinata Wins、PIÑATA 1000、Wild Bounty Showdown、Super Ace Deluxe、Fortune Garuda 1000、Calavera Fiesta、DJ BOOM BOOM、Pinata Beat 1000、Funky Ape、Dragon Gems 500、SUGAR BANG BANG 2、Fortune Gems 3、Golden Empire、Dragon Gems Wilds、Chinese New Year Moreways、Wild Bounty 2、Super Gems 1000、Wild Ape #3258、Fortune Gems 500、Super Ace 2、Poker Win、Apollo、Super Elements 2、Sugar Rush 1000、Money Coming 30000、Fortune Gems 2、Queen of Inca 2、Fortune Garuda 500、Geisha's Revenge、Sugar Bang Bang Plus、Mahjong Hit、Lucky Neko、Fortune Coins Unlimited Fortune、Super Ace Speed、Super Gems - Wheel、Wild Bandito、Fortune Gems、Treasures of Aztec、Mahjong Ways 2、Fortune Gems 2000、Sweet Bonanza 2500、Super Gems、Magic Ace Wild Lock、Super Elements、Sweet Bonanza 1000、Money Coming、Sugar Bang Bang、Gates of Olympus Super Scatter、Crazy Pinata、Wild Ace、Nustar Magic Ace 99、Mahjong Wins Super Scatter、Cyber Bounty 4096、Sugar Bang 1000、Sugar Rockets、Fortune Coins 2、X7 Hot、Cyber Bounty Wild Lock、Lucky Jaguar 500（与接口 game_ids 数量 60 一致）</li>
+<li>CASINO 1% 合集 37 张桌以 Evolution 百家乐为主，如 Speed Baccarat A、No Commission Baccarat、Emperor Speed Baccarat A、Lightning Baccarat、Golden Wealth Baccarat、Perya Speed Baccarat 1、Thai Speed Baccarat A、Salon Privé Baccarat A，另有 Easy Blackjack、Crazy Time、Funky Time 等</li>
+</ul>
+<p><strong>7. 结论</strong></p>
+<ul>
+<li>这是一个“<strong>底层按品类分档 + 上层按合集固定加码，两者取高</strong>”的双层返水系统，还预留了第三层（按厂商）</li>
+<li>合集的作用是导流：普通用户在合集桌上下 ₱500 就拿 1%，等于直接享受 ₱100,000 档的待遇</li>
+<li>宣传“1.5%”只对 60 款指定老虎机成立；Bingo 当天要投到 ₱100,000 才有 1%，对 Bingo 用户很不友好——这是 789Bingo 可以直接拉开差距的地方</li>
+<li>未能实测：还没有真实下注数据验证“整档乘全额”与合集“取高”的实际结算；如需确认，可用账号小额下注后对照次日 Yesterday 的结算值</li>
+</ul>
+<h3 id="124-instant-return阶梯任务页">12.4 Instant Return：阶梯任务页</h3>
+<p>落地页路由是 /goldenWeek（通用“任务活动”模板，接口 activity/v1/mission），<strong>本期活动期 2026-09-29 至 10-19</strong>，即按 3 周一期滚动上线。</p>
+<p><strong>页面与交互</strong></p>
+<ul>
+<li>竖向时间轴排列 9 张档位卡，每张卡显示奖金和两个进度条：Deposit（当天充值）、Bet（指定老虎机投注），各带 Go 按钮（分别跳充值页和游戏，配置的跳转游戏是 Super Ace）</li>
+<li>当前档为可做状态（高亮 + 对勾），后面的档为锁定状态（锁头），<strong>必须逐级解锁</strong></li>
+<li>底部固定栏：Total Bonus ₱3.2M（接口 total_bonus，实为单人单日上限 ₱160,000 × 20 天，见 12.4A）和 My Bonus（本人已领）</li>
+</ul>
+<p><strong>档位任务（接口配置）</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>档</th>
+<th>奖励（₱）</th>
+<th>当天充值任务（₱）</th>
+<th>当天指定老虎机投注任务（₱）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>10</td>
+<td>50</td>
+</tr>
+<tr>
+<td>2</td>
+<td>7</td>
+<td>100</td>
+<td>500</td>
+</tr>
+<tr>
+<td>3</td>
+<td>72</td>
+<td>1,000</td>
+<td>5,000</td>
+</tr>
+<tr>
+<td>4</td>
+<td>720</td>
+<td>10,000</td>
+<td>50,000</td>
+</tr>
+<tr>
+<td>5</td>
+<td>2,400</td>
+<td>20,000</td>
+<td>200,000</td>
+</tr>
+<tr>
+<td>6</td>
+<td>4,800</td>
+<td>无</td>
+<td>500,000</td>
+</tr>
+<tr>
+<td>7</td>
+<td>24,000</td>
+<td>无</td>
+<td>2,000,000</td>
+</tr>
+<tr>
+<td>8</td>
+<td>48,000</td>
+<td>无</td>
+<td>5,000,000</td>
+</tr>
+<tr>
+<td>9</td>
+<td>80,000</td>
+<td>无</td>
+<td>10,000,000</td>
+</tr>
+</tbody>
+</table></div>
+<p>接口里第 6–9 档<strong>只有投注任务</strong>，因为能解锁到第 6 档的人必然已完成第 5 档的 ₱20,000 充值；规则图中“充值 ₱20,000”的写法与此一致。</p>
+<p><strong>逻辑要点与示例</strong></p>
+<ul>
+<li>第 1 档（充 ₱10 + 投 ₱50 → ₱1）是给余额只有注册体验金的新用户设计的“首充推动”，和首充奖励 ₱10 档（送 ₱5）叠加</li>
+<li>示例：用户当天充 ₱100、投 ₱600 → 可领第 1–2 档共 ₱8；若充 ₱100 但投 ₱4,000，仍是 ₱8，要充到 ₱1,000 才能解锁第 3 档 ₱72，充值任务是刚性门槛</li>
+<li>领取时限：当天 23:59:59，过时作废；任务进度每天重置（推断：规则按“当天投注与充值”计算）</li>
+<li>单日最高 ₱160,000；实际奖励率约 1.6%（见 9.2）</li>
+</ul>
+<p><strong>问题 / 机会</strong>：“2%”与实际 1.6% 不符；单档领取需要用户自己回来点，漏领即作废。从产品角度看，“时间轴 + 锁定 + Go 直达”的任务卡设计很清晰，可以直接借鉴。</p>
+<h4 id="124a-即时返专项真实数据拆解2026-10-01-抓取">12.4A 即时返专项：真实数据拆解（2026-10-01 抓取）</h4>
+<p>活动页 /goldenWeek?activity_id=271069973835681798 只由一个接口驱动：activity/v1/mission/271069973835681798。以下数字来自该接口在 10 月 1 日两次抓取的实际返回，以及该页挂载的 5 张规则图。测试账号当天未充值、未下注，用户进度均为 0。</p>
+<p><strong>1. 接口原始结构</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>字段</th>
+<th>实际值</th>
+<th>解读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>activity.start_time / end_time</td>
+<td>2026-09-29 00:00 – 2026-10-19 00:00（GMT+8）</td>
+<td>本期共 20 天</td>
+</tr>
+<tr>
+<td>activity.state</td>
+<td>1</td>
+<td>进行中</td>
+</tr>
+<tr>
+<td>activity.detail_images</td>
+<td>5 张</td>
+<td>与返水页共用主图，但规则图是单独一张（见第 4 点）</td>
+</tr>
+<tr>
+<td>tier_cards</td>
+<td>9 张</td>
+<td>每张含 tier_no、reward_amount、card_state、tasks、bet_type、game_id</td>
+</tr>
+<tr>
+<td>tasks.task_type</td>
+<td>1 = 充值，2 = 投注</td>
+<td>第 1–5 档两个任务，第 6–9 档只有投注任务</td>
+</tr>
+<tr>
+<td>card_state</td>
+<td>第 1 档 = 3，第 2–9 档 = 4</td>
+<td>3 = 当前可做，4 = 锁定；可领、已领的状态码本次未出现</td>
+</tr>
+<tr>
+<td>bet_type / game_id</td>
+<td>3 / 1420</td>
+<td>投注口径为类型 3（按规则是指定老虎机合集），Go 按钮跳 Super Ace（game_id 1420）</td>
+</tr>
+<tr>
+<td>total_bonus</td>
+<td>3,200,000</td>
+<td>页面底栏“Total Bonus ₱3.2M”</td>
+</tr>
+<tr>
+<td>my_bonus</td>
+<td>0</td>
+<td>本人已领</td>
+</tr>
+<tr>
+<td>default_scroll_index</td>
+<td>0</td>
+<td>页面自动滚到第 1 档</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>“Total Bonus ₱3.2M”的真实含义</strong>：两次抓取都是 3,200,000，没有变化，所以不是实时发放累计。它恰好等于<strong>单人单日上限 ₱160,000 × 活动 20 天</strong>，即一个用户在本期最多能拿的金额。页面却把它写成 Total Bonus，容易让人理解成“平台已发 ₱320 万”。</p>
+<p><strong>2. 档位数据与边际奖励率（按接口计算）</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>档</th>
+<th>充值任务（₱）</th>
+<th>投注任务（₱）</th>
+<th>充值 : 投注</th>
+<th>本档奖励（₱）</th>
+<th>本档新增投注</th>
+<th>边际奖励率</th>
+<th>累计奖励（₱）</th>
+<th>累计奖励率</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>10</td>
+<td>50</td>
+<td>1 : 5</td>
+<td>1</td>
+<td>50</td>
+<td>2.00%</td>
+<td>1</td>
+<td>2.00%</td>
+</tr>
+<tr>
+<td>2</td>
+<td>100</td>
+<td>500</td>
+<td>1 : 5</td>
+<td>7</td>
+<td>450</td>
+<td>1.56%</td>
+<td>8</td>
+<td>1.60%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>1,000</td>
+<td>5,000</td>
+<td>1 : 5</td>
+<td>72</td>
+<td>4,500</td>
+<td>1.60%</td>
+<td>80</td>
+<td>1.60%</td>
+</tr>
+<tr>
+<td>4</td>
+<td>10,000</td>
+<td>50,000</td>
+<td>1 : 5</td>
+<td>720</td>
+<td>45,000</td>
+<td>1.60%</td>
+<td>800</td>
+<td>1.60%</td>
+</tr>
+<tr>
+<td>5</td>
+<td>20,000</td>
+<td>200,000</td>
+<td>1 : 10</td>
+<td>2,400</td>
+<td>150,000</td>
+<td>1.60%</td>
+<td>3,200</td>
+<td>1.60%</td>
+</tr>
+<tr>
+<td>6</td>
+<td>—</td>
+<td>500,000</td>
+<td>—</td>
+<td>4,800</td>
+<td>300,000</td>
+<td>1.60%</td>
+<td>8,000</td>
+<td>1.60%</td>
+</tr>
+<tr>
+<td>7</td>
+<td>—</td>
+<td>2,000,000</td>
+<td>—</td>
+<td>24,000</td>
+<td>1,500,000</td>
+<td>1.60%</td>
+<td>32,000</td>
+<td>1.60%</td>
+</tr>
+<tr>
+<td>8</td>
+<td>—</td>
+<td>5,000,000</td>
+<td>—</td>
+<td>48,000</td>
+<td>3,000,000</td>
+<td>1.60%</td>
+<td>80,000</td>
+<td>1.60%</td>
+</tr>
+<tr>
+<td>9</td>
+<td>—</td>
+<td>10,000,000</td>
+<td>—</td>
+<td>80,000</td>
+<td>5,000,000</td>
+<td>1.60%</td>
+<td>160,000</td>
+<td>1.60%</td>
+</tr>
+</tbody>
+</table></div>
+<p>三个结论：</p>
+<ul>
+<li><strong>奖励率实际是均匀的 1.6%</strong>：除第 1 档（₱1 / ₱50 = 2%）外，每一档新增投注带来的奖励都是 1.6%，宣传的“2%”只在 ₱50 这一档成立</li>
+<li><strong>充值门槛按 1 : 5 设计</strong>：前 4 档要求投注额是充值额的 5 倍，即把当天充入的钱在指定老虎机上转 5 遍；第 5 档改为 1 : 10，第 6 档起充值门槛封顶在 ₱20,000</li>
+<li><strong>充值门槛是硬限制</strong>：只投注不充值的老用户拿不到任何奖励；充了 ₱100 投 ₱50,000，也只拿第 1–2 档的 ₱8（实际 0.016%）</li>
+</ul>
+<p><strong>3. 示例（按接口配置计算）</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>当天充值</th>
+<th>当天指定老虎机投注</th>
+<th>解锁到</th>
+<th>可领</th>
+<th>实际奖励率</th>
+<th>叠加 1.5% 日返水后</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>₱10</td>
+<td>₱50</td>
+<td>第 1 档</td>
+<td>₱1</td>
+<td>2.0%</td>
+<td>₱1.75（3.5%）</td>
+</tr>
+<tr>
+<td>₱100</td>
+<td>₱600</td>
+<td>第 2 档</td>
+<td>₱8</td>
+<td>1.33%</td>
+<td>₱17（2.8%）</td>
+</tr>
+<tr>
+<td>₱100</td>
+<td>₱50,000</td>
+<td>第 2 档（卡在充值）</td>
+<td>₱8</td>
+<td>0.016%</td>
+<td>₱758（1.5%）</td>
+</tr>
+<tr>
+<td>₱1,000</td>
+<td>₱5,000</td>
+<td>第 3 档</td>
+<td>₱80</td>
+<td>1.6%</td>
+<td>₱155（3.1%）</td>
+</tr>
+<tr>
+<td>₱10,000</td>
+<td>₱49,999</td>
+<td>第 3 档（差 ₱1）</td>
+<td>₱80</td>
+<td>0.16%</td>
+<td>₱830（1.66%）</td>
+</tr>
+<tr>
+<td>₱10,000</td>
+<td>₱50,000</td>
+<td>第 4 档</td>
+<td>₱800</td>
+<td>1.6%</td>
+<td>₱1,550（3.1%）</td>
+</tr>
+<tr>
+<td>₱20,000</td>
+<td>₱1,000,000</td>
+<td>第 6 档</td>
+<td>₱8,000</td>
+<td>0.8%</td>
+<td>₱23,000（2.3%）</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>4. 规则原文（本页规则图）与返水页规则的冲突</strong></p>
+<p>本页规则图（2% INSTANT RETURN）共 8 条：对普通与 VIP 开放；指定老虎机玩家按投注与充值金额获得即时返；<strong>奖励可在活动页立即领取</strong>；指定老虎机带“1.5% + 2% Return”标签；另享 1.5% 返水；即时返与返水均 1 倍流水；平台保留修改及解释权。</p>
+<p>而返水页（promo_3）的规则图对同一活动多写了一条：“<strong>即时返必须在当天 23:59:59 前领取，未领取作废</strong>”。两个页面的规则不一致：用户在即时返页看不到作废条款，很容易漏领，是投诉和争议点。两张规则图都没有写明“充值”是否必须是当天充值；从接口进度字段和返水页“当天获得”的写法推断是按自然日统计、每天重置。</p>
+<p><strong>5. 平台成本与设计意图</strong></p>
+<ul>
+<li>单人单日最高 ₱160,000、本期最高 ₱3,200,000；但拿满需要当天在指定老虎机投 ₱1,000 万</li>
+<li>与日返水叠加后，指定老虎机的综合返利率在档位点上是 3.1%（1.5% + 1.6%），接近老虎机常见庄家优势（约 3–4%，行业假设值），平台靠“充值门槛 + 逐档解锁 + 手动领取 + 当天作废”压低实际发放率</li>
+<li>第 1 档（充 ₱10 + 投 ₱50 → ₱1）是针对只有注册体验金的新用户的“首充推动”，可与首充奖励 ₱10 档（送 ₱5）同时拿</li>
+<li>活动按 20 天一期重建（activity_id 随之变化），便于随时调整档位</li>
+</ul>
+<p><strong>6. 对 789Bingo 的启示</strong></p>
+<ul>
+<li>“充值 + 投注”双任务的阶梯卡可以直接用在 Bingo 上（如“当天充 ₱100 + 买 50 张卡 → 送 ₱x”），但宣传比例要与实际一致</li>
+<li>未领奖励要么自动发放，要么在活动页本身写明领取时限，避免 Nustar 这种两个页面规则不一致的问题</li>
+<li>底栏的“总奖金”展示用真实发放数据或清楚标注“单人最高可得”，避免误导</li>
+</ul>
+<h3 id="125-rank-cup榜单中心">12.5 Rank Cup：榜单中心</h3>
+<p><strong>页面与交互</strong>：顶部榜单 Tab（当前默认 NS 500）→ 倒计时 → Previous / Current → 前三领奖台 → 名次列表 → 底部固定“我的名次 / 得分 / 奖金”；右上角 ? 进入详情（/customList/detail?id=…）。金刚区图标上的“₱300000”是固定素材文字，当前 10 个榜单每日奖池合计约 ₱1,781,213。</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>榜单</th>
+<th>每日奖池（₱）</th>
+<th>排名算法</th>
+<th>活动期</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VIP Bet Royale</td>
+<td>1,000,000</td>
+<td>有效投注额（不含 Poker），前 20 名</td>
+<td>08-27 – 12-03</td>
+</tr>
+<tr>
+<td>NS 500（新）</td>
+<td>200,000</td>
+<td><strong>净赢额</strong> = 总派彩 − 总投注，老虎机 + 真人，前 500 名</td>
+<td>每周四–五（本期 10-01 – 10-03）</td>
+</tr>
+<tr>
+<td>OP（新）</td>
+<td>142,500</td>
+<td>规则页未加载；7 天合计约 ₱1,000,000，对应首页「OP 百万比索排行榜」</td>
+<td>10-01 – 10-07</td>
+</tr>
+<tr>
+<td>JILI</td>
+<td>141,000</td>
+<td>厂商游戏投注（推断）</td>
+<td>09-01 – 12-08</td>
+</tr>
+<tr>
+<td>PG</td>
+<td>83,136</td>
+<td>同上</td>
+<td>08-30 – 12-06</td>
+</tr>
+<tr>
+<td>FC</td>
+<td>79,500</td>
+<td>同上</td>
+<td>08-22 – 11-28</td>
+</tr>
+<tr>
+<td>PP</td>
+<td>71,000</td>
+<td>同上</td>
+<td>08-31 – 12-07</td>
+</tr>
+<tr>
+<td>YB</td>
+<td>30,677</td>
+<td>同上</td>
+<td>08-28 – 12-04</td>
+</tr>
+<tr>
+<td>ARCADE</td>
+<td>21,000</td>
+<td>街机品类投注</td>
+<td>07-10 – 10-16</td>
+</tr>
+<tr>
+<td>POKER</td>
+<td>12,400</td>
+<td>棋牌品类投注</td>
+<td>07-11 – 10-17</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>NS 500 规则</strong>：每天按全平台老虎机与真人游戏的净赢额排名；前 500 名获奖：第 1 名 ₱50,000、第 2 名 ₱20,000、第 3 名 ₱10,000、4–10 名 ₱5,000、11–20 名 ₱1,000、21–50 名 ₱500、51–100 名 ₱300、101–200 名 ₱200、201–300 名 ₱120、301–400 名 ₱80、401–500 名 ₱50（合计正好 ₱200,000）；次日 16:00 前发放；同分先达成者排前；每日重置；<strong>3 倍流水</strong>（其他榜单为 1 倍）。</p>
+<p>示例：当天投注 ₱10,000、派彩 ₱14,000 → 净赢 ₱4,000，这就是榜单得分；当天净输的玩家没有得分。这个榜和亏损返还（只给净输用户）正好互补：赢的人冲榜，输的人拿返还。</p>
+<p><strong>4 种排名算法对比</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>算法</th>
+<th>代表榜单</th>
+<th>对谁有利</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>投注额</td>
+<td>VIP Bet Royale、厂商榜</td>
+<td>大额、高频用户</td>
+</tr>
+<tr>
+<td>净赢额</td>
+<td>NS 500</td>
+<td>当天手气好的用户，与本金大小相关</td>
+</tr>
+<tr>
+<td>连击次数</td>
+<td>FC Combo</td>
+<td>小注高频用户（₱4 与 ₱100 等权）</td>
+</tr>
+<tr>
+<td>赢分倍数</td>
+<td>PP Daily Wins</td>
+<td>小注中大奖的用户</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>问题 / 机会</strong>：角标金额与实际奖池不一致；部分榜单详情页直接打开是空白（必须从榜单页点 ? 进入）。多算法榜单让不同类型的玩家都有机会，这个思路值得借鉴。</p>
+<h4 id="125a-榜单中心专项真实榜单数据拆解2026-10-01-抓取">12.5A 榜单中心专项：真实榜单数据拆解（2026-10-01 抓取）</h4>
+<p>榜单中心 /customList 由 3 个接口驱动：tournament-list（榜单列表）、details（单榜规则）、leaderboard-list（实时排名，每页 20 条）。以下是 10 月 1 日约 16:00（GMT+8，页面显示“Ends in 7:59”）抓到的<strong>真实排名数据</strong>，当天尚未结束，最终名次和金额会变化。成功取得 4 个榜单（VIP、NS 500、OP、FC）；JILI 等其余 6 个榜单的排名接口两次均加载超时，Previous（昨日最终榜）也未能加载。用户昵称为平台已脱敏的展示形式。</p>
+<p><strong>1. 单榜配置（details 接口）</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>榜单</th>
+<th>matches_rule</th>
+<th>计分范围</th>
+<th>上榜人数（实际 total）</th>
+<th>每日奖池（₱）</th>
+<th>流水</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>VIP Bet Royale</td>
+<td>1（投注额）</td>
+<td>品类 10000 / 10006 / 10002 / 10004 / 10005，即除 Poker（10001）外全品类</td>
+<td>20</td>
+<td>1,000,000</td>
+<td>1 倍</td>
+</tr>
+<tr>
+<td>NS 500</td>
+<td>2（净赢额）</td>
+<td>品类 10000 / 10006，即老虎机 + 真人</td>
+<td>500</td>
+<td>200,000</td>
+<td>3 倍</td>
+</tr>
+<tr>
+<td>OP</td>
+<td>1（投注额）</td>
+<td>老虎机，厂商编号 25（OmniPlay）</td>
+<td>300</td>
+<td>142,500</td>
+<td>1 倍</td>
+</tr>
+<tr>
+<td>FC</td>
+<td>1（投注额）</td>
+<td>老虎机，厂商编号 5（FaChai）</td>
+<td>300</td>
+<td>79,500</td>
+<td>1 倍（推断）</td>
+</tr>
+</tbody>
+</table></div>
+<p>matches_rule 字段可以直接判断算法：1 = 按投注额，2 = 按净赢额。每个榜单的统计周期均为当天 00:00–23:59。</p>
+<p><strong>2. VIP Bet Royale：前 20 名真实数据</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>名次</th>
+<th>玩家</th>
+<th>当日投注（₱）</th>
+<th>奖金（₱）</th>
+<th>奖金 / 投注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>TZ***EH</td>
+<td>146,491,669.5</td>
+<td>300,000</td>
+<td>0.20%</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Ra***88</td>
+<td>55,276,600</td>
+<td>200,000</td>
+<td>0.36%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Sa***al</td>
+<td>36,600,100</td>
+<td>100,000</td>
+<td>0.27%</td>
+</tr>
+<tr>
+<td>4</td>
+<td>IG***PH</td>
+<td>29,216,300</td>
+<td>50,000</td>
+<td>0.17%</td>
+</tr>
+<tr>
+<td>5</td>
+<td>D1***90</td>
+<td>26,507,750</td>
+<td>50,000</td>
+<td>0.19%</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Oo***la</td>
+<td>25,441,450</td>
+<td>50,000</td>
+<td>0.20%</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Hi***by</td>
+<td>25,321,250</td>
+<td>50,000</td>
+<td>0.20%</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Jj***sb</td>
+<td>25,070,000</td>
+<td>50,000</td>
+<td>0.20%</td>
+</tr>
+<tr>
+<td>9</td>
+<td>SG***PA</td>
+<td>23,607,250</td>
+<td>50,000</td>
+<td>0.21%</td>
+</tr>
+<tr>
+<td>10</td>
+<td>G2***62</td>
+<td>14,938,405</td>
+<td>50,000</td>
+<td>0.33%</td>
+</tr>
+<tr>
+<td>11</td>
+<td>TI***NY</td>
+<td>11,580,300</td>
+<td>5,000</td>
+<td>0.04%</td>
+</tr>
+<tr>
+<td>12</td>
+<td>RE***UG</td>
+<td>9,803,800</td>
+<td>5,000</td>
+<td>0.05%</td>
+</tr>
+<tr>
+<td>15</td>
+<td>D1***14</td>
+<td>6,472,750</td>
+<td>5,000</td>
+<td>0.08%</td>
+</tr>
+<tr>
+<td>20</td>
+<td>RO***AS</td>
+<td>5,596,350</td>
+<td>5,000</td>
+<td>0.09%</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>前 20 名当日投注合计约 <strong>₱4.81 亿</strong>，奖池 ₱100 万只相当于其 0.21%</li>
+<li>第 1 名一人投了 ₱1.46 亿，占前 20 名总投注的 30%，是第 2 名的 2.65 倍</li>
+<li><strong>第 10 名到第 11 名有一道悬崖</strong>：奖金从 ₱50,000 降到 ₱5,000，而投注只差 ₱336 万；对第 11–15 名的玩家，“冲进前 10”是非常直接的加注动机</li>
+<li>当天进榜门槛（截至 16:00）：投注 ≈ ₱560 万。对普通玩家完全不可及，这是纯大户榜</li>
+</ul>
+<p><strong>3. NS 500：按净赢额排名的真实数据</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>名次</th>
+<th>玩家</th>
+<th>当日净赢（₱）</th>
+<th>奖金（₱）</th>
+<th>奖金 / 净赢</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>ch***ii</td>
+<td>1,809,454.84</td>
+<td>50,000</td>
+<td>2.8%</td>
+</tr>
+<tr>
+<td>2</td>
+<td>TZ***EH</td>
+<td>916,776.98</td>
+<td>20,000</td>
+<td>2.2%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>RO***AS</td>
+<td>835,702</td>
+<td>10,000</td>
+<td>1.2%</td>
+</tr>
+<tr>
+<td>4</td>
+<td>—</td>
+<td>813,318</td>
+<td>5,000</td>
+<td>0.6%</td>
+</tr>
+<tr>
+<td>10</td>
+<td>—</td>
+<td>495,560</td>
+<td>5,000</td>
+<td>1.0%</td>
+</tr>
+<tr>
+<td>11</td>
+<td>—</td>
+<td>404,204.16</td>
+<td>1,000</td>
+<td>0.25%</td>
+</tr>
+<tr>
+<td>20</td>
+<td>—</td>
+<td>288,730</td>
+<td>1,000</td>
+<td>0.35%</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>上榜 500 人，恰好等于奖励人数；前 20 名当天合计已<strong>净赢平台约 ₱1,119 万</strong>，平台还要再付给他们榜单奖金</li>
+<li>设计意图：给“当天赢钱的人”一个继续留下来玩的理由。奖金 3 倍流水（其他榜 1 倍），就是要让这笔钱在平台里再转 3 遍，对冲赢家提现</li>
+<li>与 15% 亏损返还互补：输家拿返还、赢家拿榜单，两头都留住</li>
+</ul>
+<p><strong>4. OP：新厂商上线榜（奖励表 + 真实数据）</strong></p>
+<p>奖励表（规则图）：第 1 名 ₱60,000、第 2 名 ₱8,000、第 3 名 ₱6,000、4–10 名 ₱3,000、11–20 名 ₱1,500、21–50 名 ₱500、51–100 名 ₱150、101–300 名 ₱50，合计正好 ₱142,500。规则：按当日在 OP 游戏的有效投注额排名，前 300 名获奖，次日 16:00 前发放，同分先达成者排前，每日重置，1 倍流水。</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>名次</th>
+<th>当日 OP 投注（₱）</th>
+<th>奖金（₱）</th>
+<th>奖金 / 投注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1,259,395</td>
+<td>60,000</td>
+<td><strong>4.76%</strong></td>
+</tr>
+<tr>
+<td>2</td>
+<td>952,440</td>
+<td>8,000</td>
+<td>0.84%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>896,160</td>
+<td>6,000</td>
+<td>0.67%</td>
+</tr>
+<tr>
+<td>10</td>
+<td>485,661</td>
+<td>3,000</td>
+<td>0.62%</td>
+</tr>
+<tr>
+<td>20</td>
+<td>303,737</td>
+<td>1,500</td>
+<td>0.49%</td>
+</tr>
+<tr>
+<td>21</td>
+<td>301,584</td>
+<td>500</td>
+<td>0.17%</td>
+</tr>
+<tr>
+<td>40</td>
+<td>175,100</td>
+<td>500</td>
+<td>0.29%</td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>第 1 名奖金占奖池 42%，是第 2 名的 7.5 倍——<strong>赢家通吃</strong>型结构</li>
+<li>第 1 名的奖金占投注 4.76%，是所有榜单里最高的（VIP 榜第 1 名只有 0.2%）。OP 是 10 月 1 日新上线的厂商（首页 Exclusive &amp; New 同日换上 OP 新游戏），推断这是新厂商的上线补贴</li>
+<li>上榜 300 人；第 20 名门槛约 ₱30 万，第 40 名约 ₱17.5 万</li>
+</ul>
+<p><strong>5. FC：厂商榜真实数据</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>名次</th>
+<th>玩家</th>
+<th>当日 FC 投注（₱）</th>
+<th>奖金（₱）</th>
+<th>奖金 / 投注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>TZ***EH</td>
+<td>146,491,669.5</td>
+<td>30,000</td>
+<td>0.02%</td>
+</tr>
+<tr>
+<td>2</td>
+<td>RO***AS</td>
+<td>5,340,850</td>
+<td>7,000</td>
+<td>0.13%</td>
+</tr>
+<tr>
+<td>3</td>
+<td>D1***04</td>
+<td>4,624,000</td>
+<td>4,000</td>
+<td>0.09%</td>
+</tr>
+<tr>
+<td>10</td>
+<td>—</td>
+<td>1,216,510.2</td>
+<td>2,000</td>
+<td>0.16%</td>
+</tr>
+<tr>
+<td>20</td>
+<td>—</td>
+<td>741,152</td>
+<td>500</td>
+<td>0.07%</td>
+</tr>
+</tbody>
+</table></div>
+<p>FC 榜第 1 名的投注与 VIP 榜第 1 名完全相同（₱146,491,669.5），说明这位玩家当天全部投注都在 FC 老虎机上。</p>
+<p><strong>6. 同一批大户跨榜拿奖</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>玩家</th>
+<th>VIP 榜</th>
+<th>FC 榜</th>
+<th>NS 500 榜</th>
+<th>当天可得奖金合计（按 16:00 名次）</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TZ***EH</td>
+<td>第 1（₱300,000）</td>
+<td>第 1（₱30,000）</td>
+<td>第 2（₱20,000）</td>
+<td><strong>₱350,000</strong></td>
+</tr>
+<tr>
+<td>RO***AS</td>
+<td>第 20（₱5,000）</td>
+<td>第 2（₱7,000）</td>
+<td>第 3（₱10,000）</td>
+<td>₱22,000</td>
+</tr>
+<tr>
+<td>D1***04</td>
+<td>第 19（₱5,000）</td>
+<td>第 3（₱4,000）</td>
+<td>—</td>
+<td>₱9,000</td>
+</tr>
+</tbody>
+</table></div>
+<p>按当时名次，TZ***EH 一人就占了 4 个榜单当天奖池合计（₱1,422,000）的约 25%。榜单之间没有互斥规则，同一笔投注可以同时计入 VIP 榜和厂商榜，奖金自然向少数大户集中。</p>
+<p><strong>7. 结论</strong></p>
+<ul>
+<li>榜单中心本质上是<strong>面向大户的补充返利</strong>：按投注额计的榜单，奖金只占上榜投注的 0.02%–0.4%，远低于日返水的 1%–1.5%；它靠的是名次竞争，不是比例</li>
+<li>三种奖金结构对应三种目的：VIP 榜前 10 名等额、第 11 名悬崖（拉动中头部大户冲前 10）；OP 榜赢家通吃（为新厂商制造头部大户争夺）；NS 500 长尾 500 名（让当天赢钱的中小玩家也有奖）</li>
+<li>风险：奖金高度集中在同一批大户；排名接口加载慢、部分榜单实测超时</li>
+<li>对 789Bingo：Bingo 用户整体注额小，建议像 NS 500 一样设长尾名额，或采用与注额无关的计分（如连线次数、单局最大倍数）；并考虑“同一用户当天只拿一个榜的最高奖”的互斥规则，避免奖金集中</li>
+</ul>
+<h3 id="126-bag道具背包">12.6 BAG：道具背包</h3>
+<p><strong>页面与交互</strong>（/rewards）</p>
+<ul>
+<li>三个 Tab：Available / Used / Expired，各带件数；Used 与 Expired 只显示最近 30 天</li>
+<li>空状态：“No rewards yet. Check out Promos to earn some!”，把用户引向活动页</li>
+<li>金刚区图标带未读红点，有新券时弹出 BAG 弹窗（bag/v1/popup），可带气泡文案（bubble_text）</li>
+</ul>
+<p><strong>券的来源与使用</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>券类型</th>
+<th>来源</th>
+<th>使用方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>充值加赠券</td>
+<td>Deposit Boost +20%（定时抢）、Daily Lucky Surprise</td>
+<td>充值页选券，底栏显示 +₱加赠；Deposit Boost 券 2 小时过期、20 倍流水</td>
+</tr>
+<tr>
+<td>免费旋转券</td>
+<td>Daily Lucky Surprise、榜单奖励（如 FC Combo 6–1,000 名）</td>
+<td>指定游戏内使用</td>
+</tr>
+<tr>
+<td>奖金券</td>
+<td>Daily Lucky Surprise</td>
+<td>直接加奖金</td>
+</tr>
+<tr>
+<td>限时抢购</td>
+<td>flash-sale 弹窗（当前无内容）</td>
+<td>待确认</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>灰度发布</strong>：BAG 摘要接口返回 in_gray = true、show_entry = true，说明入口是按用户灰度开放的。所以不同账号可能看到不同的金刚区和不同的券，这也是“同一网址不同版本”的可能原因之一。</p>
+<p><strong>问题 / 机会</strong>：本账号背包为空，券的展示字段和使用限制无法实测。从设计上看，把所有券统一收进一个背包、充值时自动推荐可用券，是这套活动体系的基建，789Bingo 可以优先建设。</p>
+<h4 id="126a-bag-专项真实数据拆解2026-10-01-抓取">12.6A BAG 专项：真实数据拆解（2026-10-01 抓取）</h4>
+<p>BAG（/rewards）是平台所有“道具型奖励”的统一容器。测试账号背包是空的，所以下面的真实数据来自两处：一是进入页面和充值页时平台实际返回的接口数据，二是前端代码中的接口定义、字段和界面文案。前者是实测值，后者是功能设计的直接证据，但具体券的金额和规则需要有券的账号才能看到。</p>
+<p><strong>1. 实测接口返回</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>接口</th>
+<th>触发时机</th>
+<th>实际返回</th>
+<th>解读</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>bag/v1/summary</td>
+<td>进入首页</td>
+<td>in_gray: true；show_entry: true；unread_count: 0；has_item: false；has_available: false；rewards_earned: 0；empty_config: “No Rewards Yet”；bubble_text: 空</td>
+<td><strong>处于灰度发布</strong>，本账号在灰度名单内所以能看到入口；金刚区红点数、气泡文案、累计已得奖励都由这里下发</td>
+</tr>
+<tr>
+<td>bag/v1/popup</td>
+<td>进入首页</td>
+<td>total: 0，items: null</td>
+<td>有新道具时弹窗展示，当前无</td>
+</tr>
+<tr>
+<td>flash-sale/popup</td>
+<td>进入首页</td>
+<td>items: []</td>
+<td>限时抢购弹窗，当前无活动</td>
+</tr>
+<tr>
+<td>bag/v1/list（tab: available / used / expired）</td>
+<td>进入 /rewards</td>
+<td>total: 0；Used 与 Expired 的 tab_text 为“Only Used/expired items from the past 30 days are displayed.”</td>
+<td>三个列表都为空；已用和已过期只保留 30 天</td>
+</tr>
+<tr>
+<td>bag/v1/match_vouchers</td>
+<td>进入充值页</td>
+<td>locked_item_id: 空；vouchers: null</td>
+<td>充值时自动匹配可用的充值券，并支持“锁定”一张券</td>
+</tr>
+<tr>
+<td>leaderboard/v1/reward-list</td>
+<td>进入首页</td>
+<td>list: null</td>
+<td>榜单获奖弹窗，当前无奖励</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>2. 接口全集（前端代码中的 9 个 BAG 接口）</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>接口</th>
+<th>作用</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>list</td>
+<td>按 available / used / expired 分页拉取道具</td>
+</tr>
+<tr>
+<td>items</td>
+<td>按 item_id 批量取详情，每批最多 100 个</td>
+</tr>
+<tr>
+<td>detail</td>
+<td>单个道具详情，点开即标记已读并更新未读数</td>
+</tr>
+<tr>
+<td>usage_detail</td>
+<td>使用记录（如免费旋转的投注、赢分、使用时间）</td>
+</tr>
+<tr>
+<td>summary</td>
+<td>入口状态、灰度、未读数、累计奖励</td>
+</tr>
+<tr>
+<td>popup</td>
+<td>新道具弹窗</td>
+</tr>
+<tr>
+<td>use</td>
+<td>使用道具（如领取奖金券、启动免费旋转）</td>
+</tr>
+<tr>
+<td>match_vouchers</td>
+<td>充值时匹配可用充值券</td>
+</tr>
+<tr>
+<td>bind_order</td>
+<td>把充值券绑定到充值订单，充值成功后发放加赠</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>3. 道具类型与字段（前端数据结构）</strong></p>
+<p>道具类型（item_type）有 4 种，对应页面的 4 个图标：</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>类型</th>
+<th>代码值</th>
+<th>用户看到的</th>
+<th>使用方式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>充值券</td>
+<td>voucher</td>
+<td>Deposit 类券（如 Deposit EXTRA ₱250、Deposit Boost +20%）</td>
+<td>充值时自动匹配或手动选择，锁定并绑定订单</td>
+</tr>
+<tr>
+<td>奖金券</td>
+<td>cash</td>
+<td>Coupon，点 Claim NOW 即加到余额</td>
+<td>领取后弹出“You've received a ₱…”并显示流水要求</td>
+</tr>
+<tr>
+<td>免费旋转</td>
+<td>freespin / free_spin</td>
+<td>Free Spin，带剩余次数</td>
+<td>点 USE NOW → Choose a game（从适用游戏列表中选）</td>
+</tr>
+<tr>
+<td>真人游戏道具</td>
+<td>live_game</td>
+<td>指定真人游戏的道具</td>
+<td>跳转指定游戏使用</td>
+</tr>
+</tbody>
+</table></div>
+<p>每个道具的字段：item_id、item_type、template_id / item_template_type（模板）、display_name、expire_at（过期时间）、read_status（是否已读）、used_at、bonus_amount / bonus_display（奖励额）、reward_amount、remaining_times（剩余次数）、conditions_of_use（使用条件）、other_terms（其他条款）、game_list / game_ids（适用游戏）、title_image / detail_images。领取弹窗里同时显示 bonus_amount 和 turnover_amount（奖金与对应流水）。</p>
+<p><strong>4. 界面文案与状态（前端代码原文）</strong></p>
+<ul>
+<li>卡片状态文案：Expires in（倒计时）、Expires on、Used on、Ends in</li>
+<li>按钮：Claim NOW（奖金券）、USE NOW（旋转 / 游戏道具）、How to USE（充值券使用指引）、Choose a game</li>
+<li>结果提示：Claim successful、Congratulations !、This item is no longer available、No eligible games available、Claim failed</li>
+<li>空状态：“No rewards yet. Check out Promos to earn some!”</li>
+<li>埋点事件：click_rewards_item、click_rewards_use_button、click_rewards_gameicon，均带 item_template_type，平台按券模板统计点击与使用转化</li>
+</ul>
+<p><strong>5. 充值券在充值页的运作方式</strong></p>
+<ol>
+<li>进入充值页时调用 match_vouchers，返回可用券列表和当前锁定的券（locked_item_id）</li>
+<li>用户选择或系统默认一张券，底栏 Total 旁显示 +₱ 加赠（如规则图示例：充 ₱5,000，底栏显示 ₱5.2K、+₱250）</li>
+<li>点 Continue 时调用 bind_order 把券和订单绑定；券被锁定，避免同一张券用在两笔订单上</li>
+<li>充值成功后弹窗“Congratulations! You have successfully made deposit +₱5K +₱250”</li>
+</ol>
+<p><strong>6. 往背包里发券的活动（来自各活动规则）</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>来源活动</th>
+<th>券类型</th>
+<th>已知规则</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Deposit Boost +20%</td>
+<td>充值券</td>
+<td>每天 12AM / 10AM / 6PM 限量抢；抢到后 2 小时过期；20 倍流水</td>
+</tr>
+<tr>
+<td>Daily Lucky Surprise</td>
+<td>充值券 / 免费旋转券 / 奖金券</td>
+<td>每天登录有机会获得；有过期时间</td>
+</tr>
+<tr>
+<td>榜单奖励（如 FC Combo 6–1,000 名）</td>
+<td>免费旋转</td>
+<td>在 FaChai 游戏的 Free Spin Cards 中使用</td>
+</tr>
+<tr>
+<td>限时抢购（flash-sale）</td>
+<td>待确认</td>
+<td>当前无活动</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>7. 结论</strong></p>
+<ul>
+<li>BAG 是一套完整的<strong>道具 / 卡券系统</strong>：模板化发券（template_id）、未读红点、过期倒计时、充值券自动匹配与订单锁定、免费旋转的使用记录、按模板埋点统计，功能已经齐全</li>
+<li>它把“送钱”变成“送券”：充值券必须充值才生效、免费旋转必须去指定游戏用、券有短过期（Deposit Boost 只有 2 小时），引导用户尽快充值和下注</li>
+<li>当前处于灰度发布（in_gray: true），只对部分用户开放入口；不同账号看到的金刚区和券可能不同</li>
+<li>对 789Bingo：建议优先建设同类背包，卡片类型可设为“Bingo 免费卡片券 / 充值加赠券 / 奖金券”；每张券在卡片上直接写明金额、流水、适用游戏和过期时间，Nustar 在领取弹窗里展示流水的做法值得照搬</li>
+<li>未能实测：具体券的金额、流水倍数、过期时长与使用条件，需要账号里有券（如抢到 Deposit Boost 券或获得 Daily Lucky Surprise）后再抓一次</li>
+</ul>
+<h3 id="127-对-789bingo-金刚区的建议">12.7 对 789Bingo 金刚区的建议</h3>
+<ul>
+<li>金刚区保持 4 格，分别对应保底（Bingo 返水）、任务（每日打卡 / 阶梯任务）、竞争（Bingo 日榜）、惊喜（卡片券背包）</li>
+<li>任务卡采用“时间轴 + 锁定 + Go 直达”，但要自动发奖或延长领取期，避免漏领投诉</li>
+<li>榜单采用多算法（如按卡片数、按连线次数、按单局最大赢分），让小额玩家也有机会</li>
+<li>角标金额和百分比与实际规则保持一致，返水进度条直接显示金额</li>
+</ul>
+<h3 id="128-首页深度分析不同游戏的返利机制10-01-抓取">12.8 首页深度分析：不同游戏的返利机制（10-01 抓取）</h3>
+<p>首页游戏区由接口 game/page 下发，共 7 个专区、132 个游戏位（覆盖 180 款游戏的数据）。把每个游戏位与返水配置（cashback/detail 的 60 款指定老虎机、37 张真人桌、2 款 Color Game）逐一对照后，得到下面的结果。<strong>结论：同样投 ₱10,000，玩 Super Ace 比玩 Bingo 多拿 5.5 倍返利；首页 76.5% 的游戏位给了带加码返利的游戏。</strong></p>
+<p><strong>1. 首页 7 个专区的真实游戏与返利覆盖</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>专区（顺序）</th>
+<th>游戏位</th>
+<th>15% 指定老虎机</th>
+<th>6% 指定老虎机</th>
+<th>CASINO 1% 桌</th>
+<th>Color Game 1%</th>
+<th>无加码</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nustar Recommends</td>
+<td>6</td>
+<td>2（Super Ace、Pinata Wins）</td>
+<td>3</td>
+<td>1（Speed Baccarat A）</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>1.5% + 2% + 15% Slots RETURN</td>
+<td>6</td>
+<td>0</td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Exclusive &amp; New</td>
+<td>9</td>
+<td>0</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>5</td>
+</tr>
+<tr>
+<td>OP Million-Peso Leaderboard</td>
+<td>3</td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>FC Combo Rank Win Daily</td>
+<td>3</td>
+<td>0</td>
+<td>3</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Casino 1.0% Cashback</td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+<td>6</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>Popular Games</td>
+<td>99</td>
+<td>2</td>
+<td>58</td>
+<td>12</td>
+<td>1</td>
+<td>26</td>
+</tr>
+<tr>
+<td><strong>合计</strong></td>
+<td><strong>132</strong></td>
+<td><strong>4</strong></td>
+<td><strong>77</strong></td>
+<td><strong>19</strong></td>
+<td><strong>1</strong></td>
+<td><strong>31</strong></td>
+</tr>
+</tbody>
+</table></div>
+<ul>
+<li>前两个专区（首屏）12 个位置全部是加码游戏；60 款指定老虎机<strong>全部</strong>出现在 Popular Games 里</li>
+<li>无加码的 31 个位置集中在 Popular 的后半段和 Exclusive &amp; New：Popular 中的 26 个是 17 款老虎机（Mahjong Ways、Boxing King、Crazy777 等）、4 款街机（Mines 等）、2 款棋牌（Tongits Go、Baccarat Deluxe）、2 款 Bingo（Jackpot Bingo、Heat Bingo）、1 张真人桌（Speed Baccarat 2）</li>
+<li><strong>首页只有 2 款 Bingo</strong>，都没有加码返利，位置也在最后一个专区里</li>
+<li>Exclusive &amp; New 中的 5 款新游戏（Thunder Boost、Mega Palayok 5000x、Mayan Coins、Gates of Olympus 2500、Wukong Moreways）还未纳入指定名单，靠厂商活动（OP 榜、PS Jackpot、PP Daily Wins）推广</li>
+</ul>
+<p><strong>2. 六类游戏的返利叠加结构</strong></p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>游戏类型</th>
+<th>首页示例</th>
+<th>日返水</th>
+<th>即时返</th>
+<th>亏损返还</th>
+<th>可参加的榜单 / 厂商活动</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A. 双明星老虎机（2 款）</td>
+<td>Super Ace（JILI）、Pinata Wins（PG）</td>
+<td>1.5%</td>
+<td>✓ 约 1.6%（需当天充值）</td>
+<td><strong>15%</strong>，封顶 ₱100</td>
+<td>VIP、NS 500、厂商榜（JILI / PG）</td>
+</tr>
+<tr>
+<td>B. 其他指定老虎机（58 款）</td>
+<td>Super Ace Deluxe、Calavera Fiesta、Sugar Bang Bang 2、Super Gems 1000</td>
+<td>1.5%</td>
+<td>✓ 约 1.6%</td>
+<td>6%，封顶 ₱100</td>
+<td>VIP、NS 500、厂商榜（JILI / PG / FC / YB / OP / PP）；FC 的 9 款还有 FC Combo</td>
+</tr>
+<tr>
+<td>C. 非指定老虎机</td>
+<td>Gates of Olympus 2500、Mahjong Ways、Thunder Boost</td>
+<td>1.0%</td>
+<td>✗</td>
+<td>✗</td>
+<td>VIP、NS 500、厂商榜；PP 游戏有 PP Daily Wins，PS 游戏有 PS Jackpot</td>
+</tr>
+<tr>
+<td>D. CASINO 1% 合集桌（37 张）</td>
+<td>Speed Baccarat A、No Commission Baccarat、Perya Speed Baccarat 1</td>
+<td>1.0%（固定）</td>
+<td>✗</td>
+<td>✗</td>
+<td>VIP、NS 500；Perya 桌还有 Evolution Perya Fiesta</td>
+</tr>
+<tr>
+<td>E. 非合集真人桌</td>
+<td>Speed Baccarat 2</td>
+<td>0.3%–0.8%（分档）</td>
+<td>✗</td>
+<td>✗</td>
+<td>VIP、NS 500</td>
+</tr>
+<tr>
+<td>F. 街机 / 棋牌 / Bingo / 体育</td>
+<td>Mines、Tongits Go、Jackpot Bingo</td>
+<td>0.3%–1.0%（分档）</td>
+<td>✗</td>
+<td>✗</td>
+<td>街机有 ARCADE 榜、棋牌有 POKER 榜（不计入 VIP）；Bingo 只计入 VIP 榜</td>
+</tr>
+<tr>
+<td>（另）Color Game（2 款）</td>
+<td>Lucky Color Game（SG）</td>
+<td>1.0%（固定）</td>
+<td>✗</td>
+<td>✗</td>
+<td>—</td>
+</tr>
+</tbody>
+</table></div>
+<p><strong>3. 同样的玩法，不同游戏拿到的返利（按真实配置计算）</strong></p>
+<p>假设普通会员当天充值 ₱2,000，在同一款游戏上投注 ₱10,000，净输 ₱1,000（不含榜单等不确定收入）：</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>游戏</th>
+<th>日返水</th>
+<th>即时返</th>
+<th>亏损返还</th>
+<th>合计</th>
+<th>占投注</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Super Ace（A 类）</td>
+<td>₱150</td>
+<td>₱80（第 3 档）</td>
+<td>₱100（150 封顶为 100）</td>
+<td><strong>₱330</strong></td>
+<td>3.3%</td>
+</tr>
+<tr>
+<td>Fortune Gems 3（B 类）</td>
+<td>₱150</td>
+<td>₱80</td>
+<td>₱60</td>
+<td>₱290</td>
+<td>2.9%</td>
+</tr>
+<tr>
+<td>Gates of Olympus 2500（C 类）</td>
+<td>₱100</td>
+<td>—</td>
+<td>—</td>
+<td>₱100</td>
+<td>1.0%</td>
+</tr>
+<tr>
+<td>Speed Baccarat A（D 类）</td>
+<td>₱100</td>
+<td>—</td>
+<td>—</td>
+<td>₱100</td>
+<td>1.0%</td>
+</tr>
+<tr>
+<td>Speed Baccarat 2（E 类）</td>
+<td>₱60（₱5,000 档 0.6%）</td>
+<td>—</td>
+<td>—</td>
+<td>₱60</td>
+<td>0.6%</td>
+</tr>
+<tr>
+<td>Jackpot Bingo（F 类）</td>
+<td>₱60（0.6%）</td>
+<td>—</td>
+<td>—</td>
+<td>₱60</td>
+<td>0.6%</td>
+</tr>
+</tbody>
+</table></div>
+<p>VIP 用户的差别只在 E、F 类：E 类变为 0.8%（₱80），F 类变为 1%（₱100）；A–D 类 VIP 与普通会员完全相同。</p>
+<p><strong>4. 首页上的其他返利信号（同日实测）</strong></p>
+<ul>
+<li>跑马灯 3 条：“VIP BET ROYALE – ₱1,000,000 Daily! Enjoy up to 1.5% Cashback + 2% + 15% Slot Return”；“Jump into your favorite JILI game and discover your special gift!”（JILI 游戏内礼物）；大额中奖播报（如“20***98 won 852,500.00”）</li>
+<li>红包场次已换成周四主题配置（接口名 TTT，即 Triple Treat Thursdays）：每天 2 场，11:00–17:00 无门槛，18:00–23:59 需当天投注与充值各 ≥ ₱100；9 月 30 日时是 3 场、门槛 ₱0 / ₱10 / ₱50</li>
+<li>金刚区 4 个入口、专区标题本身（“1.5% + 2% + 15% Slots RETURN”“Casino 1.0% Cashback”）、游戏图标上的角标（“1.5%+2% Cashback / 15% 或 6% Loss Rebate”），都在反复强调同一套加码游戏</li>
+</ul>
+<p><strong>5. 结论</strong></p>
+<ul>
+<li>首页的返利不是“全站统一”，而是一个<strong>按游戏分级的导流工具</strong>：2 款双明星 &gt; 58 款指定老虎机 &gt; 37 张指定真人桌 &gt; 其他。加码游戏拿走首页 3/4 的位置，并全部在角标上写明返利</li>
+<li>加码集中在 JILI、PG、FC、YB、OP、5G 等老虎机厂商和 Evolution 百家乐；为什么选这些游戏（如厂商分成条件更好、或用户最热门），公开数据无法确认</li>
+<li>Bingo 在首页只有 2 个位置、无任何加码、无专属榜单，是返利体系里最边缘的品类</li>
+<li>对 789Bingo：可以直接把“按游戏分级返利 + 角标展示 + 专区命名”这套方法用在 Bingo 房间上（如主推房间更高返水、房间卡片上标注返利），并以“Bingo 全品类返利高于 Nustar 的 0.3%”作为差异化卖点</li>
+</ul>
+<h2 id="十三运营分析与对-789bingo-的可借鉴点">十三、运营分析与对 789Bingo 的可借鉴点</h2>
+<p>Nustar 的核心策略是“低门槛首充 + 多层返水叠加 + 提现时效承诺”，产品功能本身较精简，差异化主要来自活动和品牌。</p>
+<div class="tablewrap"><table>
+<thead>
+<tr>
+<th>维度</th>
+<th>Nustar 做法</th>
+<th>评价</th>
+<th>对 789Bingo 的建议</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>首充转化</td>
+<td>₱10 起充，每档明标赠送；₱8,000 首充在顶栏、Banner、弹窗、充值页反复出现</td>
+<td>强</td>
+<td>充值档位直接标注赠送金额，小档高比例</td>
+</tr>
+<tr>
+<td>返水表达</td>
+<td>返水标签打在游戏卡片上，专区按返水类型命名</td>
+<td>强</td>
+<td>Bingo 卡片加返水角标，大厅增加“返水专区” Tab</td>
+</tr>
+<tr>
+<td>信任建设</td>
+<td>提现超时补偿、PAGCOR/21+ 标识、线下度假村资讯</td>
+<td>强</td>
+<td>考虑“提现超时赔付”类可量化承诺</td>
+</tr>
+<tr>
+<td>日活手段</td>
+<td>随机时间红包（每日限次）、三个时段充值加赠、各类日榜</td>
+<td>强</td>
+<td>红包雨 + 定时加赠适合搭配 Bingo 开奖节奏</td>
+</tr>
+<tr>
+<td>Bingo 品类</td>
+<td>独立一级品类，约 20 款，主要来自 JILI 与 YB，没有 Bingo 专属活动（Spark Game 1% 返水实为 Color Game）</td>
+<td>中</td>
+<td>Bingo 是对手较薄弱的品类，可以在款数和专属活动上拉开差距</td>
+</tr>
+<tr>
+<td>弹窗体验</td>
+<td>进首页连弹 5 个，需逐个关闭</td>
+<td>弱</td>
+<td>弹窗合并为一个可左右滑的卡片组，或按用户状态只弹一个</td>
+</tr>
+<tr>
+<td>活动列表</td>
+<td>纯图片 Banner，无标题、时间、状态、分类筛选</td>
+<td>弱</td>
+<td>活动卡片加标题、截止时间、“已参与/可领取”状态</td>
+</tr>
+<tr>
+<td>VIP 体系</td>
+<td>仅一级，门槛 ₱300K/半月，无进度条</td>
+<td>弱</td>
+<td>多级 VIP + 流水进度条，覆盖中小额用户</td>
+</tr>
+<tr>
+<td>支付稳定性</td>
+<td>实测当天 GCash、QRPH 同时维护</td>
+<td>风险</td>
+<td>多渠道冗余 + 故障时自动切换默认渠道</td>
+</tr>
+<tr>
+<td>多语言</td>
+<td>界面为英文，未见语言切换入口</td>
+<td>中</td>
+<td>可考虑英文 + Tagalog</td>
+</tr>
+</tbody>
+</table></div>
+<h2 id="十四未覆盖与待确认项">十四、未覆盖与待确认项</h2>
+<p>为避免对账户产生实际操作，以下环节未实测，需要补充：</p>
+<ul>
+<li>[ ] 在线客服（顶栏耳机图标）：浏览器连接中断，未能打开</li>
+<li>[ ] 除 VIP Bet Royale 外其余 7 个榜单的详细规则（详情页加载失败）；VIP 额外 0.2% 返水的完整规则</li>
+<li>[ ] 邀请裂变（Bonus Chest）重新上线后的宝箱金额、助力规则与流水倍数</li>
+<li>[ ] 首充 5 倍、Deposit Boost 20 倍流水的计算基数（仅奖励还是本金 + 奖励）；多游戏混合时亏损返还的净输口径</li>
+<li>[ ] 注册送 ₱10、Google Signup、App 下载送 ₱10 的规则页</li>
+<li>[ ] 注册 / 登录流程（实测时已是 Google 登录态）</li>
+<li>[ ] 充值点 Continue 后的支付跳转、绑定提现账户表单、KYC 流程</li>
+<li>[ ] 每日红包打开后的金额分布</li>
+<li>[ ] 游戏内页（启动方式、是否新窗口、返回逻辑）</li>
+<li>[ ] FAQ、协议正文；App 下载页（appstore.nustargame.com）的安装方式</li>
+<li>[ ] 部分厂商缩写（浏览器自动翻译导致）需对照英文页核对</li>
+</ul>
+<div class="foot">数据采集：Nustar 2026-09-30 至 10-01；789Bingo 2026-10-02。仅浏览，未充值、未下注。仅供内部竞品研究使用。</div></div></main></div>
+<script src="assets/app.js"></script></body></html>
